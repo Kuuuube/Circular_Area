@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular Simple Stretch")]
-    public class Circular_simple_stretch : IFilter
+    [PluginName("Circular Elliptical Grid Mapping")]
+    public class Circular_elliptical_grid_mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -48,27 +48,11 @@ namespace Circular_Area
         {
             var u2 = MathF.Pow(input.X, 2);
             var v2 = MathF.Pow(input.Y, 2);
-
-            var absu = MathF.Abs(input.X);
-            var absv = MathF.Abs(input.Y);
-
-            var sgnu = absu / input.X;
-            var sgnv = absv / input.Y;
-
-            if (u2 >= v2)
-            {
+                var twosqrttwo = 2 * MathF.Sqrt(2);
                 return new Vector2(
-                sgnu * MathF.Sqrt(u2 + v2),
-                sgnu * (input.Y / input.X) * MathF.Sqrt(u2 + v2)
+                0.5f * MathF.Sqrt(2 + u2 - v2 + twosqrttwo * input.X) - 0.5f * MathF.Sqrt(2 + u2 - v2 - twosqrttwo * input.X),
+                0.5f * MathF.Sqrt(2 - u2 + v2 + twosqrttwo * input.Y) - 0.5f * MathF.Sqrt(2 - u2 + v2 - twosqrttwo * input.Y)
                 );
-            }
-            else
-            {
-                return new Vector2(
-                sgnv * (input.X / input.Y) * MathF.Sqrt(u2 + v2),
-                sgnv * MathF.Sqrt(u2 + v2)
-                );
-            }
         }
         public Vector2 Filter(Vector2 input) => FromUnit(CircleToSquare(ToUnit(input)));
 

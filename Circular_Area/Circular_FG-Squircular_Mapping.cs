@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular Simple Stretch")]
-    public class Circular_simple_stretch : IFilter
+    [PluginName("Circular FG-Squircular Mapping")]
+    public class Circular_FG_Squircular_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -52,23 +52,15 @@ namespace Circular_Area
             var absu = MathF.Abs(input.X);
             var absv = MathF.Abs(input.Y);
 
-            var sgnu = absu / input.X;
-            var sgnv = absv / input.Y;
+            var sgnuv = (absu * absv) / (input.X * input.Y);
 
-            if (u2 >= v2)
-            {
-                return new Vector2(
-                sgnu * MathF.Sqrt(u2 + v2),
-                sgnu * (input.Y / input.X) * MathF.Sqrt(u2 + v2)
+            var usqrttwo = input.X * MathF.Sqrt(2);
+            var vsqrttwo = input.Y * MathF.Sqrt(2);
+
+            return new Vector2(
+                sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
+                sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
                 );
-            }
-            else
-            {
-                return new Vector2(
-                sgnv * (input.X / input.Y) * MathF.Sqrt(u2 + v2),
-                sgnv * MathF.Sqrt(u2 + v2)
-                );
-            }
         }
         public Vector2 Filter(Vector2 input) => FromUnit(CircleToSquare(ToUnit(input)));
 
