@@ -1,3 +1,0 @@
-[submodule ".modules/OpenTabletDriver"]
-	path = .modules/OpenTabletDriver
-	url = https://github.com/InfinityGhost/OpenTabletDriver
