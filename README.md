@@ -16,7 +16,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Simple_Stretch_formula.PNG)
 
 
-#### FG-Squircular Mapping
+### FG-Squircular Mapping
 #### Mapping Diagram
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/FG-Squircular.png)
 #### Formula:
@@ -25,7 +25,7 @@
 Note: for FG-Squircular Mapping when u = 0 or v = 0 set (x,y) = (u,v)
 
 
-#### Elliptical Grid Mapping
+### Elliptical Grid Mapping
 #### Mapping Diagram
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Elliptical_Grid.png)
 #### Formula:
