@@ -57,10 +57,30 @@ namespace Circular_Area
             var usqrttwo = input.X * MathF.Sqrt(2);
             var vsqrttwo = input.Y * MathF.Sqrt(2);
 
-            return new Vector2(
-                sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
-                );
+            if (input.Y < 0.01)
+            {
+                return new Vector2(
+                        input.X,
+                        input.Y
+                        );
+            }
+            else
+            {
+                if (input.X < 0.01)
+                {
+                    return new Vector2(
+                        input.X,
+                        input.Y
+                        );
+                }
+                else
+                {
+                    return new Vector2(
+                        sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
+                        sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                        );
+                }
+            }
         }
         public Vector2 Filter(Vector2 input) => FromUnit(CircleToSquare(ToUnit(input)));
 

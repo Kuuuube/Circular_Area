@@ -46,9 +46,10 @@ namespace Circular_Area
 
         public static Vector2 CircleToSquare(Vector2 input)
         {
-            var u2 = MathF.Pow(input.X, 2);
-            var v2 = MathF.Pow(input.Y, 2);
+                var u2 = MathF.Pow(input.X, 2);
+                var v2 = MathF.Pow(input.Y, 2);
                 var twosqrttwo = 2 * MathF.Sqrt(2);
+
                 return new Vector2(
                 0.5f * MathF.Sqrt(2 + u2 - v2 + twosqrttwo * input.X) - 0.5f * MathF.Sqrt(2 + u2 - v2 - twosqrttwo * input.X),
                 0.5f * MathF.Sqrt(2 - u2 + v2 + twosqrttwo * input.Y) - 0.5f * MathF.Sqrt(2 - u2 + v2 - twosqrttwo * input.Y)
