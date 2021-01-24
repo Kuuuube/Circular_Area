@@ -57,7 +57,7 @@ namespace Circular_Area
             var usqrttwo = input.X * MathF.Sqrt(2);
             var vsqrttwo = input.Y * MathF.Sqrt(2);
 
-            if (input.Y < 0.01)
+            if (MathF.Abs(input.Y) < 0.001)
             {
                 return new Vector2(
                         input.X,
@@ -66,7 +66,7 @@ namespace Circular_Area
             }
             else
             {
-                if (input.X < 0.01)
+                if (MathF.Abs(input.X) < 0.001)
                 {
                     return new Vector2(
                         input.X,
