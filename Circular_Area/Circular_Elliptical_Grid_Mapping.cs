@@ -4,6 +4,7 @@ using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
 using System;
 using System.Numerics;
+using System.Xml.XPath;
 
 namespace Circular_Area
 {
@@ -18,8 +19,12 @@ namespace Circular_Area
                 var size = new Vector2(area.Width, area.Height);
                 var half = size / 2;
                 var display = (Info.Driver.OutputMode as AbsoluteOutputMode).Output;
-                var pxpermm = display.Width / area.Width;
-                return (input / pxpermm - half) / half;
+                var pxpermmw = display.Width / area.Width;
+                var pxpermmh = display.Height / area.Height;
+                return new Vector2(
+                    (input.X / pxpermmw - half.X) / half.X,
+                    (input.Y / pxpermmh - half.Y) / half.Y
+                    );
             }
             else
             {
@@ -35,8 +40,12 @@ namespace Circular_Area
                 var size = new Vector2(area.Width, area.Height);
                 var half = size / 2;
                 var display = (Info.Driver.OutputMode as AbsoluteOutputMode).Output;
-                var pxpermm = display.Width / area.Width;
-                return ((input * half) + half) * pxpermm;
+                var pxpermmw = display.Width / area.Width;
+                var pxpermmh = display.Height / area.Height;
+                return new Vector2(
+                    ((input.X * half.X) + half.X) * pxpermmw,
+                    ((input.Y * half.Y) + half.Y) * pxpermmh
+                );
             }
             else
             {
@@ -55,7 +64,15 @@ namespace Circular_Area
                 0.5f * MathF.Sqrt(2 - u2 + v2 + twosqrttwo * input.Y) - 0.5f * MathF.Sqrt(2 - u2 + v2 - twosqrttwo * input.Y)
                 );
         }
-        public Vector2 Filter(Vector2 input) => FromUnit(CircleToSquare(ToUnit(input)));
+
+        public static Vector2 Clamp(Vector2 input)
+        {
+            return new Vector2(
+            Math.Clamp(input.X, -1, 1),
+            Math.Clamp(input.Y, -1, 1)
+            );
+        }
+        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
 
 
         public FilterStage FilterStage => FilterStage.PostTranspose;
