@@ -12,8 +12,12 @@
 
 sgn(x) = |x|/x
 <br />
+<br />
 
 ------
+
+<br />
+
 ### Simple Stretch:
 #### Mapping Diagram:
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Simple_Stretch.png)
@@ -48,8 +52,10 @@ Note: for FG-Squircular Mapping when u = 0 or v = 0 set (x,y) = (u,v)
 <br />
 <br />
 <br />
+
+------
 <br />
 <br />
 
-------
+
 Huge thanks to [X9VoiD](https://github.com/X9VoiD) for helping majorly with the code and Chamberlain Fong's great [research paper](https://arxiv.org/abs/1509.06344) and [blog](https://squircular.blogspot.com/) for explaining all these mapping transformations.
