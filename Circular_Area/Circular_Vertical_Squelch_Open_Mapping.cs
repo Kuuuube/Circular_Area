@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular Vertical Squelch Open Mapping")]
+    public class Circular_Vertical_Squelch_Open_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -58,30 +58,11 @@ namespace Circular_Area
             var v = input.Y;
 
             var u2 = MathF.Pow(u, 2);
-            var v2 = MathF.Pow(v, 2);
 
-            var absu = MathF.Abs(u);
-            var absv = MathF.Abs(v);
-
-            var sgnuv = (absu * absv) / (u * v);
-
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
-
-            if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
-            {
-                return new Vector2(
-                        u,
-                        v
-                        );
-            }
-            else
-            {
-                return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
-                    );
-            }
+            return new Vector2(
+            u,
+            v / MathF.Sqrt(1 - u2)
+            );
         }
 
         public static Vector2 Clamp(Vector2 input)

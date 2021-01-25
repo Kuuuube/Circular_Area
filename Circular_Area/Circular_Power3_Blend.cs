@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular Power3 Blend")]
+    public class Circular_Power3_Blend : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -52,7 +52,7 @@ namespace Circular_Area
             }
         }
 
-        public static Vector2 CircleToSquare(Vector2 input)
+        public Vector2 CircleToSquare(Vector2 input)
         {
             var u = input.X;
             var v = input.Y;
@@ -60,13 +60,15 @@ namespace Circular_Area
             var u2 = MathF.Pow(u, 2);
             var v2 = MathF.Pow(v, 2);
 
+            var u4 = MathF.Pow(u, 4);
+            var v4 = MathF.Pow(v, 4);
+
             var absu = MathF.Abs(u);
             var absv = MathF.Abs(v);
 
             var sgnuv = (absu * absv) / (u * v);
 
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
+            var B = Math.Clamp(B_raw, 0.01f, 1);
 
             if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
             {
@@ -78,8 +80,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    (sgnuv * MathF.Sqrt((u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 2 * u2 * v2 * (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4)))) / (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4))) * (1 / v),
+                    (sgnuv * MathF.Sqrt((u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 2 * u2 * v2 * (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4)))) / (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4))) * (1 / u)
                     );
             }
         }
@@ -96,5 +98,7 @@ namespace Circular_Area
 
         public FilterStage FilterStage => FilterStage.PostTranspose;
 
+        [Property("β")]
+        public float B_raw { set; get; }
     }
 }

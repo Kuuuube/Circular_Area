@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular Power2 Blend")]
+    public class Circular_Power2_Blend : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -52,7 +52,7 @@ namespace Circular_Area
             }
         }
 
-        public static Vector2 CircleToSquare(Vector2 input)
+        public Vector2 CircleToSquare(Vector2 input)
         {
             var u = input.X;
             var v = input.Y;
@@ -68,6 +68,8 @@ namespace Circular_Area
             var usqrttwo = u * MathF.Sqrt(2);
             var vsqrttwo = v * MathF.Sqrt(2);
 
+            var B = Math.Clamp(B_raw, 0.01f, 1);
+
             if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
             {
                 return new Vector2(
@@ -78,8 +80,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    (sgnuv * MathF.Sqrt((u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2 * (u2 + v2 + 2 * B * (1 - u2 - v2))))) / (2 * (u2 + v2 + 2 * B * (1 - u2 - v2)))))*(1/v),
+                    (sgnuv * MathF.Sqrt((u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2 * (u2 + v2 + 2 * B * (1 - u2 - v2))))) / (2 * (u2 + v2 + 2 * B * (1 - u2 - v2)))))*(1/u)
                     );
             }
         }
@@ -96,5 +98,7 @@ namespace Circular_Area
 
         public FilterStage FilterStage => FilterStage.PostTranspose;
 
+        [Property("β")]
+        public float B_raw { set; get; }
     }
 }

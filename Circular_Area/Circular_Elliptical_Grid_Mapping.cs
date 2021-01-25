@@ -4,7 +4,6 @@ using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
 using System;
 using System.Numerics;
-using System.Xml.XPath;
 
 namespace Circular_Area
 {
@@ -55,14 +54,17 @@ namespace Circular_Area
 
         public static Vector2 CircleToSquare(Vector2 input)
         {
-                var u2 = MathF.Pow(input.X, 2);
-                var v2 = MathF.Pow(input.Y, 2);
-                var twosqrttwo = 2 * MathF.Sqrt(2);
+            var u = input.X;
+            var v = input.Y;
 
-                return new Vector2(
-                0.5f * MathF.Sqrt(2 + u2 - v2 + twosqrttwo * input.X) - 0.5f * MathF.Sqrt(2 + u2 - v2 - twosqrttwo * input.X),
-                0.5f * MathF.Sqrt(2 - u2 + v2 + twosqrttwo * input.Y) - 0.5f * MathF.Sqrt(2 - u2 + v2 - twosqrttwo * input.Y)
-                );
+            var u2 = MathF.Pow(u, 2);
+            var v2 = MathF.Pow(v, 2);
+            var twosqrttwo = 2 * MathF.Sqrt(2);
+
+            return new Vector2(
+            0.5f * MathF.Sqrt(2 + u2 - v2 + twosqrttwo * u) - 0.5f * MathF.Sqrt(2 + u2 - v2 - twosqrttwo * u),
+            0.5f * MathF.Sqrt(2 - u2 + v2 + twosqrttwo * v) - 0.5f * MathF.Sqrt(2 - u2 + v2 - twosqrttwo * v)
+            );
         }
 
         public static Vector2 Clamp(Vector2 input)

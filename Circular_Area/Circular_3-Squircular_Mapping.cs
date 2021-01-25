@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular 3-Squircular Mapping")]
+    public class Circular_3_Squircular_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -60,13 +60,13 @@ namespace Circular_Area
             var u2 = MathF.Pow(u, 2);
             var v2 = MathF.Pow(v, 2);
 
+            var u4 = MathF.Pow(u, 4);
+            var v4 = MathF.Pow(v, 4);
+
             var absu = MathF.Abs(u);
             var absv = MathF.Abs(v);
 
             var sgnuv = (absu * absv) / (u * v);
-
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
 
             if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
             {
@@ -78,8 +78,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    (sgnuv / v) * MathF.Sqrt((1 - MathF.Sqrt(1 - 4 * u4 * v2 - 4 * u2 * v4)) / (2 * (u2 + v2))),
+                    (sgnuv / u) * MathF.Sqrt((1 - MathF.Sqrt(1 - 4 * u4 * v2 - 4 * u2 * v4)) / (2 * (u2 + v2)))
                     );
             }
         }

@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular Non-axial Half-Punch Mapping")]
+    public class Circular_Non_axial_Half_Punch_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -63,24 +63,33 @@ namespace Circular_Area
             var absu = MathF.Abs(u);
             var absv = MathF.Abs(v);
 
+            var sgnu = absu / u;
+            var sgnv = absv / v;
             var sgnuv = (absu * absv) / (u * v);
 
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
-
-            if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
+            if (MathF.Abs(v) < 0.001)
             {
                 return new Vector2(
-                        u,
-                        v
+                        sgnu * u,
+                        (sgnuv / u) * MathF.Sqrt((1 - MathF.Sqrt(1 - 4 * u2 * v2 * MathF.Pow((u2 + v2), 2))) / (2 * (u2 + v2)))
                         );
             }
             else
             {
-                return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
-                    );
+                if (MathF.Abs(u) < 0.001)
+                {
+                    return new Vector2(
+                        (sgnuv / v) * MathF.Sqrt((1 - MathF.Sqrt(1 - 4 * u2 * v2 * MathF.Pow((u2 + v2), 2))) / (2 * (u2 + v2))),
+                        sgnv * v
+                        );
+                }
+                else
+                {
+                    return new Vector2(
+                        (sgnuv / v) * MathF.Sqrt((1 - MathF.Sqrt(1 - 4 * u2 * v2 * MathF.Pow((u2 + v2), 2))) / (2 * (u2 + v2))),
+                        (sgnuv / u) * MathF.Sqrt((1 - MathF.Sqrt(1 - 4 * u2 * v2 * MathF.Pow((u2 + v2), 2))) / (2 * (u2 + v2)))
+                        );
+                }
             }
         }
 

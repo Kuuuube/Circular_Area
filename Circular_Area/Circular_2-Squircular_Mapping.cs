@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular 2-Squircular Mapping")]
+    public class Circular_2_Squircular_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -78,8 +78,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    (sgnuv / vsqrttwo) * MathF.Sqrt(1 - MathF.Sqrt(1 - 4 * u2 * v2)),
+                    (sgnuv / usqrttwo) * MathF.Sqrt(1 - MathF.Sqrt(1 - 4 * u2 * v2))
                     );
             }
         }

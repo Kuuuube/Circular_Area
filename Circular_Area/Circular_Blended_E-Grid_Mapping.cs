@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular Blended E-Grid Mapping")]
+    public class Circular_blended_e_grid_mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -52,7 +52,7 @@ namespace Circular_Area
             }
         }
 
-        public static Vector2 CircleToSquare(Vector2 input)
+        public Vector2 CircleToSquare(Vector2 input)
         {
             var u = input.X;
             var v = input.Y;
@@ -63,10 +63,10 @@ namespace Circular_Area
             var absu = MathF.Abs(u);
             var absv = MathF.Abs(v);
 
-            var sgnuv = (absu * absv) / (u * v);
+            var sgnu = absu / u;
+            var sgnv = absv / v;
 
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
+            var B = Math.Clamp(B_raw, 0.01f, 1);
 
             if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
             {
@@ -78,8 +78,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    (sgnu / MathF.Sqrt(2 * B)) * MathF.Sqrt(B + 1 + B * u2 - v2 - MathF.Sqrt(MathF.Pow((B + 1 + B * u2 - v2), 2) - 4 * B * (B + 1) * u2)),
+                    (sgnv / MathF.Sqrt(2 * B)) * MathF.Sqrt(B + 1 - u2 + B * v2 - MathF.Sqrt(MathF.Pow((B + 1 - u2 + B * v2), 2) - 4 * B * (B + 1) * v2))
                     );
             }
         }
@@ -96,5 +96,7 @@ namespace Circular_Area
 
         public FilterStage FilterStage => FilterStage.PostTranspose;
 
+        [Property("β")]
+        public float B_raw { set; get; }
     }
 }

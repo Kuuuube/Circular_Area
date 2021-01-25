@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circular Cornerific Tapered2 Mapping")]
+    public class Circular_Cornerific_Tapered2_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -65,9 +65,6 @@ namespace Circular_Area
 
             var sgnuv = (absu * absv) / (u * v);
 
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
-
             if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
             {
                 return new Vector2(
@@ -78,8 +75,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    (sgnuv / v) * MathF.Sqrt((u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2 * (2 - u2 - v2)))) / (2 * (2 - u2 - v2))),
+                    (sgnuv / u) * MathF.Sqrt((u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2 * (2 - u2 - v2)))) / (2 * (2 - u2 - v2)))
                     );
             }
         }

@@ -7,8 +7,8 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular FG-Squircular Mapping")]
-    public class Circular_FG_Squircular_Mapping : IFilter
+    [PluginName("Circluar Lamé-based Mapping")]
+    public class Circular_Lamé_based_Mapping : IFilter
     {
         public static Vector2 ToUnit(Vector2 input)
         {
@@ -63,12 +63,10 @@ namespace Circular_Area
             var absu = MathF.Abs(u);
             var absv = MathF.Abs(v);
 
-            var sgnuv = (absu * absv) / (u * v);
+            var sgnu = absu / u;
+            var sgnv = absv / v;
 
-            var usqrttwo = u * MathF.Sqrt(2);
-            var vsqrttwo = v * MathF.Sqrt(2);
-
-            if (MathF.Abs(v) < 0.1 || MathF.Abs(u) < 0.1)
+            if (MathF.Abs(v) < 0.00001 || MathF.Abs(u) < 0.00001 || MathF.Abs(v) > 0.99 || MathF.Abs(u) > 0.99)
             {
                 return new Vector2(
                         u,
@@ -78,8 +76,8 @@ namespace Circular_Area
             else
             {
                 return new Vector2(
-                    sgnuv / vsqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2))),
-                    sgnuv / usqrttwo * MathF.Sqrt(u2 + v2 - MathF.Sqrt((u2 + v2) * (u2 + v2 - 4 * u2 * v2)))
+                    sgnu * MathF.Pow(absu, (1 - u2 - v2)),
+                    sgnv * MathF.Pow(absv, (1 - u2 - v2))
                     );
             }
         }
