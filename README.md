@@ -1,7 +1,9 @@
 # Circular Area
 
 ## Quick start guide:
-- Enable one of the three mapping types and apply the setting
+- Enable one of the mapping types and apply the setting
+
+Note: It is recommended to start with one of the main mapping types (Simple Stretch, FG-Squircular, and Elliptical Grid) and branch out from there
 
 
 ## Explanation of the mappings:
@@ -39,6 +41,13 @@ sgn(x) = |x|/x
 Note: for FG-Squircular Mapping when u = 0 or v = 0 set (x,y) = (u,v)
 <br />
 <br />
+**Axial linear mappings based off FG-Squircular:** 2-Squircular Mapping, 3-Squircular Mapping, Cornerific Tapered2 Mapping, and Tapered4 Squircular Mapping
+
+**Axial non-linear mappings based off FG-Squircular:** Non-Axial 2-Pinch Mapping and Non-Axial ½-Punch Mapping
+
+**Blended mappings based off FG-Squircular:** Power2 Blend (0 = 2-Squircular, 1 = Cornerific Tapered2) and Power3 Blend (0 = 3-Squircular, 1 = Tapered4 Squircular)
+<br />
+<br />
 
 ------
 
@@ -51,11 +60,26 @@ Note: for FG-Squircular Mapping when u = 0 or v = 0 set (x,y) = (u,v)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Elliptical_Grid_formula.png)
 <br />
 <br />
+**Mappings based off Elliptical Grid Mapping:** Squelched Grid Open Mapping, Vertical Squelch Open Mapping, and Horizontal Squelch Open Mapping
+
+**Blended mappings based off Elliptical Grid Mapping:** Blended E-Grid Mapping (0 = Squelched Grid, 1 = Elliptical Grid), Biased Squelch Blended Mapping (0 = Vertical Squelch, 1 = Horizontal Squelch), Biased Squelch Horizontal (0 = Horizontal Squelch, 1 = Squelched Grid), and Biased Squelch Vertical (0 = Vertical Squelch, 1 = Squelched Grid)
+<br />
 <br />
 
 ------
+
+<br />
+
+### Lamé-based Mapping:
+#### Mapping Diagram:
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Lame_based.PNG)
+#### Formula:
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Lame_based_formula.PNG)
 <br />
 <br />
 
+------
 
-Huge thanks to [X9VoiD](https://github.com/X9VoiD) for helping majorly with the code and Chamberlain Fong's great [research paper](https://arxiv.org/abs/1509.06344) and [blog](https://squircular.blogspot.com/) for explaining all these mapping transformations.
+<br />
+
+Huge thanks to [X9VoiD](https://github.com/X9VoiD) for helping majorly with the code and Chamberlain Fong's great research papers: \([1](https://arxiv.org/abs/1509.06344), [2](https://arxiv.org/abs/1709.07875)\) and [blog](https://squircular.blogspot.com/) for explaining all these mapping transformations and for the mapping diagrams.
