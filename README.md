@@ -27,6 +27,9 @@ sgn(x) = |x|/x
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/readme_img/Simple_Stretch_formula.PNG)
 <br />
 <br />
+**Mappings based off Simple Stretch Mapping:** Concentric Mapping, Approximate Equal Area, Approximate Equal Area 2 Horizontal, and Approximate Equal Area 2 Vertical 
+<br />
+<br />
 
 ------
 
