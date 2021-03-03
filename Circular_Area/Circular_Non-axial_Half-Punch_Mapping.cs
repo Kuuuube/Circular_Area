@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular Non-axial Half-Punch Mapping")]
+    [PluginName("Circular Non-axial ½-Punch Mapping")]
     public class Circular_Non_axial_Half_Punch_Mapping : CircularBase, IFilter
     {
         public static Vector2 CircleToSquare(Vector2 input)
