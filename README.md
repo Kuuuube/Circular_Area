@@ -16,7 +16,9 @@ sgn(x) = |x|/x
 <br />
 <br />
 
-### Note: Inverse mappings map the rectangular tablet area to a circle then multiply the circle's size by ≈1.4 so no parts of the screen are unreachable
+### Notes: 
+- Inverse mappings map the rectangular tablet area to a circle then multiply the circle's size by ≈1.4 so no parts of the screen are unreachable. None of the formulas or diagrams for inverse mappings are shown here.
+- Many of the mapping formulas are not listed and no diagrams are shown. The sources and explanations for these can be found in the credits.
 ------
 
 <br />
@@ -45,9 +47,9 @@ sgn(x) = |x|/x
 Note: for FG-Squircular Mapping when u = 0 or v = 0 set (x,y) = (u,v)
 <br />
 <br />
-**Axial linear mappings based off FG-Squircular:** 2-Squircular Mapping, 3-Squircular Mapping, Cornerific Tapered2 Mapping, and Tapered4 Squircular Mapping
+**Axial linear mappings based off FG-Squircular:** 2-Squircular Mapping, 3-Squircular Mapping, Cornerific Tapered2 Mapping, and Tapered4 Mapping
 
-**Axial non-linear mappings based off FG-Squircular:** Non-Axial 2-Pinch Mapping, Non-Axial ½-Punch Mapping and Sham Quartic Mapping
+**Axial non-linear mappings based off FG-Squircular:** Non-Axial 2-Pinch Mapping, Non-Axial ½-Punch Mapping, and Sham Quartic Mapping
 
 **Blended mappings based off FG-Squircular:** Power2 Blend (0 = 2-Squircular, 1 = Cornerific Tapered2) and Power3 Blend (0 = 3-Squircular, 1 = Tapered4 Squircular)
 <br />
