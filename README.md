@@ -16,7 +16,7 @@ sgn(x) = |x|/x
 <br />
 <br />
 
-**Note: Inverse mappings map the rectangular tablet area to a circle then multiply the circle's size by ≈1.4 so no parts of the screen are unreachable**
+### Note: Inverse mappings map the rectangular tablet area to a circle then multiply the circle's size by ≈1.4 so no parts of the screen are unreachable
 ------
 
 <br />
