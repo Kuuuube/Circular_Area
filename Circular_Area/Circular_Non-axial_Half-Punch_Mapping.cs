@@ -26,7 +26,7 @@ namespace Circular_Area
             double sgnv = absv / v;
             double sgnuv = (absu * absv) / (u * v);
 
-            if (Math.Abs(v) < 0.01)
+            if (Math.Abs(v) < 0.00001)
             {
                 var circle = new Vector2(
                         (float)(sgnu * u2),
@@ -49,7 +49,7 @@ namespace Circular_Area
             }
             else
             {
-                if (Math.Abs(u) < 0.01)
+                if (Math.Abs(u) < 0.00001)
                 {
                     var circle = new Vector2(
                         (float)((sgnuv / v) * Math.Sqrt((1 - Math.Sqrt(1 - 4 * u2 * v2 * Math.Pow((u2 + v2), 2))) / (2 * (u2 + v2)))),

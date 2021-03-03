@@ -27,7 +27,7 @@ namespace Circular_Area
 
             double sgnuv = (absu * absv) / (u * v);
 
-            if (Math.Abs(v) < 0.1 || Math.Abs(u) < 0.1)
+            if (Math.Abs(v) < 0.00001 || Math.Abs(u) < 0.00001)
             {
                 var circle = new Vector2(
                         (float)(u),

@@ -19,7 +19,7 @@ namespace Circular_Area
             double x2 = Math.Pow(x, 2);
             double y2 = Math.Pow(y, 2);
 
-            if (Math.Abs(y) < 0.01 || Math.Abs(x) < 0.01)
+            if (Math.Abs(y) < 0.00001 || Math.Abs(x) < 0.00001)
             {
                 var circle = new Vector2(
                         (float)(x),

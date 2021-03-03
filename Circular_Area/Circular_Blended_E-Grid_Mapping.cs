@@ -27,7 +27,7 @@ namespace Circular_Area
 
             float B = Math.Clamp(B_raw, 0.01f, 1);
 
-            if (Math.Abs(v) < 0.1 || Math.Abs(u) < 0.1)
+            if (Math.Abs(v) < 0.00001 || Math.Abs(u) < 0.00001)
             {
                 var circle = new Vector2(
                         (float)(u),
