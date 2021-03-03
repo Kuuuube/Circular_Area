@@ -3,7 +3,7 @@
 ## Quick start guide:
 - Enable one of the mapping types and apply the setting
 
-Note: It is recommended to start with one of the main mapping types (Simple Stretch, FG-Squircular, and Elliptical Grid) and branch out from there
+Note: It is recommended to start with either FG-Squircular or Elliptical Grid and branch out from there
 
 
 ## Explanation of the mappings:
@@ -47,7 +47,7 @@ Note: for FG-Squircular Mapping when u = 0 or v = 0 set (x,y) = (u,v)
 <br />
 **Axial linear mappings based off FG-Squircular:** 2-Squircular Mapping, 3-Squircular Mapping, Cornerific Tapered2 Mapping, and Tapered4 Squircular Mapping
 
-**Axial non-linear mappings based off FG-Squircular:** Non-Axial 2-Pinch Mapping and Non-Axial ½-Punch Mapping
+**Axial non-linear mappings based off FG-Squircular:** Non-Axial 2-Pinch Mapping, Non-Axial ½-Punch Mapping and Sham Quartic Mapping
 
 **Blended mappings based off FG-Squircular:** Power2 Blend (0 = 2-Squircular, 1 = Cornerific Tapered2) and Power3 Blend (0 = 3-Squircular, 1 = Tapered4 Squircular)
 <br />
