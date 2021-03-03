@@ -1,6 +1,4 @@
-﻿using OpenTabletDriver.Plugin;
-using OpenTabletDriver.Plugin.Attributes;
-using OpenTabletDriver.Plugin.Output;
+﻿using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.Tablet;
 using System;
 using System.Numerics;
@@ -8,83 +6,34 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Approximate Equal Area 2 Vertical")]
-    public class Circular_Approximate_Equal_Area_2_Vertical : IFilter
+    public class Circular_Approximate_Equal_Area_2_Vertical : CircularBase, IFilter
     {
-        public static Vector2 ToUnit(Vector2 input)
-        {
-            if (Info.Driver.OutputMode is AbsoluteOutputMode absoluteOutputMode)
-            {
-                var area = absoluteOutputMode.Input;
-                var size = new Vector2(area.Width, area.Height);
-                var half = size / 2;
-                var display = (Info.Driver.OutputMode as AbsoluteOutputMode)?.Output;
-                var offset = (Vector2)((Info.Driver.OutputMode as AbsoluteOutputMode)?.Output?.Position);
-                var shiftoffX = offset.X - (display.Width / 2);
-                var shiftoffY = offset.Y - (display.Height / 2);
-                var pxpermmw = display.Width / area.Width;
-                var pxpermmh = display.Height / area.Height;
-                return new Vector2(
-                    ((input.X - shiftoffX) / pxpermmw - half.X) / half.X,
-                    ((input.Y - shiftoffY) / pxpermmh - half.Y) / half.Y
-                    );
-            }
-            else
-            {
-                return default;
-            }
-        }
-
-
-        private static Vector2 FromUnit(Vector2 input)
-        {
-            if (Info.Driver.OutputMode is AbsoluteOutputMode absoluteOutputMode)
-            {
-                var area = absoluteOutputMode.Input;
-                var size = new Vector2(area.Width, area.Height);
-                var half = size / 2;
-                var display = (Info.Driver.OutputMode as AbsoluteOutputMode)?.Output;
-                var offset = (Vector2)((Info.Driver.OutputMode as AbsoluteOutputMode)?.Output?.Position);
-                var shiftoffX = offset.X - (display.Width / 2);
-                var shiftoffY = offset.Y - (display.Height / 2);
-                var pxpermmw = display.Width / area.Width;
-                var pxpermmh = display.Height / area.Height;
-                return new Vector2(
-                    ((input.X * half.X) + half.X) * pxpermmw + shiftoffX,
-                    ((input.Y * half.Y) + half.Y) * pxpermmh + shiftoffY
-                );
-            }
-            else
-            {
-                return default;
-            }
-        }
-
         public static Vector2 CircleToSquare(Vector2 input)
         {
-            var u = input.X;
-            var v = input.Y;
+            double u = input.X;
+            double v = input.Y;
 
-            var umax = u * 9;
-            var vmax = v * 9;
+            float umax = (float)(u * 9);
+            float vmax = (float)(v * 9);
 
-            var u2 = MathF.Pow(u, 2);
-            var v2 = MathF.Pow(v, 2);
+            double u2 = Math.Pow(u, 2);
+            double v2 = Math.Pow(v, 2);
 
-            var ffv2 = (5 / 4) * v2;
+            double ffv2 = (5 / 4) * v2;
 
-            var t = MathF.Sqrt(u2 + v2);
+            double t = Math.Sqrt(u2 + v2);
 
-            var absu = MathF.Abs(u);
-            var absv = MathF.Abs(v);
+            double absu = Math.Abs(u);
+            double absv = Math.Abs(v);
 
-            var sgnu = absu / u;
-            var sgnv = absv / v;
+            double sgnu = absu / u;
+            double sgnv = absv / v;
 
             if (ffv2 >= u2)
             {
                 var circle = new Vector2(
-                u * MathF.Sqrt((3 * t) / (t + absv)),
-                sgnv * t
+                (float)(u * Math.Sqrt((3 * t) / (t + absv))),
+                (float)(sgnv * t)
                 );
                 if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
                 {
@@ -104,8 +53,8 @@ namespace Circular_Area
             else
             {
                 var circle = new Vector2(
-                sgnu * t,
-                (3 / 2) * v
+                (float)(sgnu * t),
+                (float)((3 / 2) * v)
                 );
                 if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
                 {
@@ -123,18 +72,8 @@ namespace Circular_Area
                 }
             }
         }
-
-        public static Vector2 Clamp(Vector2 input)
-        {
-            return new Vector2(
-            Math.Clamp(input.X, -1, 1),
-            Math.Clamp(input.Y, -1, 1)
-            );
-        }
         public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
 
-
         public FilterStage FilterStage => FilterStage.PostTranspose;
-
     }
 }
