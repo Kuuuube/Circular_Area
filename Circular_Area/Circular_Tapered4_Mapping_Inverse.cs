@@ -51,8 +51,8 @@ namespace Circular_Area
             else
             {
                 var circle = new Vector2(
-                    (float)((sgnxy / (y * Math.Sqrt(x2 + y2))) * Math.Sqrt(1 - Math.Sqrt(1 - 2 * x4 * y2 - 2 * x2 * y4 + 2 * x4 * y4))),
-                    (float)((sgnxy / (x * Math.Sqrt(x2 + y2))) * Math.Sqrt(1 - Math.Sqrt(1 - 2 * x4 * y2 - 2 * x2 * y4 + 2 * x4 * y4)))
+                    (float)((sgnxy / (y * Math.Sqrt(x2 + y2))) * Math.Sqrt(1 - Math.Sqrt(1 - 2 * x4 * y2 - 2 * x2 * y4 + 3 * x4 * y4))),
+                    (float)((sgnxy / (x * Math.Sqrt(x2 + y2))) * Math.Sqrt(1 - Math.Sqrt(1 - 2 * x4 * y2 - 2 * x2 * y4 + 3 * x4 * y4)))
                     );
                 if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
                 {

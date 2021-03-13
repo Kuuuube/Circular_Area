@@ -5,10 +5,10 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular Squelched Grid Open Mapping Inverse")]
-    public class Circular_Squelched_Grid_Open_Mapping_Inverse : CircularBase, IFilter
+    [PluginName("Circluar Lamé-based Mapping Inverse")]
+    public class Circular_Lamé_based_Mapping_Inverse : CircularBase, IFilter
     {
-        public static Vector2 SquareToCircle(Vector2 input)
+        public static Vector2 CircleToSquare(Vector2 input)
         {
             double x = input.X;
             double y = input.Y;
@@ -19,10 +19,15 @@ namespace Circular_Area
             double x2 = Math.Pow(x, 2);
             double y2 = Math.Pow(y, 2);
 
+            double absx = Math.Abs(x);
+            double absy = Math.Abs(y);
+
             var circle = new Vector2(
-            (float)(x * Math.Sqrt((1 - y2) / (1 - x2 * y2))),
-            (float)(y * Math.Sqrt((1 - x2) / (1 - x2 * y2)))
+            (float)((x / Math.Sqrt(x2 + y2)) * Math.Pow((absx * (2 / ((1 - absx) * (1 - absy))) + absy * (2 / ((1 - absx) * (1 - absy)))), (0.5 * (1 - absx) * (1 - absy)))),
+            (float)((y / Math.Sqrt(x2 + y2)) * Math.Pow((absx * (2 / ((1 - absx) * (1 - absy))) + absy * (2 / ((1 - absx) * (1 - absy)))), (0.5 * (1 - absx) * (1 - absy))))
             );
+
+
             if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
             {
                 return new Vector2(
@@ -37,8 +42,9 @@ namespace Circular_Area
                 Math.Clamp(ymax, -1, 1)
                 );
             }
+
         }
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
+        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
 
         public FilterStage FilterStage => FilterStage.PostTranspose;
     }
