@@ -3,7 +3,7 @@
 # Biased Squelch Blended Mapping
 
 ## Diagrams
-#### β = 0 [(Vertical Squelch Open Mapping)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/vertical_squelch_open_mapping.md)
+#### β = 0 [(Vertical Squelch Open Mapping)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/vertical_squelch_open_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0_circle_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0_square_grid_thick_checkerboard.png)
@@ -21,7 +21,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0.33_square_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0.33_dot_grid_circle_rgb_gradient_circle.png)
 
-#### β = 0.5 [(Elliptical Grid Mapping)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
+#### β = 0.5 [(Elliptical Grid Mapping)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0.5_circle_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0.5_square_grid_thick_checkerboard.png)
@@ -39,7 +39,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0.75_square_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B0.75_dot_grid_circle_rgb_gradient_circle.png)
 
-#### β = 1 [(Horizontal Squelch Open Mapping)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/horizontal_squelch_open_mapping.md)
+#### β = 1 [(Horizontal Squelch Open Mapping)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/horizontal_squelch_open_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B1_circle_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_biased_squelch_blended_mapping_B1_square_grid_thick_checkerboard.png)
@@ -54,7 +54,7 @@
 # Biased Squelch Blended Mapping Inverse
 
 ## Diagrams
-#### β = 0 [(Vertical Squelch Open Mapping Inverse)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/vertical_squelch_open_mapping.md)
+#### β = 0 [(Vertical Squelch Open Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/vertical_squelch_open_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0_dot_grid_square_rgb_gradient.png)
@@ -69,7 +69,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0.33_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0.33_dot_grid_square_rgb_gradient.png)
 
-#### β = 0.5 [(Elliptical Grid Mapping Inverse)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
+#### β = 0.5 [(Elliptical Grid Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0.5_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0.5_dot_grid_square_rgb_gradient.png)
@@ -84,7 +84,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0.75_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B0.75_dot_grid_square_rgb_gradient.png)
 
-#### β = 1 [(Horizontal Squelch Open Mapping Inverse)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/horizontal_squelch_open_mapping.md)
+#### β = 1 [(Horizontal Squelch Open Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/horizontal_squelch_open_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B1_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_biased_squelch_blended_mapping_B1_mapping_dot_grid_square_rgb_gradient.png)

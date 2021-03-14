@@ -9,7 +9,7 @@
 
 <br>
 
-## [Explanations and Visualizations of the mappings](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
+## [Explanations and Visualizations of the mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
 
 
 <br>

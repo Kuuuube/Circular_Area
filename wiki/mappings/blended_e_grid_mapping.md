@@ -3,7 +3,7 @@
 # Blended E-Grid Mapping
 
 ## Diagrams
-#### β = 0 [(Squelched Grid Open Mapping)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)
+#### β = 0 [(Squelched Grid Open Mapping)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_blended_e-grid_mapping_B0_circle_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_blended_e-grid_mapping_B0_square_grid_thick_checkerboard.png)
@@ -39,7 +39,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_blended_e-grid_mapping_B0.75_square_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_blended_e-grid_mapping_B0.75_dot_grid_circle_rgb_gradient_circle.png)
 
-#### β = 1 [(Elliptical Grid Mapping)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
+#### β = 1 [(Elliptical Grid Mapping)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_blended_e-grid_mapping_B1_circle_grid_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/square_blended_e-grid_mapping_B1_square_grid_thick_checkerboard.png)
@@ -54,7 +54,7 @@
 # Blended E-Grid Mapping Inverse
 
 ## Diagrams
-#### β = 0 [(Squelched Grid Open Mapping Inverse)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)
+#### β = 0 [(Squelched Grid Open Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B0_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B0_dot_grid_square_rgb_gradient.png)
@@ -84,7 +84,7 @@
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B0.75_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B0.75_dot_grid_square_rgb_gradient.png)
 
-#### β = 1 [(Elliptical Grid Mapping Inverse)](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
+#### β = 1 [(Elliptical Grid Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B1_square_grid_circle_thick_checkerboard.png)
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B1_mapping_dot_grid_square_rgb_gradient.png)
