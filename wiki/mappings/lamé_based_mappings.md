@@ -1,4 +1,4 @@
-[<- Back](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
+[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
 
 Notes: 
 - Due to incompatibility with my diagram generation methods these mappings currently do not have diagrams. This page may be completed in the future.

@@ -1,4 +1,4 @@
-[<- Back](https://raw.githubusercontent.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
+[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
 
 # Simple Stretch
 
