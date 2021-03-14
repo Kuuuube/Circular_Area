@@ -10,6 +10,7 @@
 ## Formula
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/approximate_equal_area_2_vertical_formula.png)
 
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/approximate_equal_area_2_t_variable.png)
 
 
 
@@ -23,7 +24,5 @@ Note: This mapping is unusable to such a degree that it has been excluded from t
 
 ## Formula
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/approximate_equal_area_2_vertical_inverse_formula.png)
-
-![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/approximate_equal_area_2_t_variable.png)
 
 Note: All inverse mappings are scaled up by ≈1.4142 to connect the points on the circle closest to the corners of the square to the corners of the square.

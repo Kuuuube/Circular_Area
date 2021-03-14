@@ -87,7 +87,7 @@
 #### β = 1 [(Tapered4 Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/tapered4_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_power3_blend_B1_square_grid_circle_thick_checkerboard.png)
-![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_power3_blend_B1_mapping_dot_grid_square_rgb_gradient.png)
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_power3_blend_B1_dot_grid_square_rgb_gradient.png)
 
 ## Formula
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/power3_blend_inverse_formula.png)

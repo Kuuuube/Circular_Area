@@ -87,7 +87,7 @@
 #### β = 1 [(Elliptical Grid Mapping Inverse)](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B1_square_grid_circle_thick_checkerboard.png)
-![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B1_mapping_dot_grid_square_rgb_gradient.png)
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings/circle_blended_e-grid_mapping_B1_dot_grid_square_rgb_gradient.png)
 
 ## Formula
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/blended_e-grid_mapping_inverse_formula.png)
