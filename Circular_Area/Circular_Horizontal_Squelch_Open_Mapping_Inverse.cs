@@ -1,12 +1,13 @@
 ﻿using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.Tablet;
+using OpenTabletDriver.Plugin.Output;
 using System;
 using System.Numerics;
 
 namespace Circular_Area
 {
     [PluginName("Circular Horizontal Squelch Open Mapping Inverse")]
-    public class Circular_Horizontal_Squelch_Open_Mapping_Inverse : CircularBase, IFilter
+    public class Circular_Horizontal_Squelch_Open_Mapping_Inverse : CircularBase, IPositionedPipelineElement<IDeviceReport>
     {
         public static Vector2 SquareToCircle(Vector2 input)
         {
@@ -37,8 +38,22 @@ namespace Circular_Area
                 );
             }
         }
+
+        public event Action<IDeviceReport> Emit;
+
+        public void Consume(IDeviceReport value)
+        {
+            if (value is ITabletReport report)
+            {
+                report.Position = Filter(report.Position);
+                value = report;
+            }
+
+            Emit?.Invoke(value);
+        }
+
         public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
 
-        public FilterStage FilterStage => FilterStage.PostTranspose;
+        public PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }

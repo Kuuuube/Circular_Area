@@ -1,12 +1,13 @@
 ﻿using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.Tablet;
+using OpenTabletDriver.Plugin.Output;
 using System;
 using System.Numerics;
 
 namespace Circular_Area
 {
     [PluginName("Circular Simple Stretch")]
-    public class Circular_Simple_Stretch : CircularBase, IFilter
+    public class Circular_Simple_Stretch : CircularBase, IPositionedPipelineElement<IDeviceReport>
     {
         public static Vector2 CircleToSquare(Vector2 input)
         {
@@ -68,8 +69,22 @@ namespace Circular_Area
                 }
             }
         }
+
+        public event Action<IDeviceReport> Emit;
+
+        public void Consume(IDeviceReport value)
+        {
+            if (value is ITabletReport report)
+            {
+                report.Position = Filter(report.Position);
+                value = report;
+            }
+
+            Emit?.Invoke(value);
+        }
+
         public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
 
-        public FilterStage FilterStage => FilterStage.PostTranspose;
+        public PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }
