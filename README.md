@@ -1,5 +1,7 @@
 # Circular Area Plugin for [OpenTabletDriver](https://github.com/OpenTabletDriver/OpenTabletDriver)
 
+Circular mapping for tablet areas.
+
 ## Quick start guide:
 - Enable one of the mapping types and apply the setting
 
