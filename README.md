@@ -1,4 +1,4 @@
-# Circular Area Plugin for [OpenTabletDriver](https://github.com/OpenTabletDriver/OpenTabletDriver)
+# Circular Area Plugin for [OpenTabletDriver](https://github.com/OpenTabletDriver/OpenTabletDriver) [![Total Download Count](https://img.shields.io/github/downloads/Kuuuube/Circular_Area/total.svg)](https://github.com/Kuuuube/Circular_Area/releases/latest)
 
 Circular mapping for tablet areas.
 
