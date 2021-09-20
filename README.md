@@ -2,16 +2,22 @@
 
 Circular mapping for tablet areas.
 
-## Quick start guide:
-- Enable one of the mapping types and apply the setting
+<br>
 
-#### Tips: 
-- It is recommended to start with either FG-Squircular or Elliptical Grid and branch out from there
-- Enabling more than one mapping can cause issues. Instead you should use the blended or biased mappings to mix between different types.
+## Quick start guide:
+- Enable one of the mapping types in the filters tab and apply the setting.
 
 <br>
 
-## [Explanations and Visualizations of the mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
+## [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md)
+
+<br>
+
+## [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md)
+
+<br>
+
+## [Visualizations and Formulas of the Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
 
 
 <br>
