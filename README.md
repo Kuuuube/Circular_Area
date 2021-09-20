@@ -7,11 +7,11 @@ Circular mapping for tablet areas.
 
 <br>
 
-## [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md)
+## [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md#faq)
 
-## [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md)
+## [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area)
 
-## [Visualizations and Formulas of the Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
+## [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index)
 
 <br>
 

@@ -6,7 +6,7 @@
 
 [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping), [FG-Squircular Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping-inverse), [Elliptical Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping), and [Elliptical Grid Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping-inverse) are recommended for anyone new to Circular Area.
 
-For more information on mappings see: [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md) and [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md).
+For more information on mappings see: [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area) and [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index).
 
 <br>
 
@@ -52,7 +52,7 @@ No. As surprising as it may seem, you can get almost entirely accustomed to Circ
 
 No. Currently, there are no mappings like this.
 
-If you would like to help on the mathematical side of adding this feature please contact me on discord: Kuuube#6878. Serious inquiries only.
+If you would like to help on the mathematical side of adding this feature please contact me on discord: `Kuuube#6878`. Serious inquiries only.
 
 <br>
 

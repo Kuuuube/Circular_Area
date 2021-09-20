@@ -123,7 +123,7 @@ These mappings are based off and will be compared to their respective primary ma
 <div>
 
 - **Sham Quartic Mapping**
-    - Forward mapping: This mapping is bugged. If you know how to solve a quartic equation in code and want to help add this please contact me on discord: Kuuube#6878. Serious inquiries only.
+    - Forward mapping: This mapping is bugged. If you know how to solve a quartic equation in code and want to help add this please contact me on discord: `Kuuube#6878`. Serious inquiries only.
     - Inverse mapping: The middle of the area is faster than the sides and corners. Excluding the axes, the sides and corners pull inwards less. Also excluding the axes, the corners are further away relative to the sides.
 
 <div>
