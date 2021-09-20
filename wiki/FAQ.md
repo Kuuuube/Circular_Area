@@ -73,11 +73,3 @@ However, some mappings cannot be mixed between because they are too far unrelate
 ### 10. If I spin my pen in a circular motion will the cursor spin in a rectangular motion?
 
 Usually, no. However, it is possible to do this with [Simple Stretch-based mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#simple-stretch).
-
-<br>
-
-### 11. Is Circular Area good for drawing or writing?
-
-Probably not. There are always people who are outliers but it will go against years of muscle memory. Drawing or writing while correcting for distortion can be very hard. When drawing or writing it is expected for physical movements to match what is happening on the monitor. Circular Area breaks this connection.
-
-This is not an issue in osu! because there are no set movements, osu! aim is not memorized in the same ways writing characters or drawing specific lines are, and there does not need to be a strong connection between physical movement and cursor movement.
