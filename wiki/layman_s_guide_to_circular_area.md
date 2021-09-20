@@ -178,6 +178,8 @@ These mappings mix between primary and secondary mappings. Changing the value of
 
 Below are `β` values where tertiary mappings match primary or secondary mappings.
 
+### FG-Squircular Mapping Based:
+
 - **Power2 Blend**
     - 2-Squircular Mapping: β = 0
     - FG-Squircular Mapping: β = 0.5
@@ -191,6 +193,8 @@ Below are `β` values where tertiary mappings match primary or secondary mapping
     - Tapered4 Mapping: β = 1
 
 <div>
+
+### Elliptical Grid Mapping Based:
 
 - **Blended E-Grid Mapping**
     - Squelched Grid Open Mapping: β = 0
