@@ -1,4 +1,4 @@
-[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
+[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index)
 
 # Approximate Equal Area 2 Horizontal
 
