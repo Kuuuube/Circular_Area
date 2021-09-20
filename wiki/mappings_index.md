@@ -42,7 +42,7 @@ A list of all the mapping pages in Circular Area. Mapping pages include visualiz
 
 - [Concentric Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/concentric_mapping.md)
 - [Approximate Equal Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area.md)
-- [Approximate Equal Area 2 Horizontal](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area_2_horizontal.md)
 - [Approximate Equal Area 2 Vertical](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area_2_vertical.md)
+- [Approximate Equal Area 2 Horizontal](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area_2_horizontal.md)
 
 ## [Lamé-based Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/lamé_based_mappings.md)
