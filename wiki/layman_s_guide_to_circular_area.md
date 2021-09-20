@@ -96,7 +96,7 @@ Note: These mappings are not direct counterparts of each other. Lamé-based Mapp
 
 These mappings are based off and will be compared to their respective primary mappings.
 
-### FG-Squircular Mapping Based:
+### FG-Squircular Mapping based:
 
 - **2-Squircular Mapping and 3-Squircular Mapping**
     - Forward mappings: Far corners pull the cursor more. The middle and sides distort less. 3-Squircular Mapping does this slightly more than 2-Squircular Mapping.
@@ -128,7 +128,7 @@ These mappings are based off and will be compared to their respective primary ma
 
 <div>
 
-### Elliptical Grid Mapping Based:
+### Elliptical Grid Mapping based:
 
  - **Squelched Grid Open Mapping**
     - Forward mapping: Corner to corner diagonals pull the cursor more from all positions. This effect is strengthened closer to the sides and corners.
@@ -148,7 +148,7 @@ These mappings are based off and will be compared to their respective primary ma
 
 <div>
 
-### Simple Stretch Based:
+### Simple Stretch based:
 
 - **Concentric Mapping**
     - Forward mapping: On the X-axis input will be offset towards the corner to corner diagonals more. On the Y-axis input will be offset towards the axes more.
@@ -178,7 +178,7 @@ These mappings mix between primary and secondary mappings. Changing the value of
 
 Below are `β` values where tertiary mappings match primary or secondary mappings.
 
-### FG-Squircular Mapping Based:
+### FG-Squircular Mapping based:
 
 - **Power2 Blend**
     - 2-Squircular Mapping: β = 0
@@ -194,7 +194,7 @@ Below are `β` values where tertiary mappings match primary or secondary mapping
 
 <div>
 
-### Elliptical Grid Mapping Based:
+### Elliptical Grid Mapping based:
 
 - **Blended E-Grid Mapping**
     - Squelched Grid Open Mapping: β = 0
@@ -209,12 +209,12 @@ Below are `β` values where tertiary mappings match primary or secondary mapping
 
 <div>
 
-- **Biased Squelch Horizontal**
-    - Horizontal Squelch Open Mapping: β = 0
+- **Biased Squelch Vertical**
+    - Vertical Squelch Open Mapping: β = 0
     - Squelched Grid Open Mapping: β = 1
 
 <div>
 
-- **Biased Squelch Vertical**
-    - Vertical Squelch Open Mapping: β = 0
+- **Biased Squelch Horizontal**
+    - Horizontal Squelch Open Mapping: β = 0
     - Squelched Grid Open Mapping: β = 1

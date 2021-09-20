@@ -33,8 +33,8 @@ A list of all the mapping pages in Circular Area. Mapping pages include visualiz
 
 - [Blended E-Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/blended_e_grid_mapping.md)
 - [Biased Squelch Blended Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/biased_squelch_blended_mapping.md)
-- [Biased Squelch Horizontal](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/biased_squelch_horizontal.md)
 - [Biased Squelch Vertical](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/biased_squelch_vertical.md)
+- [Biased Squelch Horizontal](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/biased_squelch_horizontal.md)
 
 ## [Simple Stretch](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)
 
