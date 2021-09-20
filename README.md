@@ -2,20 +2,12 @@
 
 Circular mapping for tablet areas.
 
-<br>
-
 ## Quick start guide:
 - Enable one of the mapping types in the filters tab and apply the setting.
 
-<br>
-
 ## [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md)
 
-<br>
-
 ## [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md)
-
-<br>
 
 ## [Visualizations and Formulas of the Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md)
 

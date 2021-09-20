@@ -80,18 +80,14 @@ Note: These mappings are not direct counterparts of each other. Lamé-based Mapp
 
 - Forward mapping: 
     - When moving straight outwards from the center, the input will curve towards the corners to an extreme extent.
-
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes far from the center due to the extreme distortion.
-
     - Movements get faster non-linearly towards the corners and sides of the area.
 
 <div>
 
 - Inverse mapping:
     - When moving straight outwards from the center, the input will always stay straight. But, when offset towards any corner input will bubble outwards towards that corner.
-
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
-
     - Movements get slower non-linearly towards the corners and sides of the area.
 
 <br>
@@ -104,35 +100,30 @@ These mappings are based off and will be compared to their respective primary ma
 
 - **2-Squircular Mapping and 3-Squircular Mapping**
     - Forward mappings: Far corners pull the cursor more. The middle and sides distort less. 3-Squircular Mapping does this slightly more than 2-Squircular Mapping.
-
     - Inverse mappings: Excluding the axes, the sides and corners pull inwards less. Also excluding the axes, the corners are further away relative to the sides. 3-Squircular Mapping does this slightly more than 2-Squircular Mapping.
 
 <div>
 
 - **Cornerific Tapered2 Mapping and Tapered4 Mapping**
     - Forward mappings: Far corners pull the cursor less. The middle and sides distort more. Cornerific Tapered2 Mapping does this slightly more than Tapered4 Mapping.
-    
     - Inverse mappings: Excluding the axes, the sides and corners pull inwards more. Also excluding the axes, the corners are closer relative to the sides. Cornerific Tapered2 Mapping does this slightly more than Tapered4 Mapping.
     
 <div>
 
 - **Non-Axial 2-Pinch Mapping**
     - Forward mapping: The middle of the area is a lot faster than the sides and corners. Far corners pull the cursor a lot less. The sides distort a lot less. On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
-    
     - Inverse mapping: The middle of the area is a lot slower than the sides and corners. Excluding the axes, the sides and corners pull inwards a lot less.
     
 <div>
 
 - **Non-Axial ½-Punch Mapping**
     - Forward mapping: The middle of the area is a lot slower than the sides and corners. Far corners pull the cursor a lot more. The sides distort a lot more.
-    
     - Inverse mapping: The middle of the area is a lot faster than the sides and corners. Excluding the axes, the sides and corners pull inwards a lot more. On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
 
 <div>
 
 - **Sham Quartic Mapping**
     - Forward mapping: This mapping is bugged. If you know how to solve a quartic equation in code and want to help add this please contact me on discord: Kuuube#6878. Serious inquiries only.
-    
     - Inverse mapping: The middle of the area is faster than the sides and corners. Excluding the axes, the sides and corners pull inwards less. Also excluding the axes, the corners are further away relative to the sides.
 
 <div>
@@ -141,21 +132,18 @@ These mappings are based off and will be compared to their respective primary ma
 
  - **Squelched Grid Open Mapping**
     - Forward mapping: Corner to corner diagonals pull the cursor more from all positions. This effect is strengthened closer to the sides and corners.
-    
     - Inverse mapping: Axes pull the cursor more from all positions. This effect is strengthened closer to the sides and corners.
     
 <div>
 
 - **Vertical Squelch Open Mapping**
     - Forward mappings: Corner to corner diagonals pull the cursor more from the X-axis and less from the Y-axis. This effect is strengthened closer to the sides and corners.
-    
     - Inverse mappings: Axes pull the cursor more from the X-axis and less from the Y-axis. This effect is strengthened closer to the sides and corners.
 
 <div>
 
 - **Horizontal Squelch Open Mapping**
     - Forward mappings: Corner to corner diagonals pull the cursor more from the Y-axis and less from the X-axis. This effect is strengthened closer to the sides and corners.
-    
     - Inverse mappings: Axes pull the cursor more from the Y-axis and less from the X-axis. This effect is strengthened closer to the sides and corners.
 
 <div>
@@ -164,14 +152,12 @@ These mappings are based off and will be compared to their respective primary ma
 
 - **Concentric Mapping**
     - Forward mapping: On the X-axis input will be offset towards the corner to corner diagonals more. On the Y-axis input will be offset towards the axes more.
-    
     - Inverse mapping: On the Y-axis input will be offset towards the corner to corner diagonals more. On the X-axis input will be offset towards the axes more. Excluding the axes, the corners are further away relative to the sides.
     
 <div>
 
 - **Approximate Equal Area**
     - Forward mapping: On the Y-axis input will be offset towards the corner to corner diagonals more. On the X-axis input will be offset towards the axes more.
-    
     - Inverse mapping: On the X-axis input will be offset towards the corner to corner diagonals more. On the Y-axis input will be offset towards the axes more. Excluding the axes, the corners are further away relative to the sides.
     
 <div>
