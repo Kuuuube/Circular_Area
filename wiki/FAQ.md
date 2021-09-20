@@ -6,7 +6,7 @@
 
 [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping), [FG-Squircular Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping-inverse), [Elliptical Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping), and [Elliptical Grid Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping-inverse) are recommended for anyone new to Circular Area.
 
-For more information on mappings see: [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area) and [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md).
+For more information on mappings see: [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md) and [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md).
 
 <br>
 
@@ -18,7 +18,7 @@ Yes. Circular Area transforms your area into one of two area shapes depending on
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/area_visualizations/half-face_superellipse_transformation_examples.png)
 
-For more information on mapping types see: [Forward vs Inverse Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area#forward-vs-inverse-mappings)
+For more information on mapping types see: [Forward vs Inverse Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md.md#forward-vs-inverse-mappings)
 
 <br>
 
@@ -30,7 +30,7 @@ No. Circular Area changes your tablet area without changing the GUI. Currently, 
 
 ### 4. What benefits does a circular area have over a rectangular area?
 
-See: [Why you should use circular area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area#why-you-should-use-circular-area)
+See: [Why you should use circular area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#why-you-should-use-circular-area)
 
 <br>
 
@@ -64,7 +64,7 @@ Yes and no. There will not be any errors if you enable multiple mappings. But, t
 
 ### 9. Can I mix between two different mappings? I like different parts of two mappings is it possible to combine them?
 
-Yes. Use tertiary mappings. See: [Tertiary Mapping Styles](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area#tertiary-mapping-styles)
+Yes. Use tertiary mappings. See: [Tertiary Mapping Styles](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#tertiary-mapping-styles)
 
 However, some mappings cannot be mixed between because they are too far unrelated.
 

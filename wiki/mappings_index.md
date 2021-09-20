@@ -2,7 +2,7 @@
 
 # Mappings Index
 
-A list of all the mapping pages in Circular Area. Mapping pages include visualizations and formulas for each mapping.
+A list of all the mapping pages in Circular Area. Mapping pages include visualizations and formulas for each mapping and its inverse.
 
 ## [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)
 
