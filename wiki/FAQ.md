@@ -18,7 +18,7 @@ Yes. Circular Area transforms your area into one of two area shapes depending on
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/area_visualizations/half-face_superellipse_transformation_examples.png)
 
-For more information on mapping types see: [Forward vs Inverse Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md.md#forward-vs-inverse-mappings)
+For more information on mapping types see: [Forward vs Inverse Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#forward-vs-inverse-mappings)
 
 <br>
 
