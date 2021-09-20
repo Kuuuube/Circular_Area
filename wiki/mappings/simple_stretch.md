@@ -22,4 +22,4 @@
 ## Formula
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/formulas/simple_stretch_inverse_formula.png)
 
-Note: All inverse mappings are scaled up by ≈1.4142 to connect the points on the circle closest to the corners of the square to the corners of the square.
+Note: Inverse mapping outputs are upscaled by ≈1.4142 to fill the entire monitor area. The inverse mapping formula shown here excludes this.
