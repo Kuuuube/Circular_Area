@@ -46,6 +46,14 @@ For more information on how forward and inverse mappings work see below:
 
 <br>
 
+## [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index)
+
+The [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index) contains a list of all the mapping pages in Circular Area. Mapping pages include visualizations and formulas for each mapping and its inverse.
+
+Below are explanations of these mappings:
+
+<br>
+
 ## Primary Mapping Styles
 
 These are the mappings all other mappings are based off. This applies to both forward and inverse mappings unless explicitly stated otherwise.
