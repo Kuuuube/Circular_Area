@@ -12,7 +12,7 @@ For more information on mappings see: [Layman's Guide to Circular Area](https://
 
 ### 2. Does it really make my area circular?
 
-Yes. Circular Area transforms your area into one of two area shapes depending on the mapping type:
+Yes. Circular Area transforms your tablet area into either an ellipse or a half-face superellipse depending on the mapping type. See below:
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/area_visualizations/ellipse_transformation_examples.png)
 
