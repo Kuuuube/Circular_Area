@@ -24,7 +24,7 @@ For more information on mapping types see: [Forward vs Inverse Mappings](https:/
 
 ### 3. OpenTabletDriver doesn't show my area as an ellipse or half-face superellipse. Is the plugin broken?
 
-No. Circular Area changes your tablet area without changing the GUI. Currently, OTD does not allow plugins to change GUI. If OTD makes this option available in the future, Circular Area will make use of it.
+No. Circular Area transforms your tablet area in the backend only. There will be no visual changes within OTD's GUI/UX. Currently, OTD does not allow plugins to change GUI. If OTD makes this option available in the future, Circular Area will make use of it.
 
 <br>
 
@@ -38,7 +38,7 @@ See: [Why you should use circular area](https://github.com/Kuuuube/Circular_Area
 
 The distortion is by design and without this distortion, there would be no benefits to using a circular area.
 
-It may look hard to use but it's easier than it appears. See below:
+It may look hard to use but, it's easier than it appears. See below:
 
 <br>
 
