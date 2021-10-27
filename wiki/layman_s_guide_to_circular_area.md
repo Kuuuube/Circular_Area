@@ -2,6 +2,8 @@
 
 # Layman's Guide to Circular Area
 
+Please read the [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md#faq) before this guide.
+
 This guide simplifies various concepts down to how they effectively work from the perspective of the user. 
 
 Many parts of Circular Area work in more complex ways but are simplified to minimize confusion.
