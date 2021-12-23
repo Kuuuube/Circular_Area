@@ -1,21 +1,26 @@
-﻿using OpenTabletDriver.Plugin;
+﻿using OpenTabletDriver;
+using OpenTabletDriver.Plugin;
+using OpenTabletDriver.Plugin.Attributes;
+using OpenTabletDriver.Plugin.DependencyInjection;
 using OpenTabletDriver.Plugin.Output;
+using OpenTabletDriver.Plugin.Tablet;
 using System;
+using System.Linq;
 using System.Numerics;
 
 namespace Circular_Area
 {
-    public class CircularBase
+    public abstract class CircularBase : IPositionedPipelineElement<IDeviceReport>
     {
-        protected static Vector2 ToUnit(Vector2 input)
+        protected Vector2 ToUnit(Vector2 input)
         {
-            if (Info.Driver.OutputMode is AbsoluteOutputMode absoluteOutputMode)
+            if (outputMode is not null)
             {
-                var area = absoluteOutputMode.Input;
+                var area = outputMode.Input;
                 var size = new Vector2(area.Width, area.Height);
                 var half = size / 2;
-                var display = (Info.Driver.OutputMode as AbsoluteOutputMode)?.Output;
-                var offset = (Vector2)((Info.Driver.OutputMode as AbsoluteOutputMode)?.Output?.Position);
+                var display = outputMode?.Output;
+                var offset = (Vector2)(outputMode?.Output?.Position);
                 var shiftoffX = offset.X - (display.Width / 2);
                 var shiftoffY = offset.Y - (display.Height / 2);
                 var pxpermmw = display.Width / area.Width;
@@ -27,19 +32,20 @@ namespace Circular_Area
             }
             else
             {
+                tryResolveOutputMode();
                 return default;
             }
         }
 
-        protected static Vector2 FromUnit(Vector2 input)
+        protected Vector2 FromUnit(Vector2 input)
         {
-            if (Info.Driver.OutputMode is AbsoluteOutputMode absoluteOutputMode)
+            if (outputMode is not null)
             {
-                var area = absoluteOutputMode.Input;
+                var area = outputMode.Input;
                 var size = new Vector2(area.Width, area.Height);
                 var half = size / 2;
-                var display = (Info.Driver.OutputMode as AbsoluteOutputMode)?.Output;
-                var offset = (Vector2)((Info.Driver.OutputMode as AbsoluteOutputMode)?.Output?.Position);
+                var display = outputMode?.Output;
+                var offset = (Vector2)(outputMode?.Output?.Position);
                 var shiftoffX = offset.X - (display.Width / 2);
                 var shiftoffY = offset.Y - (display.Height / 2);
                 var pxpermmw = display.Width / area.Width;
@@ -70,5 +76,26 @@ namespace Circular_Area
             (float)(input.Y * Math.Sqrt(8) / 2)
             );
         }
+
+
+        [Resolved]
+        public IDriver driver;
+        private AbsoluteOutputMode outputMode;
+        private void tryResolveOutputMode()
+        {
+            if (driver is Driver drv)
+            {
+                IOutputMode output = drv.InputDevices
+                    .Where(dev => dev?.OutputMode?.Elements?.Contains(this) ?? false)
+                    .Select(dev => dev?.OutputMode).FirstOrDefault();
+
+                if (output is AbsoluteOutputMode absOutput)
+                    outputMode = absOutput;
+            }
+        }
+
+        public abstract event Action<IDeviceReport> Emit;
+        public abstract void Consume(IDeviceReport value);
+        public abstract PipelinePosition Position { get; }
     }
 }

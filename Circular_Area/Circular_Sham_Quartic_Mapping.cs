@@ -8,7 +8,7 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Sham Quartic Mapping")]
-    public class Circular_Sham_Quartic_Mapping : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Sham_Quartic_Mapping : CircularBase
     {
         public static Vector2 CircleToSquare(Vector2 input)
         {
@@ -75,9 +75,9 @@ namespace Circular_Area
 
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
             if (value is ITabletReport report)
             {
@@ -90,6 +90,6 @@ namespace Circular_Area
 
         public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }
