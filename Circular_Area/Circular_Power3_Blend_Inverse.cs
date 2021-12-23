@@ -7,7 +7,7 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Power3 Blend Inverse")]
-    public class Circular_Power3_Blend_Inverse : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Power3_Blend_Inverse : CircularBase
     {
         public Vector2 SquareToCircle(Vector2 input)
         {
@@ -74,9 +74,9 @@ namespace Circular_Area
             }
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
             if (value is ITabletReport report)
             {
@@ -89,7 +89,7 @@ namespace Circular_Area
 
         public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
 
         [Property("β")]
         public float B_raw { set; get; }

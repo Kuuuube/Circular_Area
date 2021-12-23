@@ -7,7 +7,7 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Biased Squelch Blended Mapping Inverse")]
-    public class Circular_Biased_Squelch_Blended_Mapping_Inverse : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Biased_Squelch_Blended_Mapping_Inverse : CircularBase
     {
         public Vector2 SquareToCircle(Vector2 input)
         {
@@ -66,9 +66,9 @@ namespace Circular_Area
             }
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
             if (value is ITabletReport report)
             {
@@ -81,7 +81,7 @@ namespace Circular_Area
 
         public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
 
         [Property("β")]
         public float B_raw { set; get; }
