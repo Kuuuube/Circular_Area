@@ -1,0 +1,6 @@
+*bin/
+*obj/
+*bld/
+*build/
+.vscode/
+.vs/
