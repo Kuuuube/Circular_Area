@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circluar Lamé-based Mapping")]
+    [PluginName("Circular Lamé-based Mapping")]
     public class Circular_Lamé_based_Mapping : CircularBase
     {
         public static Vector2 CircleToSquare(Vector2 input)
