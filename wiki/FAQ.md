@@ -70,7 +70,7 @@ However, some mappings cannot be mixed between because they are too far unrelate
 
 No. Currently, there are no mappings like this.
 
-If you would like to help on the mathematical side of adding this feature please contact me on discord: `Kuuube#6878`. Serious inquiries only.
+If you would like to help on the mathematical side of adding this feature please contact me on [discord](https://discord.gg/T5vEAh4ruF) or submit a PR.
 
 <br>
 
