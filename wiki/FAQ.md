@@ -77,3 +77,9 @@ If you would like to help on the mathematical side of adding this feature please
 ### 10. If I spin my pen in a circular motion will the cursor spin in a rectangular motion?
 
 Usually, no. However, it is possible to do this with [Simple Stretch-based mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#simple-stretch).
+
+<br>
+
+### 11. When I disable `Clamp input outside area` in OTD, it stays clamped when using Circular Area. Is there something wrong with the plugin?
+
+No, Circular Area applies its own clamping to input due to constraints in the mapping calculations. The cursor will stay locked inside the set monitor area while Circular Area is active. You should increase your monitor area if you need to reach beyond your current monitor area.
