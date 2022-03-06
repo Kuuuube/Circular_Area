@@ -78,7 +78,7 @@ These are the mappings all other mappings are based off. This applies to both fo
 
 ### [Simple Stretch:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)
 
-- Moving straight outwards from the center the input will always stay straight.
+- Moving straight outwards from the center, the input will always stay straight.
 
 - Moving around any part of the area and crossing any line of symmetry will make input change direction often unexpectedly to the user. The lines of symmetry are the X and Y axis as well as the corner to corner diagonals.
 
