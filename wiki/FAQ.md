@@ -22,9 +22,9 @@ See: [Why you should use circular area](https://github.com/Kuuuube/Circular_Area
 
 ### 3. Circular Area has lots of distortion. Wouldn't that make it harder to use?
 
-The distortion is by design and without this distortion, there would be no benefits to using a circular area.
+The distortion is by design, and without this distortion there would be no benefits to using a circular area.
 
-It may look hard to use but, it's easier than it appears. See below:
+It may look hard to use, but it's easier than it appears. See below:
 
 <br>
 

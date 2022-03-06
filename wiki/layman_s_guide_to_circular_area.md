@@ -2,7 +2,7 @@
 
 # Layman's Guide to Circular Area
 
-For basic setup and simple questions read the [Quick Start Guide](https://github.com/Kuuuube/Circular_Area/blob/main/README.md#quick-start-guide) or [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md#faq) instead of this guide.
+For basic setup and simple questions, read the [Quick Start Guide](https://github.com/Kuuuube/Circular_Area/blob/main/README.md#quick-start-guide) or [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md#faq) instead of this guide.
 
 This guide simplifies various concepts down to how they effectively work from the perspective of the user. 
 
@@ -14,9 +14,9 @@ Rectangles are unnatural to the wrists and fingers. The natural full range of mo
 
 Forward mappings match this natural motion by making the tablet area an ellipse. This creates a feeling of evenness when reaching for any point on the tablet area and removes strain caused by reaching for corners on a rectangular area.
 
-Inverse mappings make the tablet area a half-face superellipse. These are useful for an entirely different reason than forward mappings. When gripping a tablet pen it should be the most stable to move around the center of the tablet area. This stability decreases when reaching for the corners of the tablet area. Inverse mappings compensate for this by effectively increasing the tablet area when moving to the corners.
+Inverse mappings make the tablet area a half-face superellipse. These are useful for an entirely different reason than forward mappings. When gripping a tablet pen, it should be the most stable to move around the center of the tablet area. This stability decreases when reaching for the corners of the tablet area. Inverse mappings compensate for this by effectively increasing the tablet area when moving to the corners.
 
-For more information on how forward and inverse mappings work see below:
+For more information on how forward and inverse mappings work, see below:
 
 <br>
 
@@ -26,7 +26,7 @@ For more information on how forward and inverse mappings work see below:
 
 - Forward mappings are any mappings that do not include "inverse" in their name. 
 
-- These mappings make the tablet area an ellipse, transform its proportions based on the tablet area then map it to the rectangular monitor area.
+- These mappings make the tablet area an ellipse, transform its proportions based on the tablet area, then map it to the rectangular monitor area.
 
 - Forward mappings will decrease the physical distance required to move from one corner to another while keeping the side to side distance the same.
 
@@ -38,9 +38,9 @@ For more information on how forward and inverse mappings work see below:
 
 - Inverse mappings are any mappings that include "inverse" in their name.
 
-- These mappings make the tablet area a half-face superellipse, transform its proportions based on the tablet area then map it to the rectangular monitor area.
+- These mappings make the tablet area a half-face superellipse, transform its proportions based on the tablet area, then map it to the rectangular monitor area.
 
-- Inverse mappings will decrease the physical distance required to move from one side to another while keeping the corner to corner distance the same.
+- Inverse mappings will decrease the physical distance required to move from one side to another while keeping the corner-to-corner distance the same.
 
 - Inverse mapping area shape examples:
 
@@ -58,21 +58,21 @@ Below are explanations of these mappings:
 
 ## Primary Mapping Styles
 
-These are the mappings all other mappings are based off. This applies to both forward and inverse mappings unless explicitly stated otherwise.
+These are the mappings all other mappings are based off. This applies to both forward and inverse mappings, unless explicitly stated otherwise.
 
 ### [FG-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)
 
 - When moving straight outwards from the center, the input will always stay straight.
 
-- Movement around the center of the area will feel almost the same as a rectangular area and more distorted towards the edges.
+- Movement around the center of the area will feel almost the same as a rectangular area, and more distorted towards the edges.
 
 - Secondary mapping types allow for lots of customizability in how the distortion is handled. Different parts of areas can have more or less distortion depending on the mapping.
 
 ### [Elliptical Grid Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)
 
-- When moving straight outwards from the center, the input will curve towards the corner to corner diagonals or the axes depending on whether the mapping is forward or inverse respectively.
+- When moving straight outwards from the center, the input will curve towards the corner-to-corner diagonals or the axes depending on whether the mapping is forward or inverse, respectively.
 
-- Movement around the center of the area will feel almost the same as a rectangular area and more distorted towards the edges.
+- Movement around the center of the area will feel almost the same as a rectangular area, and more distorted towards the edges.
 
 - Secondary mapping types have the option to add more distortion towards the corners or distribute distortion axially. Axial distribution of the distortion stretches either the X or Y axis (Horizontal or Vertical) more than the other axis.
 
@@ -80,7 +80,7 @@ These are the mappings all other mappings are based off. This applies to both fo
 
 - Moving straight outwards from the center, the input will always stay straight.
 
-- Moving around any part of the area and crossing any line of symmetry will make input change direction often unexpectedly to the user. The lines of symmetry are the X and Y axis as well as the corner to corner diagonals.
+- Moving around any part of the area and crossing any line of symmetry will make input change direction, often unexpectedly to the user. The lines of symmetry are the X and Y axis, as well as the corner-to-corner diagonals.
 
 - Secondary mapping types distribute distortion axially in different ways. These mappings will feel very similar to the user. Axial distribution of the distortion stretches either the X or Y axis (Horizontal or Vertical) more than the other axis.
 
@@ -96,7 +96,7 @@ Note: These mappings are not direct counterparts of each other. Lamé-based Mapp
 <div>
 
 - Inverse mapping:
-    - When moving straight outwards from the center, the input will always stay straight. But, when offset towards any corner input will bubble outwards towards that corner.
+    - When moving straight outwards from the center, the input will always stay straight. But, when offset towards any corner, input will bubble outwards towards that corner.
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
     - Movements get slower non-linearly towards the corners and sides of the area.
 
@@ -133,7 +133,7 @@ These mappings are based off and will be compared to their respective primary ma
 <div>
 
 - **[Sham Quartic Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/sham_quartic_mapping.md)**
-    - Forward mapping: This mapping is bugged. If you know how to solve a quartic equation in code and want to help add this please contact me on [discord](https://discord.gg/T5vEAh4ruF) or submit a PR.
+    - Forward mapping: This mapping is bugged. If you know how to solve a quartic equation in code and want to help add this, please contact me on [discord](https://discord.gg/T5vEAh4ruF) or submit a PR.
     - Inverse mapping: The middle of the area is faster than the sides and corners. Excluding the axes, the sides and corners pull inwards less. Also excluding the axes, the corners are further away relative to the sides.
 
 <div>
@@ -141,19 +141,19 @@ These mappings are based off and will be compared to their respective primary ma
 ### [Elliptical Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md) based:
 
  - **[Squelched Grid Open Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)**
-    - Forward mapping: Corner to corner diagonals pull the cursor more from all positions. This effect is strengthened closer to the sides and corners.
+    - Forward mapping: Corner-to-corner diagonals pull the cursor more from all positions. This effect is strengthened closer to the sides and corners.
     - Inverse mapping: Axes pull the cursor more from all positions. This effect is strengthened closer to the sides and corners.
     
 <div>
 
 - **[Vertical Squelch Open Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/vertical_squelch_open_mapping.md)**
-    - Forward mappings: Corner to corner diagonals pull the cursor more from the X-axis and less from the Y-axis. This effect is strengthened closer to the sides and corners.
+    - Forward mappings: Corner-to-corner diagonals pull the cursor more from the X-axis and less from the Y-axis. This effect is strengthened closer to the sides and corners.
     - Inverse mappings: Axes pull the cursor more from the X-axis and less from the Y-axis. This effect is strengthened closer to the sides and corners.
 
 <div>
 
 - **[Horizontal Squelch Open Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/horizontal_squelch_open_mapping.md)**
-    - Forward mappings: Corner to corner diagonals pull the cursor more from the Y-axis and less from the X-axis. This effect is strengthened closer to the sides and corners.
+    - Forward mappings: Corner-to-corner diagonals pull the cursor more from the Y-axis and less from the X-axis. This effect is strengthened closer to the sides and corners.
     - Inverse mappings: Axes pull the cursor more from the Y-axis and less from the X-axis. This effect is strengthened closer to the sides and corners.
 
 <div>
@@ -161,24 +161,24 @@ These mappings are based off and will be compared to their respective primary ma
 ### [Simple Stretch](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md) based:
 
 - **[Concentric Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/concentric_mapping.md)**
-    - Forward mapping: On the X-axis input will be offset towards the corner to corner diagonals more. On the Y-axis input will be offset towards the axes more.
-    - Inverse mapping: On the Y-axis input will be offset towards the corner to corner diagonals more. On the X-axis input will be offset towards the axes more. Excluding the axes, the corners are further away relative to the sides.
+    - Forward mapping: On the X-axis, input will be offset towards the corner-to-corner diagonals more. On the Y-axis, input will be offset towards the axes more.
+    - Inverse mapping: On the Y-axis input will be offset towards the corner-to-corner diagonals more. On the X-axis, input will be offset towards the axes more. Excluding the axes, the corners are further away relative to the sides.
     
 <div>
 
 - **[Approximate Equal Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area.md)**
-    - Forward mapping: On the Y-axis input will be offset towards the corner to corner diagonals more. On the X-axis input will be offset towards the axes more.
-    - Inverse mapping: On the X-axis input will be offset towards the corner to corner diagonals more. On the Y-axis input will be offset towards the axes more. Excluding the axes, the corners are further away relative to the sides.
+    - Forward mapping: On the Y-axis, input will be offset towards the corner-to-corner diagonals more. On the X-axis, input will be offset towards the axes more.
+    - Inverse mapping: On the X-axis, input will be offset towards the corner-to-corner diagonals more. On the Y-axis, input will be offset towards the axes more. Excluding the axes, the corners are further away relative to the sides.
     
 <div>
 
 - **[Approximate Equal Area 2 Vertical](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area_2_vertical.md)**
-    - Forward mapping: On the Y-axis input will be offset towards the corner to corner diagonals more. On the X-axis input will be offset towards the axes more.
+    - Forward mapping: On the Y-axis, input will be offset towards the corner-to-corner diagonals more. On the X-axis, input will be offset towards the axes more.
     
 <div>
 
 - **[Approximate Equal Area 2 Horizontal](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/approximate_equal_area_2_horizontal.md)**
-    - Forward mapping: On the Y-axis input will be offset towards the axes more. On the X-axis input will be offset towards the corner to corner diagonals more.
+    - Forward mapping: On the Y-axis, input will be offset towards the axes more. On the X-axis, input will be offset towards the corner-to-corner diagonals more.
 
 <br>
 
