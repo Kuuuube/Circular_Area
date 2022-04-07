@@ -61,8 +61,8 @@ namespace Circular_Area
         protected static Vector2 Expand(Vector2 input)
         {
             return new Vector2(
-            (float)(input.X * Math.Sqrt(8) / 2),
-            (float)(input.Y * Math.Sqrt(8) / 2)
+            (float)(input.X * Math.Sqrt(2)), //input.X * Math.Sqrt(8) / 2 simplifies to input.X * Math.Sqrt(2)
+            (float)(input.Y * Math.Sqrt(2))
             );
         }
 
