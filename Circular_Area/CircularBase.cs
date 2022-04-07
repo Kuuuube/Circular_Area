@@ -1,6 +1,5 @@
 ﻿using OpenTabletDriver;
 using OpenTabletDriver.Plugin;
-using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.DependencyInjection;
 using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
@@ -16,18 +15,13 @@ namespace Circular_Area
         {
             if (outputMode is not null)
             {
-                var area = outputMode.Input;
-                var size = new Vector2(area.Width, area.Height);
-                var half = size / 2;
                 var display = outputMode?.Output;
                 var offset = (Vector2)(outputMode?.Output?.Position);
                 var shiftoffX = offset.X - (display.Width / 2);
                 var shiftoffY = offset.Y - (display.Height / 2);
-                var pxpermmw = display.Width / area.Width;
-                var pxpermmh = display.Height / area.Height;
                 return new Vector2(
-                    ((input.X - shiftoffX) / pxpermmw - half.X) / half.X,
-                    ((input.Y - shiftoffY) / pxpermmh - half.Y) / half.Y
+                    (input.X - shiftoffX) / display.Width * 2 - 1,
+                    (input.Y - shiftoffY) / display.Height * 2 - 1
                     );
             }
             else
@@ -41,18 +35,13 @@ namespace Circular_Area
         {
             if (outputMode is not null)
             {
-                var area = outputMode.Input;
-                var size = new Vector2(area.Width, area.Height);
-                var half = size / 2;
                 var display = outputMode?.Output;
                 var offset = (Vector2)(outputMode?.Output?.Position);
                 var shiftoffX = offset.X - (display.Width / 2);
                 var shiftoffY = offset.Y - (display.Height / 2);
-                var pxpermmw = display.Width / area.Width;
-                var pxpermmh = display.Height / area.Height;
                 return new Vector2(
-                    ((input.X * half.X) + half.X) * pxpermmw + shiftoffX,
-                    ((input.Y * half.Y) + half.Y) * pxpermmh + shiftoffY
+                    (input.X + 1) / 2 * display.Width + shiftoffX,
+                    (input.Y + 1) / 2 * display.Height + shiftoffY
                 );
             }
             else
