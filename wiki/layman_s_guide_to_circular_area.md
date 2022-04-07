@@ -265,26 +265,26 @@ The below diagrams show the shape of the tablet area with various mappings appli
 
 ### Inverse Mappings
 
-**[FG-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)**
+**[FG-Squircular Mapping Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/fg_squircular_mapping_inverse_x3.png)
 
-**[3-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/3_squircular_mapping.md)**
+**[3-Squircular Mapping Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/3_squircular_mapping.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/3_squircular_mapping_inverse_x3.png)
 
-**[Cornerific Tapered2 Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/cornerific_tapered2_mapping.md)**
+**[Cornerific Tapered2 Mapping Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/cornerific_tapered2_mapping.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/cornerific_tapered2_mapping_inverse_x3.png)
 
-**[Elliptical Grid Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)**
+**[Elliptical Grid Mapping Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/elliptical_grid_mapping_inverse_x3.png)
 
-**[Squelched Grid Open Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)**
+**[Squelched Grid Open Mapping Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/squelched_grid_open_mapping_inverse_x3.png)
 
-**[Simple Stretch:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)**
+**[Simple Stretch Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/simple_stretch_inverse_x3.png)
