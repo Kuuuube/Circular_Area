@@ -228,3 +228,63 @@ Below are `β` values where tertiary mappings match primary or secondary mapping
 - **[Biased Squelch Horizontal](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/biased_squelch_horizontal.md)**
     - Horizontal Squelch Open Mapping: β = 0
     - Squelched Grid Open Mapping: β = 1
+
+<br>
+
+## Multiple Mappings
+
+Circular area filtering is not restricted to using one mapping at a time. It is not recommended to use multiple mappings, and usually the results of applying multiple mappings are not desirable, but it is possible.
+
+The below diagrams show the shape of the tablet area with various mappings applied up to three times.
+
+### Forward Mappings
+
+**[FG-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/fg_squircular_mapping_forward_x3.png)
+
+**[3-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/3_squircular_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/3_squircular_mapping_forward_x3.png)
+
+**[Cornerific Tapered2 Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/cornerific_tapered2_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/cornerific_tapered2_mapping_forward_x3.png)
+
+**[Elliptical Grid Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/elliptical_grid_mapping_forward_x3.png)
+
+**[Squelched Grid Open Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/squelched_grid_open_mapping_forward_x3.png)
+
+**[Simple Stretch:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/simple_stretch_forward_x3.png)
+
+### Inverse Mappings
+
+**[FG-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/fg_squircular_mapping_inverse_x3.png)
+
+**[3-Squircular Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/3_squircular_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/3_squircular_mapping_inverse_x3.png)
+
+**[Cornerific Tapered2 Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/cornerific_tapered2_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/cornerific_tapered2_mapping_inverse_x3.png)
+
+**[Elliptical Grid Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/elliptical_grid_mapping_inverse_x3.png)
+
+**[Squelched Grid Open Mapping:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/squelched_grid_open_mapping.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/squelched_grid_open_mapping_inverse_x3.png)
+
+**[Simple Stretch:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)**
+
+![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/simple_stretch_inverse_x3.png)

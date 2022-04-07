@@ -54,7 +54,7 @@ No. Circular Area transforms your tablet area in the backend only. There will be
 
 ### 7. Can I enable multiple mappings?
 
-Yes and no. There will not be any errors if you enable multiple mappings. But, the results are usually undesirable.
+Yes. There will not be any errors if you enable multiple mappings. However, it is not recommended to do so. See: [Multiple Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#multiple-mappings)
 
 <br>
 
