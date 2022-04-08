@@ -66,6 +66,25 @@ namespace Circular_Area
             );
         }
 
+        protected static Vector2 No_NaN(Vector2 circle, Vector2 input)
+        {
+            Vector2 max = new Vector2(input.X * 10, input.Y * 10);
+
+            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
+            {
+                return new Vector2(
+                circle.X,
+                circle.Y
+                );
+            }
+            else
+            {
+                return new Vector2(
+                Math.Clamp(max.X, -1, 1),
+                Math.Clamp(max.Y, -1, 1)
+                );
+            }
+        }
 
         [Resolved]
         public IDriver driver;

@@ -14,9 +14,6 @@ namespace Circular_Area
             double x = input.X;
             double y = input.Y;
 
-            float xmax = (float)(x * 9);
-            float ymax = (float)(y * 9);
-
             double absx = Math.Abs(x);
             double absy = Math.Abs(y);
 
@@ -26,20 +23,8 @@ namespace Circular_Area
                 (float)(x * Math.Cos((Math.PI / 4) * (y / x))),
                 (float)(x * Math.Sin((Math.PI / 4) * (y / x)))
                 );
-                if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-                {
-                    return new Vector2(
-                    circle.X,
-                    circle.Y
-                    );
-                }
-                else
-                {
-                    return new Vector2(
-                    Math.Clamp(xmax, -1, 1),
-                    Math.Clamp(ymax, -1, 1)
-                    );
-                }
+
+                return No_NaN(circle, input);
             }
             else
             {
@@ -47,20 +32,8 @@ namespace Circular_Area
                 (float)(y * Math.Cos((Math.PI / 2) - ((Math.PI / 4) * (x / y)))),
                 (float)(y * Math.Sin((Math.PI / 2) - ((Math.PI / 4) * (x / y))))
                 );
-                if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-                {
-                    return new Vector2(
-                    circle.X,
-                    circle.Y
-                    );
-                }
-                else
-                {
-                    return new Vector2(
-                    Math.Clamp(xmax, -1, 1),
-                    Math.Clamp(ymax, -1, 1)
-                    );
-                }
+
+                return No_NaN(circle, input);
             }
         }
 

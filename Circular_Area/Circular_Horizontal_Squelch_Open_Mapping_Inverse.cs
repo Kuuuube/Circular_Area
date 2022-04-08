@@ -14,29 +14,14 @@ namespace Circular_Area
             double x = input.X;
             double y = input.Y;
 
-            float xmax = (float)(x * 9);
-            float ymax = (float)(y * 9);
-
             double y2 = Math.Pow(y, 2);
 
             var circle = new Vector2(
             (float)(x * Math.Sqrt(1 - y2)),
             (float)(y)
             );
-            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-            {
-                return new Vector2(
-                circle.X,
-                circle.Y
-                );
-            }
-            else
-            {
-                return new Vector2(
-                Math.Clamp(xmax, -1, 1),
-                Math.Clamp(ymax, -1, 1)
-                );
-            }
+
+            return No_NaN(circle, input);
         }
 
         public override event Action<IDeviceReport> Emit;

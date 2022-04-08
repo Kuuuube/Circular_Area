@@ -14,9 +14,6 @@ namespace Circular_Area
             double x = input.X;
             double y = input.Y;
 
-            float xmax = (float)(x * 9);
-            float ymax = (float)(y * 9);
-
             double x2 = Math.Pow(x, 2);
             double y2 = Math.Pow(y, 2);
 
@@ -26,20 +23,8 @@ namespace Circular_Area
             (float)(x * Math.Sqrt((1 - B * y2) / (1 - B * x2 * y2))),
             (float)(y * Math.Sqrt((1 - x2) / (1 - B * x2 * y2)))
             );
-            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-            {
-                return new Vector2(
-                circle.X,
-                circle.Y
-                );
-            }
-            else
-            {
-                return new Vector2(
-                Math.Clamp(xmax, -1, 1),
-                Math.Clamp(ymax, -1, 1)
-                );
-            }
+
+            return No_NaN(circle, input);
         }
 
         public override event Action<IDeviceReport> Emit;
