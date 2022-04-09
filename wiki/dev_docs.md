@@ -2,9 +2,11 @@
 
 # Dev Docs
 
-This is a technical guide on how Circular Area's code functions. For a simplified guide on how things work from the perspective of the user, read the [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area) instead of this guide.
+For a simplified guide on how things work from the perspective of the user, read the [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area) instead of this guide.
 
-This guide does not cover how the OpenTabletDriver.Plugin or other dependencies function.
+This is a technical guide on how Circular Area's code functions. 
+
+The functions of OpenTabletDriver.Plugin or other dependencies are not covered.
 
 ## Basic Function
 
