@@ -193,7 +193,7 @@ var circle = new Vector2(
 return No_NaN(circle, input);
 ```
 
-- Despite being FG-Squircular based mappings, Sham Quartic Mapping Inverse, Non-axial 2-Pinch Mapping Inverse, and Non-axial Half-Punch Mapping Inverse do not need any extra filtering.
+- Despite being FG-Squircular based mappings, Sham Quartic Mapping Inverse, Non-axial 2-Pinch Mapping Inverse, and Non-axial Half-Punch Mapping Inverse do not require any special handling.
 
 **Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping**
 
