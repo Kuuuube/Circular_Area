@@ -182,33 +182,6 @@ else
 
     Filters out input where either X or Y is 0. Despite being Elliptical-Grid based mappings, Biased Squelch Blended Mapping and Blended E-Grid Mapping mapping formulas cannot handle zeros, and points along the axes are not transformed.
 
-**Biased Squelch Blended Mapping Inverse and Blended E-Grid Mapping Inverse:**
-
-```csharp
-if (Math.Abs(/*X axis input*/) < 0.1 || Math.Abs(/*Y axis input*/) < 0.1)
-{
-    var circle = new Vector2(
-            (float)(/*X axis input*/),
-            (float)(/*Y axis input*/)
-            );
-
-    return No_NaN(circle, input);
-}
-else
-{
-    var circle = new Vector2(
-        (float)(/*Mapping formula for the X axis*/),
-        (float)(/*Mapping formula for the Y axis*/)
-        );
-
-    return No_NaN(circle, input);
-}
-```
-
-- `if (Math.Abs(/*X axis input*/) < 0.1 || Math.Abs(/*Y axis input*/) < 0.1)`
-
-    Filters out input where either X or Y is 0. Despite being Elliptical-Grid based mappings, Biased Squelch Blended Mapping Inverse and Blended E-Grid Mapping Inverse mapping formulas cannot handle zeros, and points along the axes are not transformed.
-
 **Sham Quartic Mapping Inverse, Non-axial 2-Pinch Mapping Inverse, and Non-axial Half-Punch Mapping Inverse:**
 
 ```csharp
