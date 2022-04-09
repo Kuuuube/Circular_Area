@@ -232,7 +232,7 @@ else
 
 - `if (Math.Abs(/*X/Y axis input*/) < 0.00001)`:
 
-    Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping have three mapping formulas. They handle when the X input is 0, when the Y input is 0, and when neither input is 0.
+    Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping have three mapping formulas. They handle when X input is 0, when Y input is 0, and when neither input is 0.
 
 <br>
 
@@ -260,7 +260,7 @@ Math.Clamp(input.Y, -1, 1)
 );
 ```
 
-- Before converting from unit coordinates back to normal coordinates, input is clamped.
+- Before converting from unit coordinates back to normal coordinates, input is clamped to the minimum and maximum unit coordinates.
 
 <br>
 
@@ -302,4 +302,4 @@ float B = Math.Clamp(B_raw, 0.01f, 1);
 
 - Blended or biased mappings allow for β to be used to mix between mappings. β allows any float as an input.
 
-- β must never be 0, or the mapping will break.
+- β must never be 0.
