@@ -261,6 +261,8 @@ else
 
     Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping have three mapping formulas. They handle when the X input is 0, when the Y input is 0, and when neither input is 0.
 
+<br>
+
 ## Expand (inverse mappings only)
 
 ```csharp
@@ -274,6 +276,8 @@ return new Vector2(
     
     In unit coordinates, 2 is the diameter of the mapped circle, and Sqrt(8) is the length of a square's corner to corner diagonals. To expand this circle's diameter to the same size as the square's corner to corner diagonals, the following can be done: `circle * (Sqrt(8) / 2)`. This simplifies to `circle * Sqrt(2)`.
 
+<br>
+
 ## Clamp
 
 ```csharp
@@ -284,6 +288,8 @@ Math.Clamp(input.Y, -1, 1)
 ```
 
 - Before converting from unit coordinates back to normal coordinates, input is clamped.
+
+<br>
 
 ## FromUnit
 
@@ -307,6 +313,8 @@ return new Vector2(
     Contains the position of the monitor area in pixels. OpenTabletDriver measures offset from the top left to the center of the monitor area. 
 
     For example, a 1920 x 1080 monitor area placed with its top left corner aligned to the top left corner of the usable monitor area will have an offset of 960 x 540.
+
+<br>
 
 ## Input β
 
