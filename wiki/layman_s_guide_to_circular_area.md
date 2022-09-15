@@ -133,7 +133,7 @@ These mappings are based off and will be compared to their respective primary ma
 <div>
 
 - **[Sham Quartic Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/sham_quartic_mapping.md)**
-    - Forward mapping: This mapping is currently excluded from Circular Area due to troubles with the implementation. If you know how to solve a quartic equation in code and want to help add this, please contact me on [discord](https://discord.gg/T5vEAh4ruF) or submit a PR.
+    - Forward mapping: This mapping is currently excluded from Circular Area due to troubles with the implementation.
     - Inverse mapping: The middle of the area is faster than the sides and corners. Excluding the axes, the sides and corners pull inwards less. Also excluding the axes, the corners are further away relative to the sides.
 
 <div>
