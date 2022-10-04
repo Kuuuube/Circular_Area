@@ -9,7 +9,7 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    public abstract class CircularBase : IPositionedPipelineElement<IDeviceReport>
+    public abstract class CircularBase : CircularControlPanel, IPositionedPipelineElement<IDeviceReport>
     {
         protected Vector2 ToUnit(Vector2 input)
         {
@@ -84,6 +84,48 @@ namespace Circular_Area
                 Math.Clamp(max.Y, -1, 1)
                 );
             }
+        }
+
+        protected static Vector2 Expander(Vector2 input)
+        {
+            float Expander_var = Expander_check();
+
+            if (Expander_var > 1)
+            {
+                return input / Expander_var;
+            }
+            else if (Expander_var < 1)
+            {
+                return input * Expander_var;
+            }
+            return input;
+        }
+
+        protected static Vector2 Despander(Vector2 input)
+        {
+            float Expander_var = Expander_check();
+
+            Console.WriteLine("Expander_var" +  Expander_var);
+
+            if (Expander_var > 1)
+            {
+                return input * Expander_var;
+            }
+            else if (Expander_var < 1)
+            {
+                return input / Expander_var;
+            }
+            return input;
+        }
+
+        public static float Expander_check()
+        {
+            Console.WriteLine("Expander_raw" + Get_Expander());
+            if (Get_Expander() == 0 || float.IsNaN(Get_Expander()))
+            {
+                return 1f;
+            }
+            return Get_Expander();
         }
 
         [Resolved]
