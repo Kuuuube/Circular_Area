@@ -105,7 +105,7 @@ namespace Circular_Area
         {
             float Expander_var = Expander_check();
 
-            Console.WriteLine("Expander_var" +  Expander_var);
+            //Console.WriteLine("Expander_var" +  Expander_var);
 
             if (Expander_var > 1)
             {
@@ -120,7 +120,7 @@ namespace Circular_Area
 
         public static float Expander_check()
         {
-            Console.WriteLine("Expander_raw" + Get_Expander());
+            //Console.WriteLine("Expander_raw" + Get_Expander());
             if (Get_Expander() == 0 || float.IsNaN(Get_Expander()))
             {
                 return 1f;

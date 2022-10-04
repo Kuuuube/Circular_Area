@@ -52,7 +52,7 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
+        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(Despander(SquareToCircle(Expander(ToUnit(input)))))));
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
 
