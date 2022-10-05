@@ -2,25 +2,28 @@
 using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
 using System;
-using System.Numerics;
 
 namespace Circular_Area
 {
     [PluginName("CircularControlPanel")]
     public class CircularControlPanel : IPositionedPipelineElement<IDeviceReport>
     {
-        private static bool Enabled = false; //This does not become false when the filter is disabled. That needs to be fixed somehow.
-        public static float Get_Expander()
+        private static bool Enabled = false;
+        public static float GetTructation(bool reset)
         {
             if (Enabled)
             {
-                return Math.Clamp(Expander_raw, 0.00001f, float.MaxValue);
+                if (reset)
+                {
+                    Enabled = false;
+                }
+                return Math.Clamp(Tructation_raw, 0.00001f, float.MaxValue);
             }
-            return 0;
+            return 1;
         }
 
-        [Property("Expander"), DefaultPropertyValue(1f)]
-        public static float Expander_raw { set; get; }
+        [Property("Tructation"), DefaultPropertyValue(1f)]
+        public static float Tructation_raw { set; get; }
 
         public event Action<IDeviceReport> Emit;
 
@@ -29,6 +32,6 @@ namespace Circular_Area
             Enabled = true;
             Emit?.Invoke(value);
         }
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public PipelinePosition Position => PipelinePosition.PreTransform;
     }
 }

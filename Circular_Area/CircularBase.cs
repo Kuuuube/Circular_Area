@@ -86,46 +86,34 @@ namespace Circular_Area
             }
         }
 
-        protected static Vector2 Expander(Vector2 input)
+        protected static Vector2 ApplyTruncation(Vector2 input)
         {
-            float Expander_var = Expander_check();
+            float Tructation = GetTructation(false);
 
-            if (Expander_var > 1)
+            if (Tructation > 1)
             {
-                return input / Expander_var;
+                return input / Tructation;
             }
-            else if (Expander_var < 1)
+            else if (Tructation < 1)
             {
-                return input * Expander_var;
+                return input * Tructation;
             }
             return input;
         }
 
-        protected static Vector2 Despander(Vector2 input)
+        protected static Vector2 DiscardTructation(Vector2 input)
         {
-            float Expander_var = Expander_check();
+            float Tructation = GetTructation(true);
 
-            //Console.WriteLine("Expander_var" +  Expander_var);
-
-            if (Expander_var > 1)
+            if (Tructation > 1)
             {
-                return input * Expander_var;
+                return input * Tructation;
             }
-            else if (Expander_var < 1)
+            else if (Tructation < 1)
             {
-                return input / Expander_var;
+                return input / Tructation;
             }
             return input;
-        }
-
-        public static float Expander_check()
-        {
-            //Console.WriteLine("Expander_raw" + Get_Expander());
-            if (Get_Expander() == 0 || float.IsNaN(Get_Expander()))
-            {
-                return 1f;
-            }
-            return Get_Expander();
         }
 
         [Resolved]
