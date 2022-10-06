@@ -228,180 +228,132 @@ namespace Circular_Area
             return false;
         }
 
+        private const string Mapping_Name_Tooltip = "Circular Area:\n\n" +
+            "Mapping Name: The name of the Circular area mapping to apply the below settings to.";
+
+        private const string Truncation_Tooltip = "Circular Area:\n\n" +
+            "Truncation: Scales down the area to replace the distortion closer to the edges with the distortion closer to the center.\n" +
+            "This can be used to transform some forward mapping area shapes into squircles.\n" +
+            "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.";
+
+        private const string Disable_Q1_Tooltip = "Circular Area:\n\n" +
+            "Disable Quadrant 1: Disables the circular area mapping in the top right quadrant of the screen.";
+
+        private const string Disable_Q2_Tooltip = "Circular Area:\n\n" +
+            "Disable Quadrant 2: Disables the circular area mapping in the top left quadrant of the screen.";
+
+        private const string Disable_Q3_Tooltip = "Circular Area:\n\n" +
+            "Disable Quadrant 3: Disables the circular area mapping in the bottom left quadrant of the screen.";
+
+        private const string Disable_Q4_Tooltip = "Circular Area:\n\n" +
+            "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.";
+
+        private const string Disable_Expand_Tooltip = "Circular Area:\n\n" +
+            "Disable Expand in Disabled Quadrants: Disables the expanding of inverse mappings in enabled quadrants.\n" +
+            "Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).";
+
+        private const string Disable_Expand_Disabled_Tooltip = "Circular Area:\n\n" +
+            "Disable Expand in Disabled Quadrants: Disables the expanding of inverse mappings in disabled quadrants.\n" +
+            "Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).";
+
         //Mapping 1
-        [Property("Mapping Name"), ToolTip
-            ("Circular Area:\n\n" +
-            "Mapping Name: The name of the Circular area mapping to apply the below settings to.")]
+        [Property("Mapping Name"), ToolTip(Mapping_Name_Tooltip)]
         public static string Mapping_Name_1 { set; get; }
 
-        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip
-            ("Circular Area:\n\n" +
-            "Truncation: Truncates the mapping by scaling down the area to remove the distortion closer to the edges and replace it with the distortion closer to the center.\n" +
-            "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.")]
+        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip(Truncation_Tooltip)]
         public static float Truncation_raw_1 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 1", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 1: Disables the circular area mapping in the top right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 1", ""), ToolTip(Disable_Q1_Tooltip)]
         public static bool Disable_Q1_1 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 2", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 2: Disables the circular area mapping in the top left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 2", ""), ToolTip(Disable_Q2_Tooltip)]
         public static bool Disable_Q2_1 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 3", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 3: Disables the circular area mapping in the bottom left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 3", ""), ToolTip(Disable_Q3_Tooltip)]
         public static bool Disable_Q3_1 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 4", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 4", ""), ToolTip(Disable_Q4_Tooltip)]
         public static bool Disable_Q4_1 { set; get; }
 
-        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in enabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip(Disable_Expand_Tooltip)]
         public static bool Disable_Expand_1 { set; get; }
 
-        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in disabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip(Disable_Expand_Disabled_Tooltip)]
         public static bool Disable_Expand_Disabled_1 { set; get; }
 
         //Mapping 2
-        [Property("Mapping Name"), ToolTip
-            ("Circular Area:\n\n" +
-            "Mapping Name: The name of the Circular area mapping to apply the below settings to.")]
+        [Property("Mapping Name"), ToolTip(Mapping_Name_Tooltip)]
         public static string Mapping_Name_2 { set; get; }
 
-        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip
-            ("Circular Area:\n\n" +
-            "Truncation: Truncates the mapping by scaling down the area to remove the distortion closer to the edges and replace it with the distortion closer to the center.\n" +
-            "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.")]
+        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip(Truncation_Tooltip)]
         public static float Truncation_raw_2 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 1", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 1: Disables the circular area mapping in the top right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 1", ""), ToolTip(Disable_Q1_Tooltip)]
         public static bool Disable_Q1_2 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 2", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 2: Disables the circular area mapping in the top left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 2", ""), ToolTip(Disable_Q2_Tooltip)]
         public static bool Disable_Q2_2 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 3", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 3: Disables the circular area mapping in the bottom left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 3", ""), ToolTip(Disable_Q3_Tooltip)]
         public static bool Disable_Q3_2 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 4", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 4", ""), ToolTip(Disable_Q4_Tooltip)]
         public static bool Disable_Q4_2 { set; get; }
 
-        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in enabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip(Disable_Expand_Tooltip)]
         public static bool Disable_Expand_2 { set; get; }
 
-        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in disabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip(Disable_Expand_Disabled_Tooltip)]
         public static bool Disable_Expand_Disabled_2 { set; get; }
 
         //Mapping 3
-        [Property("Mapping Name"), ToolTip
-            ("Circular Area:\n\n" +
-            "Mapping Name: The name of the Circular area mapping to apply the below settings to.")]
+        [Property("Mapping Name"), ToolTip(Mapping_Name_Tooltip)]
         public static string Mapping_Name_3 { set; get; }
 
-        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip
-            ("Circular Area:\n\n" +
-            "Truncation: Truncates the mapping by scaling down the area to remove the distortion closer to the edges and replace it with the distortion closer to the center.\n" +
-            "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.")]
+        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip(Truncation_Tooltip)]
         public static float Truncation_raw_3 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 1", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 1: Disables the circular area mapping in the top right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 1", ""), ToolTip(Disable_Q1_Tooltip)]
         public static bool Disable_Q1_3 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 2", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 2: Disables the circular area mapping in the top left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 2", ""), ToolTip(Disable_Q2_Tooltip)]
         public static bool Disable_Q2_3 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 3", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 3: Disables the circular area mapping in the bottom left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 3", ""), ToolTip(Disable_Q3_Tooltip)]
         public static bool Disable_Q3_3 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 4", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 4", ""), ToolTip(Disable_Q4_Tooltip)]
         public static bool Disable_Q4_3 { set; get; }
 
-        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in enabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip(Disable_Expand_Tooltip)]
         public static bool Disable_Expand_3 { set; get; }
 
-        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in disabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip(Disable_Expand_Disabled_Tooltip)]
         public static bool Disable_Expand_Disabled_3 { set; get; }
 
         //Mapping 4
-        [Property("Mapping Name"), ToolTip
-            ("Circular Area:\n\n" +
-            "Mapping Name: The name of the Circular area mapping to apply the below settings to.")]
+        [Property("Mapping Name"), ToolTip(Mapping_Name_Tooltip)]
         public static string Mapping_Name_4 { set; get; }
 
-        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip
-            ("Circular Area:\n\n" +
-            "Truncation: Truncates the mapping by scaling down the area to remove the distortion closer to the edges and replace it with the distortion closer to the center.\n" +
-            "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.")]
+        [Property("Truncation"), DefaultPropertyValue(1f), ToolTip(Truncation_Tooltip)]
         public static float Truncation_raw_4 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 1", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 1: Disables the circular area mapping in the top right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 1", ""), ToolTip(Disable_Q1_Tooltip)]
         public static bool Disable_Q1_4 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 2", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 2: Disables the circular area mapping in the top left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 2", ""), ToolTip(Disable_Q2_Tooltip)]
         public static bool Disable_Q2_4 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 3", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 3: Disables the circular area mapping in the bottom left quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 3", ""), ToolTip(Disable_Q3_Tooltip)]
         public static bool Disable_Q3_4 { set; get; }
 
-        [BooleanProperty("Disable Quadrant 4", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.")]
+        [BooleanProperty("Disable Quadrant 4", ""), ToolTip(Disable_Q4_Tooltip)]
         public static bool Disable_Q4_4 { set; get; }
 
-        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in enabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Enabled Quadrants", ""), ToolTip(Disable_Expand_Tooltip)]
         public static bool Disable_Expand_4 { set; get; }
 
-        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip
-            ("Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables inverse mapping expanding in disabled quadrants.\n" +
-            "Expand allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).")]
+        [BooleanProperty("Disable Expand in Disabled Quadrants", ""), ToolTip(Disable_Expand_Disabled_Tooltip)]
         public static bool Disable_Expand_Disabled_4 { set; get; }
 
         public event Action<IDeviceReport> Emit;

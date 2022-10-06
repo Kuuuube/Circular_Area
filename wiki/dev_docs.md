@@ -16,6 +16,8 @@ Circular Area converts the cursor position input on the monitor to a unit coordi
 
 ## The Input Pipeline
 
+Circular Control Panel settings alter this and are addressed in [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circular-control-panel).
+
 - [**ToUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit) Input is converted to unit coordinates: [-1,1].
 
 - [**CircleToSquare and SquareToCircle:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circletosquare-and-squaretocircle) The input is filtered and run through the mapping formula. 
@@ -305,3 +307,139 @@ float B = Math.Clamp(B_raw, 0.01f, 1);
 - Blended or biased mappings allow for β to be used to mix between mappings. β allows any float as an input.
 
 - β must never be 0.
+
+## Circular Control Panel
+
+Circular Control Panel edits the input pipeline by adding various options. The majority of the code used for this is specific to working with OpenTabletDriver.Plugin and will not be covered as it should not pertain to other implementations.
+
+There are three main parts of Circular Control Panel:
+
+-[**Truncation**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#truncation) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
+
+-[**Quadrant Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#quadrant-disabling) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
+
+-[**Expand Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-disabling) disables [Expand](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) either when a quadrant is disabled or when a quadrant is not disabled.
+
+## Truncation
+
+**ApplyTruncation**
+
+```csharp
+if (Truncation > 1)
+{
+    return input / Truncation;
+}
+else if (Truncation < 1)
+{
+    return input * Truncation;
+}
+return input;
+```
+
+**DiscardTruncation**
+
+```csharp
+if (Truncation > 1)
+{
+    return input * Truncation;
+}
+else if (Truncation < 1)
+{
+    return input / Truncation;
+}
+return input;
+```
+
+- `Truncation`
+
+    Contains the user input for the truncation to be applied
+
+**Example Input Pipeline**
+
+- [**ToUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit)
+
+- **ApplyTruncation**
+
+- [**CircleToSquare and SquareToCircle:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circletosquare-and-squaretocircle)
+
+- [**Expand:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only)
+
+- **DiscardTruncation**
+
+- [**Clamp:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#clamp)
+
+- [**FromUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#fromunit)
+
+## Quadrant Disabling
+
+```csharp
+if (input.X > 0 && input.Y > 0)
+{
+    //Check if the option to disable Q1 is enabled. If so, return true.
+    if (/*Q1 disabled setting*/)
+    {
+        return true;
+    }
+}
+if (input.X < 0 && input.Y > 0)
+{
+    //Check if the option to disable Q2 is enabled. If so, return true.
+    if (/*Q2 disabled setting*/)
+    {
+        return true;
+    }
+}
+if (input.X < 0 && input.Y < 0)
+{
+    //Check if the option to disable Q3 is enabled. If so, return true.
+    if (/*Q3 disabled setting*/)
+    {
+        return true;
+    }
+}
+if (input.X > 0 && input.Y < 0)
+{
+    //Check if the option to disable Q4 is enabled. If so, return true.
+    if (/*Q4 disabled setting*/)
+    {
+        return true;
+    }
+}
+//If no quadrants are found (either X and/or Y is 0), return false.
+//If none of the disable quadrant settings are enabled also return false.
+return false;
+```
+
+```csharp
+if (CheckQuadrant(ToUnit(input)))
+{
+    return input;
+}
+//else, handle input normally
+```
+
+- CheckQuadrant should be called before handling the input normally. If the current quadrant is disabled the input should not be run through the pipeline.
+
+- The Y axis checks are reversed in the actual plugin code due to how OTD handles input.
+
+## Expand Disabling
+
+```csharp
+if (/*Setting to disable expanding if a quadrant is disabled*/)
+{
+    return true;
+}
+if (/*Setting to disable expanding if a quadrant is not disabled*/)
+{
+    return true;
+}
+```
+
+```csharp
+if (GetDisableExpand())
+{
+    return FromUnit(Clamp(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input))))));
+}
+```
+
+- GetDisableExpand should be called before handling the input normally. If the current input should not be expanded it should be run through a modified pipeline without expand.

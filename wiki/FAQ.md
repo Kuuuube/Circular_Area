@@ -68,9 +68,7 @@ However, some mappings cannot be mixed between because they are too far unrelate
 
 ### 9. Are there any mappings that make my area a squircle or only somewhat circular?
 
-No. Currently, there are no mappings like this.
-
-If you would like to help on the mathematical side of adding this feature please contact me on [discord](https://discord.gg/T5vEAh4ruF) or submit a PR.
+Yes, using the truncation option in [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/circular_control_panel.md#circular-control-panel) some forward mappings will become a squircle.
 
 <br>
 
