@@ -10,7 +10,7 @@ Circular Control Panel is a filter that can be used to control various options a
 
 **Truncation:** Scales down the area to replace the distortion closer to the edges with the distortion closer to the center. This can be used to transform some forward mapping area shapes into squircles.
 
-Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.
+Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. For example: 2 and 0.5 produce identical truncation. When set to 1, there is no change.
 
 **Disable Quadrant 1:** Disables the circular area mapping in the top right quadrant of the screen.
 
