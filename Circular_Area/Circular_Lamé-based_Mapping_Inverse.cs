@@ -9,7 +9,9 @@ namespace Circular_Area
     [PluginName("Circular Lamé-based Mapping Inverse")]
     public class Circular_Lamé_based_Mapping_Inverse : CircularBase
     {
-        public static Vector2 CircleToSquare(Vector2 input)
+        public static string Filter_Name = "Circular Lamé-based Mapping Inverse";
+
+        public static Vector2 SquareToCircle(Vector2 input)
         {
             double x = input.X;
             double y = input.Y;
@@ -43,11 +45,19 @@ namespace Circular_Area
 
         public Vector2 Filter(Vector2 input)
         {
-            if (CheckQuadrant(ToUnit(input)))
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
             {
-                return input;
+                if (GetDisableExpand(false, true, Filter_Name))
+                {
+                    return input;
+                }
+                return FromUnit(Clamp(Expand(ToUnit(input))));
             }
-            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input))))));
+            if (GetDisableExpand(true, false, Filter_Name))
+            {
+                return FromUnit(Clamp(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+            }
+            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name))));
         }
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;

@@ -9,6 +9,8 @@ namespace Circular_Area
     [PluginName("Circular Simple Stretch Inverse")]
     public class Circular_Simple_Stretch_Inverse : CircularBase
     {
+        public static string Filter_Name = "Circular Simple Stretch Inverse";
+
         public static Vector2 SquareToCircle(Vector2 input)
         {
             double x = input.X;
@@ -58,15 +60,19 @@ namespace Circular_Area
 
         public Vector2 Filter(Vector2 input)
         {
-            if (CheckQuadrant(ToUnit(input)))
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
             {
-                if (Disable_Expand)
+                if (GetDisableExpand(false, true, Filter_Name))
                 {
                     return input;
                 }
                 return FromUnit(Clamp(Expand(ToUnit(input))));
             }
-            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input)))))));
+            if (GetDisableExpand(true, false, Filter_Name))
+            {
+                return FromUnit(Clamp(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+            }
+            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name))));
         }
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;

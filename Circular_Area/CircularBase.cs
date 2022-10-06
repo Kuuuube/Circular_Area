@@ -86,9 +86,9 @@ namespace Circular_Area
             }
         }
 
-        protected static Vector2 ApplyTruncation(Vector2 input)
+        protected static Vector2 ApplyTruncation(Vector2 input, string filter_name)
         {
-            float Truncation = GetTruncation(false);
+            float Truncation = GetTruncation(false, filter_name);
 
             if (Truncation > 1)
             {
@@ -101,9 +101,9 @@ namespace Circular_Area
             return input;
         }
 
-        protected static Vector2 DiscardTruncation(Vector2 input)
+        protected static Vector2 DiscardTruncation(Vector2 input, string filter_name)
         {
-            float Truncation = GetTruncation(true);
+            float Truncation = GetTruncation(true, filter_name);
 
             if (Truncation > 1)
             {
@@ -116,35 +116,35 @@ namespace Circular_Area
             return input;
         }
 
-        protected static bool CheckQuadrant(Vector2 input)
+        protected static bool CheckQuadrant(Vector2 input, string filter_name)
         {
             //Due to how OTD sends input, the Y axis ends up flipped. Normally the Y axis for these quadrants would be reversed.
             //for the quadrant checks, true = disabled
 
             if (input.X > 0 && input.Y < 0)
             {
-                if (GetQuadrant(1))
+                if (GetQuadrant(1, filter_name))
                 {
                     return true;
                 }
             }
             if (input.X < 0 && input.Y < 0)
             {
-                if (GetQuadrant(2))
+                if (GetQuadrant(2, filter_name))
                 {
                     return true;
                 }
             }
             if (input.X < 0 && input.Y > 0)
             {
-                if (GetQuadrant(3))
+                if (GetQuadrant(3, filter_name))
                 {
                     return true;
                 }
             }
             if (input.X > 0 && input.Y > 0)
             {
-                if (GetQuadrant(4))
+                if (GetQuadrant(4, filter_name))
                 {
                     return true;
                 }

@@ -9,6 +9,8 @@ namespace Circular_Area
     [PluginName("Circular Power2 Blend")]
     public class Circular_Power2_Blend : CircularBase
     {
+        public static string Filter_Name = "Circular Power2 Blend";
+
         public Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
@@ -59,11 +61,11 @@ namespace Circular_Area
 
         public Vector2 Filter(Vector2 input)
         {
-            if (CheckQuadrant(ToUnit(input)))
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
             {
                 return input;
             }
-            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input))))));
+            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
         }
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
