@@ -249,7 +249,7 @@ namespace Circular_Area
             "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.";
 
         private const string Disable_Expand_Tooltip = "Circular Area:\n\n" +
-            "Disable Expand in Disabled Quadrants: Disables the expanding of inverse mappings in enabled quadrants.\n" +
+            "Disable Expand in Enabled Quadrants: Disables the expanding of inverse mappings in enabled quadrants.\n" +
             "Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).";
 
         private const string Disable_Expand_Disabled_Tooltip = "Circular Area:\n\n" +
