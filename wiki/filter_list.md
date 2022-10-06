@@ -42,6 +42,7 @@ A list of all the filter names in Circular Area.
 | Circular Power2 Blend Inverse                    |
 | Circular Power3 Blend                            |
 | Circular Power3 Blend Inverse                    |
+| Circular Sham Quartic Mapping                    |
 | Circular Sham Quartic Mapping Inverse            |
 | Circular Simple Stretch                          |
 | Circular Simple Stretch Inverse                  |
