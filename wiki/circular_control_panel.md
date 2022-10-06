@@ -2,6 +2,8 @@
 
 # Circular Control Panel
 
+Circular Control Panel is a filter that can be used to control various options about Circular Area mappings. It can be found and enabled in the filters tab.
+
 ## Explanation of the Values:
 
 **Mapping Name:** The name of the filter to apply the below values to. See [Filter List](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/filter_list.md#filter-list) for a list of valid filter names.
