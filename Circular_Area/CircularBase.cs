@@ -101,7 +101,7 @@ namespace Circular_Area
             return input;
         }
 
-        protected static Vector2 DiscardTructation(Vector2 input)
+        protected static Vector2 DiscardTruncation(Vector2 input)
         {
             float Tructation = GetTructation(true);
 
