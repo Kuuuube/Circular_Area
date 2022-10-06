@@ -4,11 +4,11 @@
 
 ## Explanation of the Values:
 
-**Mapping Name:** The name of the filter to apply the below values to. See [Filter List](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/filter_list#filter-list) for a list of valid filter names.
+**Mapping Name:** The name of the filter to apply the below values to. See [Filter List](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/filter_list.md#filter-list) for a list of valid filter names.
 
 **Truncation:** Scales down the area to replace the distortion closer to the edges with the distortion closer to the center. This can be used to transform some forward mapping area shapes into squircles.
 
-    Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.
+Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.
 
 **Disable Quadrant 1:** Disables the circular area mapping in the top right quadrant of the screen.
 
@@ -20,8 +20,8 @@
 
 **Disable Expand in Enabled Quadrants:** Disables the expanding of inverse mappings in enabled quadrants.
 
-    Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).
+Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).
 
 **Disable Expand in Disabled Quadrants:** Disables the expanding of inverse mappings in disabled quadrants.
 
-    Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).
+Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).

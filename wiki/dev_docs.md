@@ -356,19 +356,19 @@ return input;
 
 **Example Input Pipeline**
 
-- [**ToUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit)
+- [**ToUnit**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit)
 
 - **ApplyTruncation**
 
-- [**CircleToSquare and SquareToCircle:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circletosquare-and-squaretocircle)
+- [**CircleToSquare and SquareToCircle**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circletosquare-and-squaretocircle)
 
-- [**Expand:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only)
+- [**Expand**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only)
 
 - **DiscardTruncation**
 
-- [**Clamp:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#clamp)
+- [**Clamp**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#clamp)
 
-- [**FromUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#fromunit)
+- [**FromUnit**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#fromunit)
 
 ## Quadrant Disabling
 
