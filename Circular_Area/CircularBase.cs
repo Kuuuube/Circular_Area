@@ -116,6 +116,42 @@ namespace Circular_Area
             return input;
         }
 
+        protected static bool CheckQuadrant(Vector2 input)
+        {
+            //Due to how OTD sends input, the Y axis ends up flipped. Normally the Y axis for these quadrants would be reversed.
+            //for the quadrant checks, true = disabled
+
+            if (input.X > 0 && input.Y < 0)
+            {
+                if (GetQuadrant(1))
+                {
+                    return true;
+                }
+            }
+            if (input.X < 0 && input.Y < 0)
+            {
+                if (GetQuadrant(2))
+                {
+                    return true;
+                }
+            }
+            if (input.X < 0 && input.Y > 0)
+            {
+                if (GetQuadrant(3))
+                {
+                    return true;
+                }
+            }
+            if (input.X > 0 && input.Y > 0)
+            {
+                if (GetQuadrant(4))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         [Resolved]
         public IDriver driver;
         private AbsoluteOutputMode outputMode;

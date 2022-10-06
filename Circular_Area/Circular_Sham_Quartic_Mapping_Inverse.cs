@@ -39,7 +39,18 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input)))))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input)))
+            {
+                if (Disable_Expand)
+                {
+                    return input;
+                }
+                return FromUnit(Clamp(Expand(ToUnit(input))));
+            }
+            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input)))))));
+        }
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
