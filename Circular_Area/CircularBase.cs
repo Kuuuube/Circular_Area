@@ -9,7 +9,7 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    public abstract class CircularBase : IPositionedPipelineElement<IDeviceReport>
+    public abstract class CircularBase : CircularControlPanel, IPositionedPipelineElement<IDeviceReport>
     {
         protected Vector2 ToUnit(Vector2 input)
         {
@@ -84,6 +84,72 @@ namespace Circular_Area
                 Math.Clamp(max.Y, -1, 1)
                 );
             }
+        }
+
+        protected static Vector2 ApplyTruncation(Vector2 input, string filter_name)
+        {
+            float Truncation = GetTruncation(false, filter_name);
+
+            if (Truncation > 1)
+            {
+                return input / Truncation;
+            }
+            else if (Truncation < 1)
+            {
+                return input * Truncation;
+            }
+            return input;
+        }
+
+        protected static Vector2 DiscardTruncation(Vector2 input, string filter_name)
+        {
+            float Truncation = GetTruncation(true, filter_name);
+
+            if (Truncation > 1)
+            {
+                return input * Truncation;
+            }
+            else if (Truncation < 1)
+            {
+                return input / Truncation;
+            }
+            return input;
+        }
+
+        protected static bool CheckQuadrant(Vector2 input, string filter_name)
+        {
+            //Due to how OTD sends input, the Y axis ends up flipped. Normally the Y axis for these quadrants would be reversed.
+            //for the quadrant checks, true = disabled
+
+            if (input.X > 0 && input.Y < 0)
+            {
+                if (GetQuadrant(1, filter_name))
+                {
+                    return true;
+                }
+            }
+            if (input.X < 0 && input.Y < 0)
+            {
+                if (GetQuadrant(2, filter_name))
+                {
+                    return true;
+                }
+            }
+            if (input.X < 0 && input.Y > 0)
+            {
+                if (GetQuadrant(3, filter_name))
+                {
+                    return true;
+                }
+            }
+            if (input.X > 0 && input.Y > 0)
+            {
+                if (GetQuadrant(4, filter_name))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         [Resolved]

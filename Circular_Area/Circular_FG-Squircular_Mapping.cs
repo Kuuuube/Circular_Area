@@ -9,6 +9,8 @@ namespace Circular_Area
     [PluginName("Circular FG-Squircular Mapping")]
     public class Circular_FG_Squircular_Mapping : CircularBase
     {
+        public static string Filter_Name = "Circular FG-Squircular Mapping";
+
         public static Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
@@ -58,7 +60,14 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                return input;
+            }
+            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+        }
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
     }

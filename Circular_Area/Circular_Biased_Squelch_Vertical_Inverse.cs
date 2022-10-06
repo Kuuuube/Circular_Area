@@ -9,6 +9,8 @@ namespace Circular_Area
     [PluginName("Circular Biased Squelch Vertical Inverse")]
     public class Circular_Biased_Squelch_Vertical_Inverse : CircularBase
     {
+        public static string Filter_Name = "Circular Biased Squelch Vertical Inverse";
+
         public Vector2 SquareToCircle(Vector2 input)
         {
             double x = input.X;
@@ -40,7 +42,22 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                if (GetDisableExpand(false, true, Filter_Name))
+                {
+                    return input;
+                }
+                return FromUnit(Clamp(Expand(ToUnit(input))));
+            }
+            if (GetDisableExpand(true, false, Filter_Name))
+            {
+                return FromUnit(Clamp(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+            }
+            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name))));
+        }
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
 

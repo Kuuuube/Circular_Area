@@ -15,6 +15,8 @@ Circular mapping for tablet areas.
 
 ## [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area)
 
+## [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/circular_control_panel.md#circular-control-panel)
+
 ## [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index)
 
 ## [Dev Docs](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#dev-docs)
