@@ -9,7 +9,7 @@ namespace Circular_Area
     public class CircularControlPanel : IPositionedPipelineElement<IDeviceReport>
     {
         private static bool[] Enabled = { false, false };
-        public static float GetTructation(bool reset)
+        public static float GetTruncation(bool reset)
         {
             if (Enabled[0])
             {
@@ -17,7 +17,7 @@ namespace Circular_Area
                 {
                     Enabled[0] = false;
                 }
-                return Math.Clamp(Tructation_raw, 0.00001f, float.MaxValue);
+                return Math.Clamp(Truncation_raw, 0.00001f, float.MaxValue);
             }
             return 1;
         }
@@ -48,7 +48,7 @@ namespace Circular_Area
             ("Circular Area:\n\n" +
             "Truncation: Truncates the mapping by scaling down the area to remove the distortion closer to the edges and replace it with the distortion closer to the center.\n" +
             "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.")]
-        public static float Tructation_raw { set; get; }
+        public static float Truncation_raw { set; get; }
 
         [BooleanProperty("Disable Quadrant 1", "")]
         public static bool Disable_Q1 { set; get; }

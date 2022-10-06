@@ -88,30 +88,30 @@ namespace Circular_Area
 
         protected static Vector2 ApplyTruncation(Vector2 input)
         {
-            float Tructation = GetTructation(false);
+            float Truncation = GetTruncation(false);
 
-            if (Tructation > 1)
+            if (Truncation > 1)
             {
-                return input / Tructation;
+                return input / Truncation;
             }
-            else if (Tructation < 1)
+            else if (Truncation < 1)
             {
-                return input * Tructation;
+                return input * Truncation;
             }
             return input;
         }
 
         protected static Vector2 DiscardTruncation(Vector2 input)
         {
-            float Tructation = GetTructation(true);
+            float Truncation = GetTruncation(true);
 
-            if (Tructation > 1)
+            if (Truncation > 1)
             {
-                return input * Tructation;
+                return input * Truncation;
             }
-            else if (Tructation < 1)
+            else if (Truncation < 1)
             {
-                return input / Tructation;
+                return input / Truncation;
             }
             return input;
         }
