@@ -2,7 +2,7 @@
 
 # Circular Control Panel
 
-Circular Control Panel is a filter that can be used to control various options about Circular Area mappings. It can be found and enabled in the filters tab.
+Circular Control Panel is a filter that can be used to control various advanced options about Circular Area mappings. It can be found and enabled in the filters tab.
 
 ## Explanation of the Values:
 
