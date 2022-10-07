@@ -338,6 +338,8 @@ float B = Math.Clamp(B_raw, 0.01f, 1);
 
 - β must never be 0.
 
+<br>
+
 ## Circular Control Panel
 
 Circular Control Panel edits the input pipeline by adding various options. The majority of the code used for this is specific to working with OpenTabletDriver.Plugin and will not be covered as it should not pertain to other implementations.
@@ -349,6 +351,8 @@ There are three main parts of Circular Control Panel:
 - [**Quadrant Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#quadrant-disabling) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
 
 - [**Expand Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-disabling) disables [Expand](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) either when a quadrant is disabled or when a quadrant is not disabled.
+
+<br>
 
 ## Truncation
 
@@ -399,6 +403,8 @@ return input;
 - [**Clamp**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#clamp)
 
 - [**FromUnit**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#fromunit)
+
+<br>
 
 ## Quadrant Disabling
 
@@ -451,6 +457,8 @@ if (CheckQuadrant(ToUnit(input)))
 - CheckQuadrant should be called before handling the input normally. If the current quadrant is disabled the input should not be run through the pipeline.
 
 - The Y axis checks are reversed in the actual plugin code due to how OTD handles input.
+
+<br>
 
 ## Expand Disabling
 
