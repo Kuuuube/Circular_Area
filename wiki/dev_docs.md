@@ -57,6 +57,8 @@ return new Vector2(
 
     For example, a 1920 x 1080 monitor area placed with its top left corner aligned to the top left corner of the usable monitor area will have an offset of 960 x 540.
 
+<br>
+
 ## CircleToSquare and SquareToCircle
 
 ### All CircleToSquare and SquareToCircle mappings
@@ -356,7 +358,7 @@ There are three main parts of Circular Control Panel:
 
 ## Truncation
 
-**ApplyTruncation**
+**ApplyTruncation:**
 
 ```csharp
 if (Truncation > 1)
@@ -370,7 +372,7 @@ else if (Truncation < 1)
 return input;
 ```
 
-**DiscardTruncation**
+**DiscardTruncation:**
 
 ```csharp
 if (Truncation > 1)
@@ -388,7 +390,7 @@ return input;
 
     Contains the user input for the truncation to be applied
 
-**Example Input Pipeline**
+**Example Input Pipeline:**
 
 - [**ToUnit**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit)
 

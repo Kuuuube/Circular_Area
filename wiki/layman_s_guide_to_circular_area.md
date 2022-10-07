@@ -289,6 +289,8 @@ The below diagrams show the shape of the tablet area with various mappings appli
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/simple_stretch_inverse_x3.png)
 
+<br>
+
 ## Circular Control Panel
 
 Circular Control Panel is a filter that can be used to control various advanced options about Circular Area mappings.
