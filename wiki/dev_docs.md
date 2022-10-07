@@ -199,7 +199,7 @@ return No_NaN(circle, input);
 
 - Despite being FG-Squircular based mappings, Sham Quartic Mapping Inverse, Non-axial 2-Pinch Mapping Inverse, and Non-axial Half-Punch Mapping Inverse do not require any special handling.
 
-**Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping**
+**Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping:**
 
 ```csharp
 if (Math.Abs(/*Y axis input*/) < 0.00001)
@@ -237,6 +237,36 @@ else
 - `if (Math.Abs(/*X/Y axis input*/) < 0.00001)`:
 
     Non-axial 2-Pinch Mapping and Non-axial Half-Punch Mapping have three mapping formulas. They handle when X input is 0, when Y input is 0, and when neither input is 0.
+
+**Sham Quartic Mapping:**
+
+```csharp
+Complex[] roots = QuarticBase.Quartic(/*The five coefficients of the quartic formula used for this mapping*/);
+double[] real_roots = new double[roots.Count()];
+for (int i = 0; i <= roots.Count() - 1; i++)
+{
+    real_roots[i] = roots[i].Real;
+}
+
+double q0 = real_roots.OrderBy(i => i).SkipWhile(i => i <= 0).First();
+
+var circle = new Vector2(
+    (float)(/*Mapping formula for the X axis*/),
+    (float)(/*Mapping formula for the Y axis*/)
+    );
+
+return No_NaN(circle, input);
+```
+
+- Sham Quartic Mapping requires solving a quartic equation. For more information on the methods see: [Quartic Cubic Quadratic Solver](https://github.com/Kuuuube/Quartic_Cubic_Quadratic_Solver)
+
+- `for (int i = 0; i <= roots.Count() - 1; i++)`
+
+    Converts from a complex array to a double array by discarding the imaginary values.
+
+- `double q0 = real_roots.OrderBy(i => i).SkipWhile(i => i <= 0).First();`:
+
+    Finds the smallest non-negative root from the previously sorted out real roots.
 
 <br>
 
@@ -314,11 +344,11 @@ Circular Control Panel edits the input pipeline by adding various options. The m
 
 There are three main parts of Circular Control Panel:
 
--[**Truncation**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#truncation) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
+- [**Truncation**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#truncation) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
 
--[**Quadrant Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#quadrant-disabling) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
+- [**Quadrant Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#quadrant-disabling) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
 
--[**Expand Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-disabling) disables [Expand](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) either when a quadrant is disabled or when a quadrant is not disabled.
+- [**Expand Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-disabling) disables [Expand](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) either when a quadrant is disabled or when a quadrant is not disabled.
 
 ## Truncation
 
@@ -425,11 +455,11 @@ if (CheckQuadrant(ToUnit(input)))
 ## Expand Disabling
 
 ```csharp
-if (/*Setting to disable expanding if a quadrant is disabled*/)
+if (/*Setting to disable expanding if a quadrant is disabled*/ && /*Check if a quadrant is disabled*/)
 {
     return true;
 }
-if (/*Setting to disable expanding if a quadrant is not disabled*/)
+if (/*Setting to disable expanding if a quadrant is not disabled*/ && /*Check if a quadrant is not disabled*/)
 {
     return true;
 }
