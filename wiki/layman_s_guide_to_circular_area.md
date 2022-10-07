@@ -133,7 +133,7 @@ These mappings are based off and will be compared to their respective primary ma
 <div>
 
 - **[Sham Quartic Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/sham_quartic_mapping.md)**
-    - Forward mapping: This mapping is currently excluded from Circular Area due to troubles with the implementation.
+    - Forward mapping: The middle of the area is slightly slower than the sides and corners. The corners pull the cursor to an extreme extent. The far sides pull the cursor a lot more.
     - Inverse mapping: The middle of the area is faster than the sides and corners. Excluding the axes, the sides and corners pull inwards less. Also excluding the axes, the corners are further away relative to the sides.
 
 <div>
@@ -288,3 +288,9 @@ The below diagrams show the shape of the tablet area with various mappings appli
 **[Simple Stretch Inverse:](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/simple_stretch.md)**
 
 ![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/mappings_x3/simple_stretch_inverse_x3.png)
+
+## Circular Control Panel
+
+Circular Control Panel is a filter that can be used to control various advanced options about Circular Area mappings.
+
+See [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/circular_control_panel.md#circular-control-panel).
