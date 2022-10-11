@@ -9,7 +9,7 @@ using OpenTabletDriver.Plugin;
 namespace Circular_Area
 {
     [PluginName("Circular Sham Quartic Mapping")]
-    public class Circular_Sham_Quartic_Mapping : CircularBase, QuarticBase
+    public class Circular_Sham_Quartic_Mapping : CircularBase
     {
         public static string Filter_Name = "Circular Sham Quartic Mapping";
 

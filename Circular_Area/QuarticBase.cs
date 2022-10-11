@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    public interface QuarticBase
+    public class QuarticBase
     {
         public static Complex[] Quadratic(Complex a0, Complex b0, Complex c0)
         {
