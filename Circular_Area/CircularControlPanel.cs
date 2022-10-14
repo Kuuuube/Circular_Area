@@ -228,31 +228,31 @@ namespace Circular_Area
             return false;
         }
 
-        private const string Mapping_Name_Tooltip = "Circular Area:\n\n" +
+        private const string Mapping_Name_Tooltip = "Circular Control Panel:\n\n" +
             "Mapping Name: The name of the Circular area mapping to apply the below settings to.";
 
-        private const string Truncation_Tooltip = "Circular Area:\n\n" +
+        private const string Truncation_Tooltip = "Circular Control Panel:\n\n" +
             "Truncation: Scales down the area to replace the distortion closer to the edges with the distortion closer to the center.\n" +
             "This can be used to transform some forward mapping area shapes into squircles.\n" +
             "Values higher or lower than 1 will truncate the distortion by the ratio of that value to 1. When set to 1, there is no change.";
 
-        private const string Disable_Q1_Tooltip = "Circular Area:\n\n" +
+        private const string Disable_Q1_Tooltip = "Circular Control Panel:\n\n" +
             "Disable Quadrant 1: Disables the circular area mapping in the top right quadrant of the screen.";
 
-        private const string Disable_Q2_Tooltip = "Circular Area:\n\n" +
+        private const string Disable_Q2_Tooltip = "Circular Control Panel:\n\n" +
             "Disable Quadrant 2: Disables the circular area mapping in the top left quadrant of the screen.";
 
-        private const string Disable_Q3_Tooltip = "Circular Area:\n\n" +
+        private const string Disable_Q3_Tooltip = "Circular Control Panel:\n\n" +
             "Disable Quadrant 3: Disables the circular area mapping in the bottom left quadrant of the screen.";
 
-        private const string Disable_Q4_Tooltip = "Circular Area:\n\n" +
+        private const string Disable_Q4_Tooltip = "Circular Control Panel:\n\n" +
             "Disable Quadrant 4: Disables the circular area mapping in the bottom right quadrant of the screen.";
 
-        private const string Disable_Expand_Tooltip = "Circular Area:\n\n" +
+        private const string Disable_Expand_Tooltip = "Circular Control Panel:\n\n" +
             "Disable Expand in Enabled Quadrants: Disables the expanding of inverse mappings in enabled quadrants.\n" +
             "Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).";
 
-        private const string Disable_Expand_Disabled_Tooltip = "Circular Area:\n\n" +
+        private const string Disable_Expand_Disabled_Tooltip = "Circular Control Panel:\n\n" +
             "Disable Expand in Disabled Quadrants: Disables the expanding of inverse mappings in disabled quadrants.\n" +
             "Expanding allows reaching the entire screen when using an inverse mapping by scaling up the mapping and effectively making the tablet area smaller by sqrt(2).";
 
