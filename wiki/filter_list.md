@@ -1,4 +1,4 @@
-[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/circular_control_panel.md#circular-control-panel)
+[<- Back](./circular_control_panel.md)
 
 # Filter List
 

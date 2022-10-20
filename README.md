@@ -6,20 +6,20 @@ Circular mapping for tablet areas.
 - Install Circular Area from the OpenTabletDriver plugin manager.
 - Enable one of the Circular Area mappings in the filters tab and apply the setting.
 
-    Recommended mappings: [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping), [FG-Squircular Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping-inverse), [Elliptical Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping), or [Elliptical Grid Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping-inverse).
+    Recommended mappings: [FG-Squircular Mapping](./wiki/mappings/fg_squircular_mapping.md), [FG-Squircular Mapping Inverse](./wiki/mappings/fg_squircular_mapping.md), [Elliptical Grid Mapping](./wiki/mappings/elliptical_grid_mapping.md), or [Elliptical Grid Mapping Inverse](./wiki/mappings/elliptical_grid_mapping.md).
 
 
 <br>
 
-## [FAQ](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/FAQ.md#faq)
+## [FAQ](./wiki/FAQ.md)
 
-## [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area)
+## [Layman's Guide to Circular Area](./wiki/layman_s_guide_to_circular_area.md)
 
-## [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/circular_control_panel.md#circular-control-panel)
+## [Circular Control Panel](./wiki/circular_control_panel.md)
 
-## [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index)
+## [Mappings Index](./wiki/mappings_index.md)
 
-## [Dev Docs](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#dev-docs)
+## [Dev Docs](./wiki/dev_docs.md)
 
 <br>
 

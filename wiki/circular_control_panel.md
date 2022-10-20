@@ -1,4 +1,4 @@
-[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/README.md#circular-area-plugin-for-opentabletdriver-)
+[<- Back](../README.md)
 
 # Circular Control Panel
 
@@ -6,7 +6,7 @@ Circular Control Panel is a filter that can be used to control various advanced 
 
 ## Explanation of the Values:
 
-**Mapping Name:** The name of the filter to apply the below values to. See [Filter List](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/filter_list.md#filter-list) for a list of valid filter names.
+**Mapping Name:** The name of the filter to apply the below values to. See [Filter List](./filter_list.md) for a list of valid filter names.
 
 **Truncation:** Scales down the area to replace the distortion closer to the edges with the distortion closer to the center. This can be used to transform some forward mapping area shapes into squircles.
 

@@ -1,4 +1,4 @@
-[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/README.md#circular-area-plugin-for-opentabletdriver-)
+[<- Back](../README.md)
 
 # FAQ
 
@@ -6,17 +6,17 @@
 
 The following four mappings are recommended for anyone new to Circular Area. It is recommended to try at least one forward mapping and one inverse mapping.
 
-- Forward mappings: [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping) or [Elliptical Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping).
+- Forward mappings: [FG-Squircular Mapping](./mappings/fg_squircular_mapping.md) or [Elliptical Grid Mapping](./mappings/elliptical_grid_mapping.md).
 
-- Inverse mappings: [FG-Squircular Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping-inverse) or [Elliptical Grid Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping-inverse).
+- Inverse mappings: [FG-Squircular Mapping Inverse](./mappings/fg_squircular_mapping.md) or [Elliptical Grid Mapping Inverse](./mappings/elliptical_grid_mapping.md).
 
-For more information on mappings see: [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area) and [Mappings Index](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#mappings-index).
+For more information on mappings see: [Layman's Guide to Circular Area](./layman_s_guide_to_circular_area.md) and [Mappings Index](./mappings_index.md).
 
 <br>
 
 ### 2. What benefits does a circular area have over a rectangular area?
 
-See: [Why you should use circular area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#why-you-should-use-circular-area)
+See: [Why you should use circular area](./layman_s_guide_to_circular_area.md)
 
 <br>
 
@@ -38,11 +38,11 @@ No. As surprising as it may seem, you can get almost entirely accustomed to Circ
 
 Yes. Circular Area transforms your tablet area into either an ellipse or a half-face superellipse depending on the mapping type. See below:
 
-![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/area_visualizations/ellipse_transformation_examples.png)
+![](./images/area_visualizations/ellipse_transformation_examples.png)
 
-![](https://raw.githubusercontent.com/Kuuuube/Circular_Area/main/wiki/images/area_visualizations/half-face_superellipse_transformation_examples.png)
+![](./images/area_visualizations/half-face_superellipse_transformation_examples.png)
 
-For more information on mapping types see: [Forward vs Inverse Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#forward-vs-inverse-mappings)
+For more information on mapping types see: [Forward vs Inverse Mappings](./layman_s_guide_to_circular_area.md)
 
 <br>
 
@@ -54,13 +54,13 @@ No. Circular Area transforms your tablet area in the backend only. There will be
 
 ### 7. Can I enable multiple mappings?
 
-Yes. There will not be any errors if you enable multiple mappings. However, it is not recommended to do so. See: [Multiple Mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#multiple-mappings)
+Yes. There will not be any errors if you enable multiple mappings. However, it is not recommended to do so. See: [Multiple Mappings](./layman_s_guide_to_circular_area.md)
 
 <br>
 
 ### 8. Can I mix between two different mappings? I like different parts of two mappings is it possible to combine them?
 
-Yes. Use tertiary mappings. See: [Tertiary Mapping Styles](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#tertiary-mapping-styles)
+Yes. Use tertiary mappings. See: [Tertiary Mapping Styles](./layman_s_guide_to_circular_area.md)
 
 However, some mappings cannot be mixed between because they are too far unrelated.
 
@@ -68,13 +68,13 @@ However, some mappings cannot be mixed between because they are too far unrelate
 
 ### 9. Are there any mappings that make my area a squircle or only somewhat circular?
 
-Yes, using the truncation option in [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/circular_control_panel.md#circular-control-panel) some forward mappings will become a squircle.
+Yes, using the truncation option in [Circular Control Panel](./circular_control_panel.md) some forward mappings will become a squircle.
 
 <br>
 
 ### 10. If I spin my pen in a circular motion will the cursor spin in a rectangular motion?
 
-Usually, no. However, it is possible to do this with [Simple Stretch-based mappings](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings_index.md#simple-stretch).
+Usually, no. However, it is possible to do this with [Simple Stretch-based mappings](./mappings_index.md).
 
 <br>
 

@@ -1,8 +1,8 @@
-[<- Back](https://github.com/Kuuuube/Circular_Area/blob/main/README.md#circular-area-plugin-for-opentabletdriver-)
+[<- Back](../README.md)
 
 # Dev Docs
 
-For a simplified guide on how things work from the perspective of the user, read the [Layman's Guide to Circular Area](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/layman_s_guide_to_circular_area.md#laymans-guide-to-circular-area) instead of this guide.
+For a simplified guide on how things work from the perspective of the user, read the [Layman's Guide to Circular Area](./layman_s_guide_to_circular_area.md) instead of this guide.
 
 This is a technical guide on how Circular Area's code functions. 
 
@@ -16,21 +16,21 @@ Circular Area converts the cursor position input on the monitor to a unit coordi
 
 ## The Input Pipeline
 
-Circular Control Panel settings alter this and are addressed in [Circular Control Panel](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circular-control-panel).
+Circular Control Panel settings alter this and are addressed in [Circular Control Panel](./dev_docs.md).
 
-- [**ToUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit) Input is converted to unit coordinates: [-1,1].
+- [**ToUnit:**](./dev_docs.md) Input is converted to unit coordinates: [-1,1].
 
-- [**CircleToSquare and SquareToCircle:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circletosquare-and-squaretocircle) The input is filtered and run through the mapping formula. 
+- [**CircleToSquare and SquareToCircle:**](./dev_docs.md) The input is filtered and run through the mapping formula. 
 
     CircleToSquare is used for forward mappings.
 
     SquareToCircle is used for inverse mappings.
 
-- [**Expand:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only) The input is scaled up by `Sqrt(2)`.
+- [**Expand:**](./dev_docs.md) (Inverse mappings only) The input is scaled up by `Sqrt(2)`.
 
-- [**Clamp:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#clamp) The input is clamped to [-1,1].
+- [**Clamp:**](./dev_docs.md) The input is clamped to [-1,1].
 
-- [**FromUnit:**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#fromunit) Input is converted out of unit coordinates.
+- [**FromUnit:**](./dev_docs.md) Input is converted out of unit coordinates.
 
 <br>
 
@@ -348,11 +348,11 @@ Circular Control Panel edits the input pipeline by adding various options. The m
 
 There are three main parts of Circular Control Panel:
 
-- [**Truncation**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#truncation) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
+- [**Truncation**](./dev_docs.md) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
 
-- [**Quadrant Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#quadrant-disabling) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
+- [**Quadrant Disabling**](./dev_docs.md) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
 
-- [**Expand Disabling**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-disabling) disables [Expand](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) either when a quadrant is disabled or when a quadrant is not disabled.
+- [**Expand Disabling**](./dev_docs.md) disables [Expand](./dev_docs.md) either when a quadrant is disabled or when a quadrant is not disabled.
 
 <br>
 
@@ -392,19 +392,19 @@ return input;
 
 **Example Input Pipeline:**
 
-- [**ToUnit**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#tounit)
+- [**ToUnit**](./dev_docs.md)
 
 - **ApplyTruncation**
 
-- [**CircleToSquare and SquareToCircle**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#circletosquare-and-squaretocircle)
+- [**CircleToSquare and SquareToCircle**](./dev_docs.md)
 
-- [**Expand**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only)
+- [**Expand**](./dev_docs.md) (Inverse mappings only)
 
 - **DiscardTruncation**
 
-- [**Clamp**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#clamp)
+- [**Clamp**](./dev_docs.md)
 
-- [**FromUnit**](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/dev_docs.md#fromunit)
+- [**FromUnit**](./dev_docs.md)
 
 <br>
 
