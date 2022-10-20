@@ -16,7 +16,7 @@ For more information on mappings see: [Layman's Guide to Circular Area](./layman
 
 ### 2. What benefits does a circular area have over a rectangular area?
 
-See: [Why you should use circular area](./layman_s_guide_to_circular_area.md)
+See: [Why you should use circular area](./layman_s_guide_to_circular_area.md#why-you-should-use-circular-area)
 
 <br>
 
@@ -42,7 +42,7 @@ Yes. Circular Area transforms your tablet area into either an ellipse or a half-
 
 ![](./images/area_visualizations/half-face_superellipse_transformation_examples.png)
 
-For more information on mapping types see: [Forward vs Inverse Mappings](./layman_s_guide_to_circular_area.md)
+For more information on mapping types see: [Forward vs Inverse Mappings](./layman_s_guide_to_circular_area.md#forward-vs-inverse-mappings)
 
 <br>
 
@@ -54,13 +54,13 @@ No. Circular Area transforms your tablet area in the backend only. There will be
 
 ### 7. Can I enable multiple mappings?
 
-Yes. There will not be any errors if you enable multiple mappings. However, it is not recommended to do so. See: [Multiple Mappings](./layman_s_guide_to_circular_area.md)
+Yes. There will not be any errors if you enable multiple mappings. However, it is not recommended to do so. See: [Multiple Mappings](./layman_s_guide_to_circular_area.md#multiple-mappings)
 
 <br>
 
 ### 8. Can I mix between two different mappings? I like different parts of two mappings is it possible to combine them?
 
-Yes. Use tertiary mappings. See: [Tertiary Mapping Styles](./layman_s_guide_to_circular_area.md)
+Yes. Use tertiary mappings. See: [Tertiary Mapping Styles](./layman_s_guide_to_circular_area.md#tertiary-mapping-styles)
 
 However, some mappings cannot be mixed between because they are too far unrelated.
 
@@ -74,7 +74,7 @@ Yes, using the truncation option in [Circular Control Panel](./circular_control_
 
 ### 10. If I spin my pen in a circular motion will the cursor spin in a rectangular motion?
 
-Usually, no. However, it is possible to do this with [Simple Stretch-based mappings](./mappings_index.md).
+Usually, no. However, it is possible to do this with [Simple Stretch-based mappings](./mappings_index.md#simple-stretch).
 
 <br>
 

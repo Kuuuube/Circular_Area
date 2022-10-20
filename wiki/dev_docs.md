@@ -16,21 +16,21 @@ Circular Area converts the cursor position input on the monitor to a unit coordi
 
 ## The Input Pipeline
 
-Circular Control Panel settings alter this and are addressed in [Circular Control Panel](./dev_docs.md).
+Circular Control Panel settings alter this and are addressed in [Circular Control Panel](./dev_docs.md#circular-control-panel).
 
-- [**ToUnit:**](./dev_docs.md) Input is converted to unit coordinates: [-1,1].
+- [**ToUnit:**](./dev_docs.md#tounit) Input is converted to unit coordinates: [-1,1].
 
-- [**CircleToSquare and SquareToCircle:**](./dev_docs.md) The input is filtered and run through the mapping formula. 
+- [**CircleToSquare and SquareToCircle:**](./dev_docs.md#circletosquare-and-squaretocircle) The input is filtered and run through the mapping formula. 
 
     CircleToSquare is used for forward mappings.
 
     SquareToCircle is used for inverse mappings.
 
-- [**Expand:**](./dev_docs.md) (Inverse mappings only) The input is scaled up by `Sqrt(2)`.
+- [**Expand:**](./dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only) The input is scaled up by `Sqrt(2)`.
 
-- [**Clamp:**](./dev_docs.md) The input is clamped to [-1,1].
+- [**Clamp:**](./dev_docs.md#clamp) The input is clamped to [-1,1].
 
-- [**FromUnit:**](./dev_docs.md) Input is converted out of unit coordinates.
+- [**FromUnit:**](./dev_docs.md#fromunit) Input is converted out of unit coordinates.
 
 <br>
 
@@ -348,11 +348,11 @@ Circular Control Panel edits the input pipeline by adding various options. The m
 
 There are three main parts of Circular Control Panel:
 
-- [**Truncation**](./dev_docs.md) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
+- [**Truncation**](./dev_docs.md#truncation) changes the distortion by scaling the input smaller, applying the mapping, and scaling it back up.
 
-- [**Quadrant Disabling**](./dev_docs.md) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
+- [**Quadrant Disabling**](./dev_docs.md#quadrant-disabling) disables a mapping for a quadrant of input and reports the raw input back instead of applying the mapping.
 
-- [**Expand Disabling**](./dev_docs.md) disables [Expand](./dev_docs.md) either when a quadrant is disabled or when a quadrant is not disabled.
+- [**Expand Disabling**](./dev_docs.md#expand-disabling) disables [Expand](./dev_docs.md#expand-inverse-mappings-only) either when a quadrant is disabled or when a quadrant is not disabled.
 
 <br>
 
@@ -392,19 +392,19 @@ return input;
 
 **Example Input Pipeline:**
 
-- [**ToUnit**](./dev_docs.md)
+- [**ToUnit**](./dev_docs.md#tounit)
 
 - **ApplyTruncation**
 
-- [**CircleToSquare and SquareToCircle**](./dev_docs.md)
+- [**CircleToSquare and SquareToCircle**](./dev_docs.md#circletosquare-and-squaretocircle)
 
-- [**Expand**](./dev_docs.md) (Inverse mappings only)
+- [**Expand**](./dev_docs.md#expand-inverse-mappings-only) (Inverse mappings only)
 
 - **DiscardTruncation**
 
-- [**Clamp**](./dev_docs.md)
+- [**Clamp**](./dev_docs.md#clamp)
 
-- [**FromUnit**](./dev_docs.md)
+- [**FromUnit**](./dev_docs.md#fromunit)
 
 <br>
 

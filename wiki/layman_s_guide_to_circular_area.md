@@ -2,7 +2,7 @@
 
 # Layman's Guide to Circular Area
 
-For basic setup and simple questions, read the [Quick Start Guide](../README.md) or [FAQ](./FAQ.md) instead of this guide.
+For basic setup and simple questions, read the [Quick Start Guide](../README.md#quick-start-guide) or [FAQ](./FAQ.md) instead of this guide.
 
 This guide simplifies various concepts down to how they effectively work from the perspective of the user. 
 
