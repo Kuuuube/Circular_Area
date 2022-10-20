@@ -4,6 +4,8 @@
 
 A list of all the mapping pages in Circular Area. Mapping pages include visualizations and formulas for each mapping and its inverse.
 
+Each mapping has multiple diagrams to aid in understanding how the distortion works. The left side shows the tablet area's shape, and the right side shows the distortion of the monitor area.
+
 ## [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md)
 
 **FG-Squircular Mapping based secondary mapping styles:** 
