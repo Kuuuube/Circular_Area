@@ -22,8 +22,8 @@ namespace Circular_Area
             if (x2 > y2)
             {
                 var circle = new Vector2(
-                (float)(x * Math.Sqrt(1 - (y2 / (2 * x2)))),
-                (float)(y / Math.Sqrt(2))
+                    (float)(x * Math.Sqrt(1 - (y2 / (2 * x2)))),
+                    (float)(y / Math.Sqrt(2))
                 );
 
                 return No_NaN(circle, input);
@@ -31,8 +31,8 @@ namespace Circular_Area
             else
             {
                 var circle = new Vector2(
-                (float)(x / Math.Sqrt(2)),
-                (float)(y * Math.Sqrt(1 - (x2 / (2 * y2))))
+                    (float)(x / Math.Sqrt(2)),
+                    (float)(y * Math.Sqrt(1 - (x2 / (2 * y2))))
                 );
 
                 return No_NaN(circle, input);

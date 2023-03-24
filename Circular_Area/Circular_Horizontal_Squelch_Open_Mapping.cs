@@ -14,13 +14,13 @@ namespace Circular_Area
         public static Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
-            double v = input.Y;            
-            
+            double v = input.Y;
+
             double v2 = Math.Pow(v, 2);
 
             var circle = new Vector2(
-            (float)(u / Math.Sqrt(1 - v2)),
-            (float)(v)
+                (float)(u / Math.Sqrt(1 - v2)),
+                (float)(v)
             );
 
             return No_NaN(circle, input);

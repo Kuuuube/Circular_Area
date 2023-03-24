@@ -4,7 +4,6 @@ using OpenTabletDriver.Plugin.Output;
 using System;
 using System.Numerics;
 
-
 namespace Circular_Area
 {
     [PluginName("Circular 2-Squircular Mapping")]
@@ -31,9 +30,9 @@ namespace Circular_Area
             if (Math.Abs(v) < 0.00001 || Math.Abs(u) < 0.00001)
             {
                 var circle =  new Vector2(
-                        (float)(u),
-                        (float)(v)
-                        );
+                    (float)(u),
+                    (float)(v)
+                );
 
                 return No_NaN(circle, input);
             }
@@ -42,7 +41,7 @@ namespace Circular_Area
                 var circle = new Vector2(
                     (float)((sgnuv / vsqrttwo) * Math.Sqrt(1 - Math.Sqrt(1 - 4 * u2 * v2))),
                     (float)((sgnuv / usqrttwo) * Math.Sqrt(1 - Math.Sqrt(1 - 4 * u2 * v2)))
-                    );
+                );
 
                 return No_NaN(circle, input);
             }

@@ -36,9 +36,9 @@ namespace Circular_Area
             if (Math.Abs(v) < 0.00001 || Math.Abs(u) < 0.00001)
             {
                 var circle = new Vector2(
-                        (float)(u),
-                        (float)(v)
-                        );
+                    (float)(u),
+                    (float)(v)
+                );
 
                 return No_NaN(circle, input);
             }
@@ -47,7 +47,7 @@ namespace Circular_Area
                 var circle = new Vector2(
                     (float)(sgnu * Math.Sqrt(((1 + (u2 / v2)) / (2 * ((m / (m - 1)) * B + (1 - (m / (m - 1)) * B) * Math.Pow(Math.Sqrt(u2 + v2), 2 * (m - 1))))) - Math.Sqrt(Math.Pow((1 + (u2 / v2)) / (2 * ((m / (m - 1)) * B + (1 - (m / (m - 1)) * B) * Math.Pow(Math.Sqrt(u2 + v2), 2 * (m - 1)))), 2) - (u2 / v2) * (Math.Pow(Math.Sqrt(u2 + v2), 2) / ((m / (m - 1)) * B + (1 - (m / (m - 1)) * B) * Math.Pow(Math.Sqrt(u2 + v2), 2 * (m - 1))))))),
                     (float)(sgnv * Math.Sqrt(((1 + (1 / (u2 / v2))) / (2 * ((m / (m - 1)) * B + (1 - (m / (m - 1)) * B) * Math.Pow(Math.Sqrt(u2 + v2), 2 * (m - 1))))) - Math.Sqrt(Math.Pow((1 + (1 / (u2 / v2))) / (2 * ((m / (m - 1)) * B + (1 - (m / (m - 1)) * B) * Math.Pow(Math.Sqrt(u2 + v2), 2 * (m - 1)))), 2) - (1 / (u2 / v2)) * (Math.Pow(Math.Sqrt(u2 + v2), 2) / ((m / (m - 1)) * B + (1 - (m / (m - 1)) * B) * Math.Pow(Math.Sqrt(u2 + v2), 2 * (m - 1)))))))
-                    );
+                );
 
                 return No_NaN(circle, input);
             }

@@ -14,8 +14,8 @@ namespace Circular_Area
         public Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
-            double v = input.Y;            
-            
+            double v = input.Y;
+
             double u2 = Math.Pow(u, 2);
             double v2 = Math.Pow(v, 2);
 
@@ -32,9 +32,9 @@ namespace Circular_Area
             if (Math.Abs(v) < 0.00001 || Math.Abs(u) < 0.00001)
             {
                 var circle = new Vector2(
-                        (float)(u),
-                        (float)(v)
-                        );
+                    (float)(u),
+                    (float)(v)
+                );
 
                 return No_NaN(circle, input);
             }
@@ -43,7 +43,7 @@ namespace Circular_Area
                 var circle = new Vector2(
                     (float)((sgnuv * Math.Sqrt((u2 + v2 - Math.Sqrt((u2 + v2) * (u2 + v2 - 2 * u2 * v2 * (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4)))) / (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4))) * (1 / v)),
                     (float)((sgnuv * Math.Sqrt((u2 + v2 - Math.Sqrt((u2 + v2) * (u2 + v2 - 2 * u2 * v2 * (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4)))) / (3 * B - (3 * B - 2) * u4 - 2 * (3 * B - 2) * u2 * v2 - (3 * B - 2) * v4))) * (1 / u))
-                    );
+                );
 
                 return No_NaN(circle, input);
             }

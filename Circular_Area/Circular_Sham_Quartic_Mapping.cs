@@ -43,7 +43,7 @@ namespace Circular_Area
             var circle = new Vector2(
                 (float)(sgnu * q0sqrt),
                 (float)(sgnv * Math.Abs(v / u) * q0sqrt)
-                );
+            );
 
             return No_NaN(circle, input);
         

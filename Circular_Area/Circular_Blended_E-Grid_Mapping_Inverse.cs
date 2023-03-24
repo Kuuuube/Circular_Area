@@ -24,9 +24,9 @@ namespace Circular_Area
             if (Math.Abs(y) < 0.00001 || Math.Abs(x) < 0.00001)
             {
                 var circle = new Vector2(
-                        (float)(x),
-                        (float)(y)
-                        );
+                    (float)(x),
+                    (float)(y)
+                );
 
                 return No_NaN(circle, input);
             }
@@ -35,7 +35,7 @@ namespace Circular_Area
                 var circle = new Vector2(
                     (float)(x * Math.Sqrt((y2 * (B + 1 - B * y2) - (B + 1 - B * x2) * (B + 1 - B * y2)) / (x2 * y2 - (B + 1 - B * x2) * (B + 1 - B * y2)))),
                     (float)(y * Math.Sqrt((x2 * (B + 1 - B * x2) - (B + 1 - B * x2) * (B + 1 - B * y2)) / (x2 * y2 - (B + 1 - B * x2) * (B + 1 - B * y2))))
-                    );
+                );
 
                 return No_NaN(circle, input);
             }

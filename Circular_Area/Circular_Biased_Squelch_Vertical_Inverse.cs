@@ -22,8 +22,8 @@ namespace Circular_Area
             float B = Math.Clamp(B_raw, 0.01f, 1);
 
             var circle = new Vector2(
-            (float)(x * Math.Sqrt((1 - B * y2) / (1 - B * x2 * y2))),
-            (float)(y * Math.Sqrt((1 - x2) / (1 - B * x2 * y2)))
+                (float)(x * Math.Sqrt((1 - B * y2) / (1 - B * x2 * y2))),
+                (float)(y * Math.Sqrt((1 - x2) / (1 - B * x2 * y2)))
             );
 
             return No_NaN(circle, input);

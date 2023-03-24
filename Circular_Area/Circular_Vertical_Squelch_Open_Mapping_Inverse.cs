@@ -19,8 +19,8 @@ namespace Circular_Area
             double x2 = Math.Pow(x, 2);
 
             var circle = new Vector2(
-            (float)(x),
-            (float)(y * Math.Sqrt(1 - x2))
+                (float)(x),
+                (float)(y * Math.Sqrt(1 - x2))
             );
 
             return No_NaN(circle, input);

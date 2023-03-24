@@ -22,8 +22,8 @@ namespace Circular_Area
             if (absx >= absy)
             {
                 var circle = new Vector2(
-                (float)(x * Math.Cos((Math.PI / 4) * (y / x))),
-                (float)(x * Math.Sin((Math.PI / 4) * (y / x)))
+                    (float)(x * Math.Cos((Math.PI / 4) * (y / x))),
+                    (float)(x * Math.Sin((Math.PI / 4) * (y / x)))
                 );
 
                 return No_NaN(circle, input);
@@ -31,8 +31,8 @@ namespace Circular_Area
             else
             {
                 var circle = new Vector2(
-                (float)(y * Math.Cos((Math.PI / 2) - ((Math.PI / 4) * (x / y)))),
-                (float)(y * Math.Sin((Math.PI / 2) - ((Math.PI / 4) * (x / y))))
+                    (float)(y * Math.Cos((Math.PI / 2) - ((Math.PI / 4) * (x / y)))),
+                    (float)(y * Math.Sin((Math.PI / 2) - ((Math.PI / 4) * (x / y))))
                 );
 
                 return No_NaN(circle, input);

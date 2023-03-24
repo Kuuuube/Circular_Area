@@ -22,7 +22,7 @@ namespace Circular_Area
             var circle = new Vector2(
                 (float)((x * Math.Sqrt(x2 + y2)) / (1 + x2 * y2)),
                 (float)((y * Math.Sqrt(x2 + y2)) / (1 + x2 * y2))
-                );
+            );
 
             return No_NaN(circle, input);
         }
