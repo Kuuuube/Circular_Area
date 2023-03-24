@@ -39,7 +39,7 @@
 ![](./images/mappings/square_power3_blend_B0.75_square_grid_thick_checkerboard.png)
 ![](./images/mappings/square_power3_blend_B0.75_dot_grid_circle_rgb_gradient_circle.png)
 
-#### β = 1 [(Tapered4 Mapping)](./tapered4_mapping.md)
+#### β = 1 [(Tapered3 Mapping)](./tapered3_mapping.md)
 
 ![](./images/mappings/square_power3_blend_B1_circle_grid_thick_checkerboard.png)
 ![](./images/mappings/square_power3_blend_B1_square_grid_thick_checkerboard.png)
@@ -84,7 +84,7 @@
 ![](./images/mappings/circle_power3_blend_B0.75_square_grid_circle_thick_checkerboard.png)
 ![](./images/mappings/circle_power3_blend_B0.75_dot_grid_square_rgb_gradient.png)
 
-#### β = 1 [(Tapered4 Mapping Inverse)](./tapered4_mapping.md)
+#### β = 1 [(Tapered3 Mapping Inverse)](./tapered3_mapping.md)
 
 ![](./images/mappings/circle_power3_blend_B1_square_grid_circle_thick_checkerboard.png)
 ![](./images/mappings/circle_power3_blend_B1_dot_grid_square_rgb_gradient.png)

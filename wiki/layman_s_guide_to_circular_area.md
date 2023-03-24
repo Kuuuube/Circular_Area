@@ -114,9 +114,9 @@ These mappings are based off and will be compared to their respective primary ma
 
 <div>
 
-- **[Cornerific Tapered2 Mapping](./mappings/cornerific_tapered2_mapping.md) and [Tapered4 Mapping](./mappings/tapered4_mapping.md)**
-    - Forward mappings: Far corners pull the cursor less. The middle and sides distort more. Cornerific Tapered2 Mapping does this slightly more than Tapered4 Mapping.
-    - Inverse mappings: Excluding the axes, the sides and corners pull inwards more. Also excluding the axes, the corners are closer relative to the sides. Cornerific Tapered2 Mapping does this slightly more than Tapered4 Mapping.
+- **[Cornerific Tapered2 Mapping](./mappings/cornerific_tapered2_mapping.md) and [Tapered3 Mapping](./mappings/tapered3_mapping.md)**
+    - Forward mappings: Far corners pull the cursor less. The middle and sides distort more. Cornerific Tapered2 Mapping does this slightly more than Tapered3 Mapping.
+    - Inverse mappings: Excluding the axes, the sides and corners pull inwards more. Also excluding the axes, the corners are closer relative to the sides. Cornerific Tapered2 Mapping does this slightly more than Tapered3 Mapping.
     
 <div>
 
@@ -200,7 +200,7 @@ Below are `β` values where tertiary mappings match primary or secondary mapping
 - **[Power3 Blend](./mappings/power3_blend.md)**
     - 3-Squircular Mapping: β = 0
     - FG-Squircular Mapping: β = 0.66
-    - Tapered4 Mapping: β = 1
+    - Tapered3 Mapping: β = 1
 
 <div>
 

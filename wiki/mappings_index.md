@@ -13,7 +13,7 @@ Each mapping has multiple diagrams to aid in understanding how the distortion wo
 - [2-Squircular Mapping](./mappings/2_squircular_mapping.md)
 - [3-Squircular Mapping](./mappings/3_squircular_mapping.md)
 - [Cornerific Tapered2 Mapping](./mappings/cornerific_tapered2_mapping.md)
-- [Tapered4 Mapping](./mappings/tapered4_mapping.md)
+- [Tapered3 Mapping](./mappings/tapered3_mapping.md)
 - [Non-Axial 2-Pinch Mapping](./mappings/non_axial_2_pinch_mapping.md)
 - [Non-Axial ½-Punch Mapping](./mappings/non_axial_half_punch_mapping.md)
 - [Sham Quartic Mapping](./mappings/sham_quartic_mapping.md)

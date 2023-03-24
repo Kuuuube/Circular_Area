@@ -6,10 +6,10 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circular Tapered4 Mapping Inverse")]
-    public class Circular_Tapered4_Mapping_Inverse : CircularBase
+    [PluginName("Circular Tapered3 Mapping Inverse")]
+    public class Circular_Tapered3_Mapping_Inverse : CircularBase
     {
-        public static string Filter_Name = "Circular Tapered4 Mapping Inverse";
+        public static string Filter_Name = "Circular Tapered3 Mapping Inverse";
 
         public static Vector2 SquareToCircle(Vector2 input)
         {

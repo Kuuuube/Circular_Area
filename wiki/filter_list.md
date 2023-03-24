@@ -48,7 +48,7 @@ A list of all the filter names in Circular Area.
 | Circular Simple Stretch Inverse                  |
 | Circular Squelched Grid Open Mapping             |
 | Circular Squelched Grid Open Mapping Inverse     |
-| Circular Tapered4 Mapping                        |
-| Circular Tapered4 Mapping Inverse                |
+| Circular Tapered3 Mapping                        |
+| Circular Tapered3 Mapping Inverse                |
 | Circular Vertical Squelch Open Mapping           |
 | Circular Vertical Squelch Open Mapping Inverse   |
