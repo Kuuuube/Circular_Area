@@ -7,7 +7,7 @@ Notes:
 # Lamé-based Mapping
 
 ## Formula
-![](./images/formulas/lame_based_mapping_formula.png)
+![](./images/formulas/lamé_based_mapping_formula.png)
 
 
 
@@ -15,6 +15,6 @@ Notes:
 # Lamé-based Mapping Inverse
 
 ## Formula
-![](./images/formulas/lame_based_mapping_inverse_formula.png)
+![](./images/formulas/lamé_based_mapping_inverse_formula.png)
 
 Note: Inverse mapping outputs are upscaled by ≈1.4142 to fill the entire monitor area. The inverse mapping formula shown here excludes this.
