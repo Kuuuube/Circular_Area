@@ -100,6 +100,18 @@ Note: These mappings are not direct counterparts of each other. Lamé-based Mapp
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
     - Movements get slower non-linearly towards the corners and sides of the area.
 
+### [p-Norm Squicular Mapping](./mappings/p_norm_squircular.md)
+
+Note: This mapping only has a forward variant.
+
+- Moving straight outwards from the center, the input will always stay straight.
+
+- When `m` is 1, the mapping is in its neutral state. Movement around the center of the area will feel almost the same as a rectangular area, and more distorted towards the edges.
+
+- When `m` is less than 1 the distorsion affects more of the center and distorts less heavily towards the corners and sides of the area. Low `m` values create distortion similar to Simple Stretch.
+
+- When `m` is greater than 1 the distorsion affects less of the center and distorts more heavily towards the corners and sides of the area. High `m` values create distortion similar to 2-Squircular or 3-Squircular mappings.
+
 <br>
 
 ## Secondary Mapping Styles
@@ -114,9 +126,9 @@ These mappings are based off and will be compared to their respective primary ma
 
 <div>
 
-- **[Cornerific Tapered2 Mapping](./mappings/cornerific_tapered2_mapping.md) and [Tapered3 Mapping](./mappings/tapered3_mapping.md)**
-    - Forward mappings: Far corners pull the cursor less. The middle and sides distort more. Cornerific Tapered2 Mapping does this slightly more than Tapered3 Mapping.
-    - Inverse mappings: Excluding the axes, the sides and corners pull inwards more. Also excluding the axes, the corners are closer relative to the sides. Cornerific Tapered2 Mapping does this slightly more than Tapered3 Mapping.
+- **[Cornerific Tapered2 Mapping](./mappings/cornerific_tapered2_mapping.md), [Tapered3 Mapping](./mappings/tapered3_mapping.md), and [Tapered1.5 Mapping](./mappings/tapered1_5_mapping.md)**
+    - Forward mappings: Far corners pull the cursor less. The middle and sides distort more. Tapered1.5 Mapping does this slightly more than Cornerific Tapered2 Mapping and Tapered3 Mapping.
+    - Inverse mappings: Excluding the axes, the sides and corners pull inwards more. Also excluding the axes, the corners are closer relative to the sides. Tapered1.5 Mapping does this slightly more than Cornerific Tapered2 Mapping and Tapered3 Mapping.
     
 <div>
 
@@ -184,7 +196,7 @@ These mappings are based off and will be compared to their respective primary ma
 
 ## Tertiary Mapping Styles
 
-These mappings mix between primary and secondary mappings. Changing the value of `β` changes how the tertiary mapping is mixed. `β` accepts any value from 0 to 1.
+These mappings mix between primary and secondary mappings. Changing the value of `β` changes the mixing of primary or secondary mappings. `β` accepts any value from 0 to 1.
 
 Below are `β` values where tertiary mappings match primary or secondary mappings.
 
@@ -228,6 +240,22 @@ Below are `β` values where tertiary mappings match primary or secondary mapping
 - **[Biased Squelch Horizontal](./mappings/biased_squelch_horizontal.md)**
     - Horizontal Squelch Open Mapping: β = 0
     - Squelched Grid Open Mapping: β = 1
+
+<br>
+
+## Quaternary Mapping Styles
+
+These mappings mix between primary, secondary, and tertiary mappings. Changing the value of `m` changes the tertiary mapping to use. `m` accepts any value 0 and higher. Changing the value of `β` changes the mixing of primary or secondary mappings. `β` accepts any value from 0 to 1.
+
+This can be used to create many mappings that do not exist on their own. For example, 200-Squircular using m = 200 and β = 0 or Tapered0.001 using m = 0.001 and β = 1.
+
+Below are `m` values matching existing tertiary mappings.
+
+### [FG-Squircular Mapping](./mappings/fg_squircular_mapping.md) based:
+
+- **[Power-m Blend](./mappings/power_m_blend.md)**
+    - Power2: m = 2
+    - Power3: m = 3
 
 <br>
 
