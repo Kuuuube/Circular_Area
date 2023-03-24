@@ -25,7 +25,7 @@ namespace Circular_Area
             double sgnu = absu / u;
             double sgnv = absv / v;
 
-            float a = Math.Clamp(a_raw, 0.01f, float.MaxValue);
+            float m = Math.Clamp(m_raw, 0.01f, float.MaxValue);
 
             if (Math.Abs(v) < 0.00001 || Math.Abs(u) < 0.00001)
             {
@@ -39,8 +39,8 @@ namespace Circular_Area
             else
             {
                 var circle = new Vector2(
-                    (float)((sgnu * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(v / u), (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2))))), 1 / (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2))))))),
-                    (float)((sgnv * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(u / v), (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2))))), 1 / (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2)))))))
+                    (float)((sgnu * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(v / u), (2 / (1 - Math.Pow(Math.Sqrt(u2 + v2), m)))), 1 / (2 / (1 - Math.Pow(Math.Sqrt(u2 + v2), m)))))),
+                    (float)((sgnv * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(u / v), (2 / (1 - Math.Pow(Math.Sqrt(u2 + v2), m)))), 1 / (2 / (1 - Math.Pow(Math.Sqrt(u2 + v2), m))))))
                 );
 
                 return No_NaN(circle, input);
@@ -71,7 +71,7 @@ namespace Circular_Area
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
 
-        [Property("α"), DefaultPropertyValue(1f)]
-        public float a_raw { set; get; }
+        [Property("m"), DefaultPropertyValue(1f)]
+        public float m_raw { set; get; }
     }
 }
