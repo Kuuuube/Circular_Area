@@ -39,8 +39,8 @@ namespace Circular_Area
             else
             {
                 var circle = new Vector2(
-                    (float)((sgnu * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(v / u), (2 + a * (Math.Sqrt(u2 + v2) / (1 - Math.Sqrt(u2 + v2))))), 1 / (2 + a * (Math.Sqrt(u2 + v2) / (1 - Math.Sqrt(u2 + v2))))))),
-                    (float)((sgnv * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(u / v), (2 + a * (Math.Sqrt(u2 + v2) / (1 - Math.Sqrt(u2 + v2))))), 1 / (2 + a * (Math.Sqrt(u2 + v2) / (1 - Math.Sqrt(u2 + v2)))))))
+                    (float)((sgnu * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(v / u), (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2))))), 1 / (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2))))))),
+                    (float)((sgnv * Math.Sqrt(u2 + v2)) / (Math.Pow(1 + Math.Pow(Math.Abs(u / v), (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2))))), 1 / (2 + a * ((2 * Math.Sqrt(u2 + v2)) / (1 - Math.Sqrt(u2 + v2)))))))
                     );
 
                 return No_NaN(circle, input);
@@ -71,7 +71,7 @@ namespace Circular_Area
 
         public override PipelinePosition Position => PipelinePosition.PostTransform;
 
-        [Property("α"), DefaultPropertyValue(2f)]
+        [Property("α"), DefaultPropertyValue(1f)]
         public float a_raw { set; get; }
     }
 }
