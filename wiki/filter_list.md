@@ -42,13 +42,17 @@ A list of all the filter names in Circular Area.
 | Circular Power2 Blend Inverse                    |
 | Circular Power3 Blend                            |
 | Circular Power3 Blend Inverse                    |
+| Circular Power-m Blend                           |
 | Circular Sham Quartic Mapping                    |
 | Circular Sham Quartic Mapping Inverse            |
 | Circular Simple Stretch                          |
 | Circular Simple Stretch Inverse                  |
 | Circular Squelched Grid Open Mapping             |
 | Circular Squelched Grid Open Mapping Inverse     |
+| Circular Tapered1.5 Mapping                      |
+| Circular Tapered1.5 Mapping Inverse              |
 | Circular Tapered3 Mapping                        |
 | Circular Tapered3 Mapping Inverse                |
 | Circular Vertical Squelch Open Mapping           |
 | Circular Vertical Squelch Open Mapping Inverse   |
+| Circular p-Norm Squircular Mapping               |
