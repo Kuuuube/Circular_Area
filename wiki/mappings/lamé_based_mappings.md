@@ -18,6 +18,10 @@ Notes:
 
 # Lamé-based Mapping Inverse
 
+## Diagrams
+![](./images/mappings/circle_lame_mapping_square_grid_circle_thick_checkerboard.png)
+![](./images/mappings/circle_lame_mapping_dot_grid_square_rgb_gradient.png)
+
 ## Formula
 ![](./images/formulas/lamé_based_mapping_inverse_formula.png)
 
