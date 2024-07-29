@@ -1,10 +1,14 @@
 [<- Back](../mappings_index.md)
 
 Notes: 
-- Due to incompatibility with my diagram generation methods these mappings currently do not have diagrams. This page may be completed in the future.
 - These mappings are not counterparts to one another. Lamé-based Mappings do not have direct inverses. These two mappings are distinctly different.
 
 # Lamé-based Mapping
+
+## Diagrams
+![](./images/mappings/square_lame_mapping_circle_grid_thick_checkerboard.png)
+![](./images/mappings/square_lame_mapping_square_grid_thick_checkerboard.png)
+![](./images/mappings/square_lame_mapping_dot_grid_circle_rgb_gradient_circle.png)
 
 ## Formula
 ![](./images/formulas/lamé_based_mapping_formula.png)
