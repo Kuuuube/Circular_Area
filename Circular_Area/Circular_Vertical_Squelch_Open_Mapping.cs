@@ -30,7 +30,7 @@ namespace Circular_Area
 
         public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
