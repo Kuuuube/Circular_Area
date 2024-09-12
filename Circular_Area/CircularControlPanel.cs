@@ -186,23 +186,32 @@ namespace Circular_Area
 
         public static int CheckName(string filter_name)
         {
-            if (filter_name == Mapping_Name_1)
+            if (StripMappingName(filter_name) == StripMappingName(Mapping_Name_1))
             {
                 return 1;
             }
-            if (filter_name == Mapping_Name_2)
+            if (StripMappingName(filter_name) == StripMappingName(Mapping_Name_2))
             {
                 return 2;
             }
-            if (filter_name == Mapping_Name_3)
+            if (StripMappingName(filter_name) == StripMappingName(Mapping_Name_3))
             {
                 return 3;
             }
-            if (filter_name == Mapping_Name_4)
+            if (StripMappingName(filter_name) == StripMappingName(Mapping_Name_4))
             {
                 return 4;
             }
             return 0;
+        }
+
+        private static string StripMappingName(string mapping_name)
+        {
+            try {
+                return mapping_name.ToLower().Replace("circular","").Replace(" ", "").Trim();
+            } catch {
+                return mapping_name;
+            }
         }
 
         public static bool EnabledCheck(int enabled_id)
