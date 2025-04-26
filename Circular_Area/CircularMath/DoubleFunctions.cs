@@ -54,8 +54,7 @@ namespace Circular_Area.CircularMath
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static double F(double angle, double k)
         {
-            var radians = Math.PI * angle / 180;
-            return Math.Sin(radians) * CarlsonSymmetricForm.RF(Math.Pow(Math.Cos(radians), 2), 1 - k * Math.Pow(Math.Sin(radians), 2), 1);
+            return Math.Sin(angle) * CarlsonSymmetricForm.RF(Math.Pow(Math.Cos(angle), 2), 1 - k * Math.Pow(Math.Sin(angle), 2), 1);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
