@@ -7,15 +7,14 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Elliptical Grid Mapping")]
-    public class Circular_Elliptical_Grid_Mapping : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Elliptical_Grid_Mapping : CircularBase
     {
+        public static string Filter_Name = "Circular Elliptical Grid Mapping";
+
         public static Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
             double v = input.Y;
-
-            float umax = (float)(u * 9);
-            float vmax = (float)(v * 9);
 
             double u2 = Math.Pow(u, 2);
             double v2 = Math.Pow(v, 2);
@@ -24,31 +23,16 @@ namespace Circular_Area
             var circle = new Vector2(
                 (float)(0.5f * Math.Sqrt(2 + u2 - v2 + twosqrttwo * u) - 0.5f * Math.Sqrt(2 + u2 - v2 - twosqrttwo * u)),
                 (float)(0.5f * Math.Sqrt(2 - u2 + v2 + twosqrttwo * v) - 0.5f * Math.Sqrt(2 - u2 + v2 - twosqrttwo * v))
-                );
+            );
 
-
-            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-            {
-                return new Vector2(
-                circle.X,
-                circle.Y
-                );
-            }
-            else
-            {
-                return new Vector2(
-                Math.Clamp(umax, -1, 1),
-                Math.Clamp(vmax, -1, 1)
-                );
-            }
-
+            return No_NaN(circle, input);
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
@@ -57,8 +41,15 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                return input;
+            }
+            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+        }
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }

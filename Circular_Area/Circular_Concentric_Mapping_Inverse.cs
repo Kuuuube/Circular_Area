@@ -7,15 +7,14 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Concentric Mapping Inverse")]
-    public class Circular_Concentric_Mapping_Inverse : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Concentric_Mapping_Inverse : CircularBase
     {
+        public static string Filter_Name = "Circular Concentric Mapping Inverse";
+
         public static Vector2 SquareToCircle(Vector2 input)
         {
             double x = input.X;
             double y = input.Y;
-
-            float xmax = (float)(x * 9);
-            float ymax = (float)(y * 9);
 
             double absx = Math.Abs(x);
             double absy = Math.Abs(y);
@@ -23,52 +22,28 @@ namespace Circular_Area
             if (absx >= absy)
             {
                 var circle = new Vector2(
-                (float)(x * Math.Cos((Math.PI / 4) * (y / x))),
-                (float)(x * Math.Sin((Math.PI / 4) * (y / x)))
+                    (float)(x * Math.Cos((Math.PI / 4) * (y / x))),
+                    (float)(x * Math.Sin((Math.PI / 4) * (y / x)))
                 );
-                if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-                {
-                    return new Vector2(
-                    circle.X,
-                    circle.Y
-                    );
-                }
-                else
-                {
-                    return new Vector2(
-                    Math.Clamp(xmax, -1, 1),
-                    Math.Clamp(ymax, -1, 1)
-                    );
-                }
+
+                return No_NaN(circle, input);
             }
             else
             {
                 var circle = new Vector2(
-                (float)(y * Math.Cos((Math.PI / 2) - ((Math.PI / 4) * (x / y)))),
-                (float)(y * Math.Sin((Math.PI / 2) - ((Math.PI / 4) * (x / y))))
+                    (float)(y * Math.Cos((Math.PI / 2) - ((Math.PI / 4) * (x / y)))),
+                    (float)(y * Math.Sin((Math.PI / 2) - ((Math.PI / 4) * (x / y))))
                 );
-                if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-                {
-                    return new Vector2(
-                    circle.X,
-                    circle.Y
-                    );
-                }
-                else
-                {
-                    return new Vector2(
-                    Math.Clamp(xmax, -1, 1),
-                    Math.Clamp(ymax, -1, 1)
-                    );
-                }
+
+                return No_NaN(circle, input);
             }
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
@@ -77,8 +52,23 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(Expand(SquareToCircle(ToUnit(input)))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                if (GetDisableExpand(false, true, Filter_Name))
+                {
+                    return input;
+                }
+                return FromUnit(Clamp(Expand(ToUnit(input))));
+            }
+            if (GetDisableExpand(true, false, Filter_Name))
+            {
+                return FromUnit(Clamp(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+            }
+            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name))));
+        }
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }

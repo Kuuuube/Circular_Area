@@ -7,15 +7,14 @@ using System.Numerics;
 namespace Circular_Area
 {
     [PluginName("Circular Biased Squelch Vertical")]
-    public class Circular_Biased_Squelch_Vertical : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Biased_Squelch_Vertical : CircularBase
     {
+        public static string Filter_Name = "Circular Biased Squelch Vertical";
+
         public Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
             double v = input.Y;
-
-            float umax = (float)(u * 9);
-            float vmax = (float)(v * 9);
 
             double u2 = Math.Pow(u, 2);
             double v2 = Math.Pow(v, 2);
@@ -23,30 +22,18 @@ namespace Circular_Area
             float B = Math.Clamp(B_raw, 0.01f, 1);
 
             var circle = new Vector2(
-            (float)(u / Math.Sqrt(1 - B * v2)),
-            (float)(v / Math.Sqrt(1 - u2))
+                (float)(u / Math.Sqrt(1 - B * v2)),
+                (float)(v / Math.Sqrt(1 - u2))
             );
-            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-            {
-                return new Vector2(
-                circle.X,
-                circle.Y
-                );
-            }
-            else
-            {
-                return new Vector2(
-                Math.Clamp(umax, -1, 1),
-                Math.Clamp(vmax, -1, 1)
-                );
-            }
+
+            return No_NaN(circle, input);
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
@@ -55,9 +42,16 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                return input;
+            }
+            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+        }
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
 
         [Property("β")]
         public float B_raw { set; get; }

@@ -4,23 +4,23 @@ using OpenTabletDriver.Plugin.Output;
 using System;
 using System.Linq;
 using System.Numerics;
+using OpenTabletDriver.Plugin;
 
 namespace Circular_Area
 {
     [PluginName("Circular Sham Quartic Mapping")]
-    public class Circular_Sham_Quartic_Mapping : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    public class Circular_Sham_Quartic_Mapping : CircularBase
     {
+        public static string Filter_Name = "Circular Sham Quartic Mapping";
+
         public static Vector2 CircleToSquare(Vector2 input)
         {
             double u = input.X;
             double v = input.Y;
 
-            float umax = (float)(u * 9);
-            float vmax = (float)(v * 9);
-
             double u2 = Math.Pow(u, 2);
             double v2 = Math.Pow(v, 2);
-            
+
             double u4 = Math.Pow(u, 4);
             double v4 = Math.Pow(v, 4);
 
@@ -30,56 +30,31 @@ namespace Circular_Area
             double sgnu = absu / u;
             double sgnv = absv / v;
 
-            double toppart2 = (((-(8 * ((2 + v2 + 1) * u2 + v2))) / (v2 + v4)));
-            double toppart3 = ((2 * v2 + 1) * u2 + v2) / (v4);
-            double toppart4 = (2 + u2) / v2;
-            double toppart5 = 2 / v4;
+            Complex[] roots = QuarticBase.Quartic(v4, -2 * v2, u2 + v2 + 2 * u2 * v2, -2 * u2, u4);
+            double[] real_roots = new double[roots.Count()];
+            for (int i = 0; i <= roots.Count() - 1; i++)
+            {
+                real_roots[i] = roots[i].Real;
+            }
 
-            double toppart2sol12 = - (v2 * toppart2);
-            double toppart2sol34 = v2 * toppart2;
-
-            double bottompart2 = 4 * Math.Sqrt((-v2) - u2 + 1);
-
-            double endpart1 = 1 / (2 * v2);
-            double endpart2 = (Math.Sqrt((-v2) - u2 + 1)) / (2 * v2);
-
-            double solution1 = (-(Math.Sqrt((toppart2sol12 / bottompart2) - toppart3 - toppart4 - toppart5)) / 2) + endpart1 - endpart2;
-            double solution2 = ((Math.Sqrt((toppart2sol12 / bottompart2) - toppart3 - toppart4 + toppart5)) / 2) + endpart1 + endpart2;
-            double solution3 = (-(Math.Sqrt((toppart2sol34 / bottompart2) - toppart3 - toppart4 - toppart5)) / 2) + endpart1 - endpart2;
-            double solution4 = ((Math.Sqrt((toppart2sol34 / bottompart2) - toppart3 - toppart4 + toppart5)) / 2) + endpart1 + endpart2; ;
-
-            double[] solutions = { solution1, solution2, solution3, solution4 };
-
-            double q0 = solutions.OrderBy(i => i).SkipWhile(i => i <= 0).First();
+            double q0 = real_roots.OrderBy(i => i).SkipWhile(i => i <= 0).First();
             double q0sqrt = Math.Sqrt(q0);
 
             var circle = new Vector2(
                 (float)(sgnu * q0sqrt),
                 (float)(sgnv * Math.Abs(v / u) * q0sqrt)
-                );
+            );
 
-            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-            {
-                return new Vector2(
-                circle.X,
-                circle.Y
-                );
-            }
-            else
-            {
-                return new Vector2(
-                Math.Clamp(umax, -1, 1),
-                Math.Clamp(vmax, -1, 1)
-                );
-            }
-
+            return No_NaN(circle, input);
+        
         }
 
-        public event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override event Action<IDeviceReport> Emit;
+
+        public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
@@ -88,8 +63,15 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                return input;
+            }
+            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+        }
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }

@@ -1,23 +1,6 @@
-# IDE
-.vs/
+*bin/
+*obj/
+*bld/
+*build/
 .vscode/
-.idea/
-
-# Build Artifacts
-**/obj
-**/bin
-**/nupkg
-/Build
-
-# BenchmarkDotNet Artifacts
-**/BenchmarkDotNet.Artifacts
-
-# User Preferences
-*.user
-
-# MacOS Cache
-*.DS_Store
-
-# Nix
-.envrc
-shell.nix
+.vs/

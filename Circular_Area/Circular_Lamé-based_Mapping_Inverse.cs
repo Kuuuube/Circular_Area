@@ -6,16 +6,15 @@ using System.Numerics;
 
 namespace Circular_Area
 {
-    [PluginName("Circluar Lamé-based Mapping Inverse")]
-    public class Circular_Lamé_based_Mapping_Inverse : CircularBase, IPositionedPipelineElement<IDeviceReport>
+    [PluginName("Circular Lamé-based Mapping Inverse")]
+    public class Circular_Lamé_based_Mapping_Inverse : CircularBase
     {
-        public static Vector2 CircleToSquare(Vector2 input)
+        public static string Filter_Name = "Circular Lamé-based Mapping Inverse";
+
+        public static Vector2 SquareToCircle(Vector2 input)
         {
             double x = input.X;
             double y = input.Y;
-
-            float xmax = (float)(x * 9);
-            float ymax = (float)(y * 9);
 
             double x2 = Math.Pow(x, 2);
             double y2 = Math.Pow(y, 2);
@@ -24,33 +23,18 @@ namespace Circular_Area
             double absy = Math.Abs(y);
 
             var circle = new Vector2(
-            (float)((x / Math.Sqrt(x2 + y2)) * Math.Pow((absx * (2 / ((1 - absx) * (1 - absy))) + absy * (2 / ((1 - absx) * (1 - absy)))), (0.5 * (1 - absx) * (1 - absy)))),
-            (float)((y / Math.Sqrt(x2 + y2)) * Math.Pow((absx * (2 / ((1 - absx) * (1 - absy))) + absy * (2 / ((1 - absx) * (1 - absy)))), (0.5 * (1 - absx) * (1 - absy))))
+                (float)((x / Math.Sqrt(x2 + y2)) * Math.Pow((Math.Pow(absx, (2 / ((1 - absx) * (1 - absy)))) + Math.Pow(absy, (2 / ((1 - absx) * (1 - absy))))), (0.5 * (1 - absx) * (1 - absy)))),
+                (float)((y / Math.Sqrt(x2 + y2)) * Math.Pow((Math.Pow(absx, (2 / ((1 - absx) * (1 - absy)))) + Math.Pow(absy, (2 / ((1 - absx) * (1 - absy))))), (0.5 * (1 - absx) * (1 - absy))))
             );
 
-
-            if ((circle.X >= 0 || circle.X <= 0) && (circle.Y >= 0 || circle.Y <= 0))
-            {
-                return new Vector2(
-                circle.X,
-                circle.Y
-                );
-            }
-            else
-            {
-                return new Vector2(
-                Math.Clamp(xmax, -1, 1),
-                Math.Clamp(ymax, -1, 1)
-                );
-            }
-
+            return No_NaN(circle, input);
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
@@ -59,8 +43,23 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                if (GetDisableExpand(false, true, Filter_Name))
+                {
+                    return input;
+                }
+                return FromUnit(Clamp(Expand(ToUnit(input))));
+            }
+            if (GetDisableExpand(true, false, Filter_Name))
+            {
+                return FromUnit(Clamp(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+            }
+            return FromUnit(Clamp(Expand(DiscardTruncation(SquareToCircle(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name))));
+        }
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }

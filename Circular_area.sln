@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30626.31
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Circular_Area", "Circular_Area\Circular_Area.csproj", "{5ED8476E-5251-4B86-A44E-1F0B9E538DB6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTabletDriver.Plugin", ".modules\OpenTabletDriver\OpenTabletDriver.Plugin\OpenTabletDriver.Plugin.csproj", "{AD3F2FF5-9FC6-4B1F-8EC2-78E571AF515C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTabletDriver.Configurations", ".modules\OpenTabletDriver\OpenTabletDriver.Configurations\OpenTabletDriver.Configurations.csproj", "{51C7B70C-D39D-44E5-AA9A-DE6F1F43D377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTabletDriver", ".modules\OpenTabletDriver\OpenTabletDriver\OpenTabletDriver.csproj", "{D3B770F8-8DE0-4F98-88F4-20E1FAD7BDF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTabletDriver.Native", ".modules\OpenTabletDriver\OpenTabletDriver.Native\OpenTabletDriver.Native.csproj", "{F28C2CC4-F15A-47A3-AC9D-081997CF706D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{AD3F2FF5-9FC6-4B1F-8EC2-78E571AF515C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD3F2FF5-9FC6-4B1F-8EC2-78E571AF515C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD3F2FF5-9FC6-4B1F-8EC2-78E571AF515C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C7B70C-D39D-44E5-AA9A-DE6F1F43D377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C7B70C-D39D-44E5-AA9A-DE6F1F43D377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C7B70C-D39D-44E5-AA9A-DE6F1F43D377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C7B70C-D39D-44E5-AA9A-DE6F1F43D377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B770F8-8DE0-4F98-88F4-20E1FAD7BDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B770F8-8DE0-4F98-88F4-20E1FAD7BDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B770F8-8DE0-4F98-88F4-20E1FAD7BDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B770F8-8DE0-4F98-88F4-20E1FAD7BDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28C2CC4-F15A-47A3-AC9D-081997CF706D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28C2CC4-F15A-47A3-AC9D-081997CF706D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28C2CC4-F15A-47A3-AC9D-081997CF706D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28C2CC4-F15A-47A3-AC9D-081997CF706D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
