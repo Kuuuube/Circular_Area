@@ -10,6 +10,7 @@ namespace Circular_Area
     [PluginName("Circular Schwarz-Christoffel Mapping")]
     public class Circular_Schwarz_Christoffel_Mapping : CircularBase, IPositionedPipelineElement<IDeviceReport>
     {
+        public static string Filter_Name = "Circular Schwarz-Christoffel Mapping";
         private const double Ke = 1.854;
         private static readonly Complex NegativeImaginary = new(1, -1);
         private static readonly Complex PositiveImaginary = new(1, 1);
@@ -31,11 +32,11 @@ namespace Circular_Area
             );
         }
 
-        public event Action<IDeviceReport> Emit;
+        public override event Action<IDeviceReport> Emit;
 
-        public void Consume(IDeviceReport value)
+        public override void Consume(IDeviceReport value)
         {
-            if (value is ITabletReport report)
+            if (value is IAbsolutePositionReport report)
             {
                 report.Position = Filter(report.Position);
                 value = report;
@@ -44,8 +45,15 @@ namespace Circular_Area
             Emit?.Invoke(value);
         }
 
-        public Vector2 Filter(Vector2 input) => FromUnit(Clamp(CircleToSquare(ToUnit(input))));
+        public Vector2 Filter(Vector2 input)
+        {
+            if (CheckQuadrant(ToUnit(input), Filter_Name))
+            {
+                return input;
+            }
+            return FromUnit(Clamp(DiscardTruncation(CircleToSquare(ApplyTruncation(ToUnit(input), Filter_Name)), Filter_Name)));
+        }
 
-        public PipelinePosition Position => PipelinePosition.PostTransform;
+        public override PipelinePosition Position => PipelinePosition.PostTransform;
     }
 }
