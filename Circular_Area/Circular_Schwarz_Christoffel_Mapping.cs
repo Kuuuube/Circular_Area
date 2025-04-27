@@ -1,6 +1,5 @@
 using System;
 using System.Numerics;
-using Circular_Area.CircularMath;
 using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
@@ -11,24 +10,27 @@ namespace Circular_Area
     public class Circular_Schwarz_Christoffel_Mapping : CircularBase, IPositionedPipelineElement<IDeviceReport>
     {
         public static string Filter_Name = "Circular Schwarz-Christoffel Mapping";
-        private const double Ke = 1.854;
-        private static readonly Complex NegativeImaginary = new(1, -1);
-        private static readonly Complex PositiveImaginary = new(1, 1);
-        private static readonly Complex FirstCachedValue = NegativeImaginary / -Ke;
-        private static readonly Complex SecondCachedValue = PositiveImaginary / Math.Sqrt(2);
-        private static readonly double ThirdCachedValue = 1 / Math.Sqrt(2);
-
         public static Vector2 CircleToSquare(Vector2 input)
         {
-            var complexInput = new Complex(input.X, input.Y);
-            var angle = Complex.Acos(SecondCachedValue * complexInput);
+            double k = 1.854074677301371918433850347195260046217598823521766905586;
+            double u = input.X;
+            double v = input.Y;
 
-            var jacobian = SpecialFunctions.F(angle, ThirdCachedValue);
-            var mappedValue = FirstCachedValue * jacobian;
-
+            double ru = (u - v) * Math.Sqrt(1.0 / 2.0);
+            double rv = (u + v) * Math.Sqrt(1.0 / 2.0);
+            double a_big = ru * ru + rv * rv;
+            double b_big = ru * ru - rv * rv;
+            double u_big = 1.0 + 2.0 * b_big - a_big * a_big;
+            double t_big = Math.Sqrt((1.0 + a_big * a_big) * (1.0 + a_big * a_big) - 4.0 * b_big * b_big);
+            double cos_a = (2.0 * a_big - t_big) / u_big;
+            double cos_b = u_big / (2.0 * a_big + t_big);
+            double a = Math.Acos(Math.Min(Math.Max(cos_a, -1.0), 1.0));
+            double b = Math.Acos(Math.Min(Math.Max(cos_b, -1.0), 1.0));
+            double rx = Math.Sign(ru) * (1.0 - SchwarzChristoffelBase.landen_elliptic_f(a) / (2.0 * k));
+            double ry = Math.Sign(rv) * (SchwarzChristoffelBase.landen_elliptic_f(b) / (2.0 * k));
             return new Vector2(
-                (float)(mappedValue.Real + 1),
-                (float)(mappedValue.Imaginary - 1)
+                (float)(rx + ry),
+                (float)(ry - rx)
             );
         }
 
