@@ -98,7 +98,7 @@ Note: These mappings are not direct counterparts of each other. Lamé-based Mapp
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
     - Movements get slower non-linearly towards the corners and sides of the area.
 
-### [p-Norm Squicular Mapping](./mappings/p_norm_squircular.md)
+### [p-Norm Squicular Mapping:](./mappings/p_norm_squircular.md)
 
 Note: This mapping only has a forward variant.
 
@@ -110,7 +110,7 @@ Note: This mapping only has a forward variant.
 
 - When `m` is greater than 1 the distorsion affects less of the center and distorts more heavily towards the corners and sides of the area. High `m` values create distortion similar to 2-Squircular or 3-Squircular mappings.
 
-### [Schwarz Christoffel Mapping](./mappings/schwarz_christoffel.md)
+### [Schwarz Christoffel Mapping:](./mappings/schwarz_christoffel.md)
 
 This is a rather unique mapping, it transforms conformally which allows it to be angle and shape preserving.
 
