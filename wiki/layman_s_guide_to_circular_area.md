@@ -93,8 +93,6 @@ Note: These mappings are not direct counterparts of each other. Lamé-based Mapp
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes far from the center due to the extreme distortion.
     - Movements get faster non-linearly towards the corners and sides of the area.
 
-<div>
-
 - Inverse mapping:
     - When moving straight outwards from the center, the input will always stay straight. But, when offset towards any corner, input will bubble outwards towards that corner.
     - On small areas or low/medium LPI tablets, input will jump when crossing the axes near the center due to the extreme distortion.
