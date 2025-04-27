@@ -6,7 +6,9 @@ Circular mapping for tablet areas.
 - Install Circular Area from the OpenTabletDriver plugin manager.
 - Enable one of the Circular Area mappings in the filters tab and apply the setting.
 
-    Recommended mappings: [FG-Squircular Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping), [FG-Squircular Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping-inverse), [Elliptical Grid Mapping](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping), or [Elliptical Grid Mapping Inverse](https://github.com/Kuuuube/Circular_Area/blob/main/wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping-inverse).
+    Recommended mappings: [FG-Squircular Mapping](./wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping), [Elliptical Grid Mapping](./wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping), [Schwarz Christoffel Mapping](./wiki/mappings/schwarz_christoffel.md#schwarz-christoffel).
+
+    If you aren't satisied with the forward mappings, give the inverses a try.
 
 
 <br>
