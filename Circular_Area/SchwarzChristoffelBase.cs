@@ -23,7 +23,7 @@ namespace Circular_Area
                 last_g = g;
                 a = 0.5 * (last_a + last_g);
                 g = Math.Sqrt(last_a * last_g);
-                if (!(i < MAX_ITER && Math.Abs(a - g) > double.Epsilon)) {
+                if (!(i < MAX_ITER && Math.Abs(a - g) > 0.00001)) {
                     break;
                 }
             }
