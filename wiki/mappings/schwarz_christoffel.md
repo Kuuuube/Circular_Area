@@ -3,9 +3,9 @@
 # Schwarz Christoffel
 
 ## Diagrams
-![](./images/mappings/schwarz_christoffel_mapping_circle_grid_thick_checkerboard.png)
-![](./images/mappings/schwarz_christoffel_mapping_square_grid_thick_checkerboard.png)
-![](./images/mappings/schwarz_christoffel_mapping_dot_grid_circle_rgb_gradient_circle.png)
+![](./images/mappings/square_schwarz_christoffel_mapping_circle_grid_thick_checkerboard.png)
+![](./images/mappings/square_schwarz_christoffel_mapping_square_grid_thick_checkerboard.png)
+![](./images/mappings/square_schwarz_christoffel_mapping_dot_grid_circle_rgb_gradient_circle.png)
 
 ## Formula
 ![](./images/formulas/schwarz_christoffel_mapping_formula.png)
@@ -17,8 +17,8 @@
 # 2-Squircular Mapping Inverse
 
 ## Diagrams
-![](./images/mappings/schwarz_christoffel_mapping_square_grid_circle_thick_checkerboard.png)
-![](./images/mappings/schwarz_christoffel_mapping_dot_grid_square_rgb_gradient.png)
+![](./images/mappings/circle_schwarz_christoffel_mapping_square_grid_circle_thick_checkerboard.png)
+![](./images/mappings/circle_schwarz_christoffel_mapping_dot_grid_square_rgb_gradient.png)
 
 ## Formula
 ![](./images/formulas/schwarz_christoffel_mapping_inverse_formula.png)
