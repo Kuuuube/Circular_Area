@@ -56,4 +56,4 @@ Each mapping has multiple diagrams to aid in understanding how the distortion wo
 
 ## [p-Norm Squircular Mapping](./mappings/p_norm_squircular.md)
 
-## [Schwarz Christoffel Mapping](./mappings/schwarz_christoffel.md)
+## [Schwarz Christoffel Mapping](./mappings/schwarz_christoffel_mapping.md)

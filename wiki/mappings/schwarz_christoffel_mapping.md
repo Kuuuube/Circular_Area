@@ -1,6 +1,6 @@
 [<- Back](../mappings_index.md)
 
-# Schwarz Christoffel
+# Schwarz Christoffel Mapping
 
 ## Diagrams
 ![](./images/mappings/square_schwarz_christoffel_mapping_circle_grid_thick_checkerboard.png)
@@ -14,7 +14,7 @@
 
 
 
-# 2-Squircular Mapping Inverse
+# Schwarz Christoffel Mapping Inverse
 
 ## Diagrams
 ![](./images/mappings/circle_schwarz_christoffel_mapping_square_grid_circle_thick_checkerboard.png)

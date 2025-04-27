@@ -110,7 +110,7 @@ Note: This mapping only has a forward variant.
 
 - When `m` is greater than 1 the distorsion affects less of the center and distorts more heavily towards the corners and sides of the area. High `m` values create distortion similar to 2-Squircular or 3-Squircular mappings.
 
-### [Schwarz Christoffel Mapping:](./mappings/schwarz_christoffel.md)
+### [Schwarz Christoffel Mapping:](./mappings/schwarz_christoffel_mapping.md)
 
 This is a rather unique mapping, it transforms conformally which allows it to be angle and shape preserving.
 
