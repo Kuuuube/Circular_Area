@@ -110,6 +110,16 @@ Note: This mapping only has a forward variant.
 
 - When `m` is greater than 1 the distorsion affects less of the center and distorts more heavily towards the corners and sides of the area. High `m` values create distortion similar to 2-Squircular or 3-Squircular mappings.
 
+### [Schwarz Christoffel Mapping](./mappings/schwarz_christoffel.md)
+
+This is a rather unique mapping, it transforms conformally which allows it to be angle and shape preserving.
+
+- When moving straight outwards from the center, the input will curve towards the axes or the corner-to-corner diagonals depending on whether the mapping is forward or inverse, respectively.
+
+- Movement around the center of the area will feel almost the same as a rectangular area, and more distorted towards the edges.
+
+- Feels somewhat like the opposite of [Elliptical Grid](./mappings/elliptical_grid_mapping.md) or an Elliptical Grid based mapping.
+
 <br>
 
 ## Secondary Mapping Styles
