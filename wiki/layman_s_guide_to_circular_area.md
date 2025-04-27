@@ -116,7 +116,7 @@ This is a rather unique mapping, it transforms conformally which allows it to be
 
 - When moving straight outwards from the center, the input will curve towards the axes or the corner-to-corner diagonals depending on whether the mapping is forward or inverse, respectively.
 
-- Movement around the center of the area will feel almost the same as a rectangular area, and more distorted towards the edges.
+- Movement around the center of the area will feel similar to rectangular area, and more distorted towards the edges. But the distortion is more evenly spread into the center than [FG-Squircular Mapping](./mappings/fg_squircular_mapping.md) or [Elliptical Grid Mapping](./mappings/elliptical_grid_mapping.md).
 
 - Feels somewhat like the opposite of [Elliptical Grid](./mappings/elliptical_grid_mapping.md) or an Elliptical Grid based mapping.
 
