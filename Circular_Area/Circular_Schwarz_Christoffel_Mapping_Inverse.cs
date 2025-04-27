@@ -1,6 +1,5 @@
 using System;
 using System.Numerics;
-using Circular_Area.CircularMath;
 using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
@@ -11,21 +10,15 @@ namespace Circular_Area
     public class Circular_Schwarz_Christoffel_Mapping_Inverse : CircularBase, IPositionedPipelineElement<IDeviceReport>
     {
         public static string Filter_Name = "Circular Schwarz-Christoffel Mapping Inverse";
-        private const double Ke = 1.854;
-        private static readonly Complex NegativeImaginary = new(1, -1);
-        private static readonly Complex PositiveImaginary = new(1, 1);
-        private static readonly Complex FirstCachedValue = NegativeImaginary / Math.Sqrt(2);
-        private static readonly Complex SecondCachedValue = Ke * PositiveImaginary / 2;
-        private static readonly double ThirdCachedValue = 1 / Math.Sqrt(2);
-
         public static Vector2 SquareToCircle(Vector2 input)
         {
-            var complexInput = new Complex(input.X, input.Y);
-            var mappedValue = FirstCachedValue * SpecialFunctions.Cn(SecondCachedValue * complexInput - Ke, ThirdCachedValue);
-
+            double k = 1.854074677301371918433850347195260046217598823521766905586;
+            double z_re = input.X / 2.0 - input.Y / 2.0;
+            double z_im = input.X / 2.0 + input.Y / 2.0;
+            var (ru, rv) = SchwarzChristoffelBase.ccn(k * (1.0 - z_re), -k * z_im);
             return new Vector2(
-                (float)mappedValue.Real,
-                (float)mappedValue.Imaginary
+                (float)((ru + rv) * Math.Sqrt(1.0 / 2.0)),
+                (float)((rv - ru) * Math.Sqrt(1.0 / 2.0))
             );
         }
 
