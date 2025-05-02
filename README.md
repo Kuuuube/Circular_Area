@@ -8,7 +8,7 @@ Circular mapping for tablet areas.
 
     Recommended mappings: [FG-Squircular Mapping](./wiki/mappings/fg_squircular_mapping.md#fg-squircular-mapping), [Elliptical Grid Mapping](./wiki/mappings/elliptical_grid_mapping.md#elliptical-grid-mapping), [Schwarz Christoffel Mapping](./wiki/mappings/schwarz_christoffel_mapping.md#schwarz-christoffel-mapping).
 
-    If you aren't satisied with the forward mappings, give the inverses a try.
+    If you aren't satisfied with the forward mappings, give the inverses a try.
 
 
 <br>
